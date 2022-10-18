@@ -1,0 +1,15 @@
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\bin\Debug\net6.0\CAI-GrupoH.exe
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\bin\Debug\net6.0\CAI-GrupoH.deps.json
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\bin\Debug\net6.0\CAI-GrupoH.runtimeconfig.json
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\bin\Debug\net6.0\CAI-GrupoH.dll
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\bin\Debug\net6.0\CAI-GrupoH.pdb
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\obj\Debug\net6.0\CAI-GrupoH.csproj.AssemblyReference.cache
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\obj\Debug\net6.0\CAI-GrupoH.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\obj\Debug\net6.0\CAI-GrupoH.AssemblyInfoInputs.cache
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\obj\Debug\net6.0\CAI-GrupoH.AssemblyInfo.cs
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\obj\Debug\net6.0\CAI-GrupoH.csproj.CoreCompileInputs.cache
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\obj\Debug\net6.0\CAI-GrupoH.dll
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\obj\Debug\net6.0\refint\CAI-GrupoH.dll
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\obj\Debug\net6.0\CAI-GrupoH.pdb
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\obj\Debug\net6.0\CAI-GrupoH.genruntimeconfig.cache
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\CAI-GrupoH\CAI-GrupoH\obj\Debug\net6.0\ref\CAI-GrupoH.dll

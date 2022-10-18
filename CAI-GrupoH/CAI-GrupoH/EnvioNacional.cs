@@ -90,9 +90,12 @@ namespace CAIGrupoH
             } while (true);
 
             // Origen del paquete (en puerta o presentacion en sucursal).
+            // Traigo info de la recepcion del paquete.
             var retiroPaquete = Region.RetiroPaquete();
             envioNacional.RetiroPaquete = retiroPaquete;
+
             // Destino del paquete (en puerta o presentacion en sucursal).
+            // Traigo info de la entrega del paquete
             var entregaPaquete = Region.EntregaPaquete();
             envioNacional.EntregaPaquete = entregaPaquete;
 

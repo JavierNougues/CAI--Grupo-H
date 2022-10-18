@@ -1,4 +1,6 @@
-﻿namespace CAIGrupoH
+﻿using System;
+
+namespace CAIGrupoH
 {
     internal class Validaciones
     {
@@ -8,9 +10,33 @@
             string numeroCliente;
             do
             {
+                // Cliente hardcodeado.
                 numeroCliente = Console.ReadLine();
+                if (numeroCliente != "123456789")
+                {
+                    Console.WriteLine("Cliente invalido.");
+                    continue;
+                }
+
             } while (true);
             return numeroCliente;
+        }
+
+        static public string ValidarContraseñaCliente(string mensaje)
+        {
+            Console.WriteLine(mensaje);
+            string contraseñaCliente = "";
+            do
+            {
+                // Cliente hardcodeado.
+                contraseñaCliente = Console.ReadLine();
+                if (contraseñaCliente != "123456789")
+                {
+                    Console.WriteLine("Contraseña invalida.");
+                    continue;
+                }
+            } while (true);
+            return contraseñaCliente;
         }
 
         static public string ValidarDNI(string mensaje)
@@ -19,7 +45,13 @@
             string numeroDNI;
             do
             {
+                // DNI hardcodeado.
                 numeroDNI = Console.ReadLine();
+                if (numeroDNI != "40506070")
+                {
+                    Console.WriteLine("DNI invalido.");
+                    continue;
+                }
             } while (true);
             return numeroDNI;
         }
