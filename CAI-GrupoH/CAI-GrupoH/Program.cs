@@ -1,4 +1,14 @@
-﻿namespace CAIGrupoH
+﻿
+/*
+Prototipo:
+Posible camino de Envio Nacional:
+    - Tipo de paquete: correspondencia.
+    - Tipo de envio: normal.
+    - Origen del paquete: en la sucursal.
+    - Destino del paquete: en la sucursal.
+*/
+
+namespace CAIGrupoH
     {
     class Program
     {

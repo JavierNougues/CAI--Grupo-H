@@ -1,10 +1,13 @@
-﻿namespace CAIGrupoH
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace CAIGrupoH
 {
     internal class EnvioNacional
     {
         public string TipoPaquete { get; set; }
         public string PesoPaquete { get; set; }
         public string TipoEnvio { get; set; }
+        public int TarifaPaqueteNacional { get; set; }
 
         Region RetiroPaquete = new Region();
         Region EntregaPaquete = new Region();
@@ -38,8 +41,11 @@
                 envioNacional.PesoPaquete = pesoEncomienda;
             }
 
+            //No implementado
             if (envioNacional.TipoPaquete == "Encomienda")
             {
+                Console.WriteLine("No implementado.");
+            /*
                 string pesoEncomienda = "";
                 int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el peso del paquete a enviar: ", "1. Bultos hasta 10Kg. \n 2. Bultos hasta 20Kg.\n 3. Bultos hasta 30Kg.", 1, 3);
 
@@ -62,6 +68,7 @@
                         }
                 }
                 envioNacional.PesoPaquete = pesoEncomienda;
+            */
             }
 
             do
@@ -70,11 +77,13 @@
                 string tipoEnvio = "";
                 if (menuPrincipal == 1)
                 {
-                    tipoEnvio = "Envío urgente";
+                    //No implemetado
+                    Console.WriteLine("No implementado.");
+                    //tipoEnvio = "Envío urgente";
                 }
                 if (menuPrincipal == 2)
                 {
-                    tipoEnvio = "Envío normal";
+                    tipoEnvio = "Envio normal";
                 }
                 envioNacional.TipoEnvio = tipoEnvio;
                 break;
@@ -87,12 +96,51 @@
             var entregaPaquete = Region.EntregaPaquete();
             envioNacional.EntregaPaquete = entregaPaquete;
 
-            //Calculo de las tarifas
-            int tarifa;
-            if (envioNacional.RetiroPaquete.TipoRecepcion == "Retiro en puerta")
-            {
 
+            //Calculo de las tarifas
+            /* No implementado:
+ *              - Encomiendas --> 10k, 20kg, 30kg.
+ *              - Retiro en puerta.
+ *              - Entrega en puerta.
+ *              - Envio rapido.
+            */
+            int tarifaPaquete = 0;
+
+            if (envioNacional.RetiroPaquete.TipoRecepcion == "Retiro en sucursal")
+            {
+                // Cargo fijo por retiro en sucursal..
+                tarifaPaquete += 100;
             }
+            if(envioNacional.RetiroPaquete.RetiroRegion != envioNacional.EntregaPaquete.EntregaRegion)
+            {
+                // Tarifa extra por entega interegional.
+                tarifaPaquete += 500;
+            }
+            else
+            {
+                if(envioNacional.RetiroPaquete.RetiroProvincia != envioNacional.EntregaPaquete.EntregaProvincia)
+                {
+                    // Tarifa extra por entrega interprovincial.
+                    tarifaPaquete += 300;
+                }
+                else
+                {
+                    // Tarifa extra por entrega provincial.
+                    tarifaPaquete += 150; 
+                }
+            }
+            if(envioNacional.EntregaPaquete.TipoEntrega == "Retiro en sucursal")
+            {
+                // Cargo fijo por entrega en sucursal.
+                tarifaPaquete += 100;
+            }
+
+            envioNacional.TarifaPaqueteNacional = tarifaPaquete;
+
+            return envioNacional;
         }
+
+        
+
     }
 }
