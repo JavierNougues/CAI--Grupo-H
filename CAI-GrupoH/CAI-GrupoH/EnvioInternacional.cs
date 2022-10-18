@@ -2,9 +2,9 @@
 {
     internal class EnvioInternacional
     {
-        public string TipoPaquete { get; set; }
-        public string PesoPaquete { get; set; }
-        public int TarifaPaqueteInternacional { get; set; }
+        public string? TipoPaquete { get; set; }
+        public string? PesoPaquete { get; set; }
+        public int   TarifaPaqueteInternacional { get; set; }
 
         RegionInternacional RetiroPaqueteInternacional = new RegionInternacional();
         RegionInternacional EntregaPaqueteInternacional = new RegionInternacional();

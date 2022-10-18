@@ -4,10 +4,10 @@ namespace CAIGrupoH
 {
     internal class EnvioNacional
     {
-        public string TipoPaquete { get; set; }
-        public string PesoPaquete { get; set; }
-        public string TipoEnvio { get; set; }
-        public int TarifaPaqueteNacional { get; set; }
+        public string? TipoPaquete { get; set; }
+        public string? PesoPaquete { get; set; }
+        public string? TipoEnvio { get; set; }
+        public int? TarifaPaqueteNacional { get; set; }
 
         Region RetiroPaquete = new Region();
         Region EntregaPaquete = new Region();

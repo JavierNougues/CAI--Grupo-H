@@ -3,18 +3,18 @@
     internal class RegionInternacional
     {
         //Propiedades Recepcion
-        public string TipoRecepcionInternacional { get; set; }
-        public string RetiroRegionInternacional { get; set; }
-        public string RetiroProvinciaInternacional { get; set; }
-        public string RetiroLocalidadInternacional { get; set; }
-        public string RetiroDireccionInternacional { get; set; }
-        public string RetiroDireccionNumeroInternacional { get; set; }
-        public string RetiroSucursalInternacional { get; set; }
+        public string? TipoRecepcionInternacional { get; set; }
+        public string? RetiroRegionInternacional { get; set; }
+        public string? RetiroProvinciaInternacional { get; set; }
+        public string? RetiroLocalidadInternacional { get; set; }
+        public string? RetiroDireccionInternacional { get; set; }
+        public string? RetiroDireccionNumeroInternacional { get; set; }
+        public string? RetiroSucursalInternacional { get; set; }
 
         //Propiedades Entrega
-        public string TipoEntregaInternacional { get; set; }
-        public string EntregaRegionInternacional { get; set; }
-        public string EntregaPaisInternacional { get; set; }
+        public string? TipoEntregaInternacional { get; set; }
+        public string? EntregaRegionInternacional { get; set; }
+        public string? EntregaPaisInternacional { get; set; }
 
         public static RegionInternacional RetiroPaqueteInternacional()
         {

@@ -3,22 +3,22 @@
     internal class Region
     {
         //Propiedades Recepcion
-        public string TipoRecepcion { get; set; }
-        public string RetiroRegion { get; set; }
-        public string RetiroProvincia { get; set; }
-        public string RetiroLocalidad { get; set; }
-        public string RetiroDireccion { get; set; }
-        public string RetiroDireccionNumero { get; set; }
-        public string RetiroSucursal { get; set; }
+        public string? TipoRecepcion { get; set; }
+        public string? RetiroRegion { get; set; }
+        public string? RetiroProvincia { get; set; }
+        public string? RetiroLocalidad { get; set; }
+        public string? RetiroDireccion { get; set; }
+        public string? RetiroDireccionNumero { get; set; }
+        public string? RetiroSucursal { get; set; }
 
         //Propiedades Entrega
-        public string TipoEntrega { get; set; }
-        public string EntregaRegion { get; set; }
-        public string EntregaProvincia { get; set; }
-        public string EntregaLocalidad { get; set; }
-        public string EntregaDireccion { get; set; }
-        public string EntregaDireccionNumero { get; set; }
-        public string EntregaSucursal { get; set; }
+        public string? TipoEntrega { get; set; }
+        public string? EntregaRegion { get; set; }
+        public string? EntregaProvincia { get; set; }
+        public string? EntregaLocalidad { get; set; }
+        public string? EntregaDireccion { get; set; }
+        public string? EntregaDireccionNumero { get; set; }
+        public string? EntregaSucursal { get; set; }
 
         // Retiro del paquete para ser enviado
         public static Region RetiroPaquete()
