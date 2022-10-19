@@ -8,6 +8,7 @@ namespace CAIGrupoH
         public string? PesoPaquete { get; set; }
         public string? TipoEnvio { get; set; }
         public int? TarifaPaqueteNacional { get; set; }
+        public string? OrdenDeServicio { get; set; }
 
         Region RetiroPaquete = new Region();
         Region EntregaPaquete = new Region();
@@ -19,13 +20,13 @@ namespace CAIGrupoH
             while (true)
             {
                 string tipoPaquete = "";
-                int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de paquete: ", "1. Correspondencia: hasta 500gr. \n 2. Encomienda: hasta 30kg.", 1, 2);
+                int menuTipoPaquete = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de paquete: ", "1. Correspondencia: hasta 500gr. \n 2. Encomienda: hasta 30kg.", 1, 2);
 
-                if (menuPrincipal == 1)
+                if (menuTipoPaquete == 1)
                 {
                     tipoPaquete = "Correspondencia";
                 }
-                if (menuPrincipal == 2)
+                if (menuTipoPaquete == 2)
                 {
                     Console.WriteLine("No implementado.");
                     //tipoPaquete = "Correspondencia";
@@ -73,15 +74,15 @@ namespace CAIGrupoH
 
             do
             {
-                int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de envío:", "1. Envío urgente: 48hs. \n2. Envío normal.", 1, 2);
+                int menuTipoEnvio = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de envío:", "1. Envío urgente: 48hs. \n2. Envío normal.", 1, 2);
                 string tipoEnvio = "";
-                if (menuPrincipal == 1)
+                if (menuTipoEnvio == 1)
                 {
                     //No implemetado
                     Console.WriteLine("No implementado.");
                     //tipoEnvio = "Envío urgente";
                 }
-                if (menuPrincipal == 2)
+                if (menuTipoEnvio == 2)
                 {
                     tipoEnvio = "Envio normal";
                 }
@@ -119,6 +120,8 @@ namespace CAIGrupoH
                 // Tarifa extra por entega interegional.
                 tarifaPaquete += 500;
             }
+            // No implementado
+            /*
             else
             {
                 if(envioNacional.RetiroPaquete.RetiroProvincia != envioNacional.EntregaPaquete.EntregaProvincia)
@@ -132,6 +135,7 @@ namespace CAIGrupoH
                     tarifaPaquete += 150; 
                 }
             }
+            */
             if(envioNacional.EntregaPaquete.TipoEntrega == "Retiro en sucursal")
             {
                 // Cargo fijo por entrega en sucursal.
@@ -140,10 +144,68 @@ namespace CAIGrupoH
 
             envioNacional.TarifaPaqueteNacional = tarifaPaquete;
 
-            return envioNacional;
-        }
 
-        
+            // Crear orden de servicio
+            // Generamos numero aleatorio
+            /*
+             * Revisar --> no funciona
+            Random orden() = new Random();
+            int sigOrdenDeServicio = orden.Next(1, 10);
+            */
+            //Hardcodeado
+            int sigOrdenDeServicio = 100;
+
+            // Asignamos nueva orden al envio nacional.
+            envioNacional.OrdenDeServicio = sigOrdenDeServicio.ToString();
+
+            // Mostramos en pantalla el envio al detalle: --> esto lo podemos modularizar despues.
+            Console.WriteLine($"Numero de Orden: {envioNacional.OrdenDeServicio}\n");
+            Console.WriteLine("Tipo de Envio: Nacional\n");
+            Console.WriteLine($"Tipo de Paquete: {envioNacional.TipoPaquete}\n");
+            Console.WriteLine($"Peso: {envioNacional.PesoPaquete}\n\n");
+            Console.WriteLine($"Importe: ${envioNacional.TarifaPaqueteNacional.ToString()}");
+
+            // Confirmamos la orden
+            int menuConfirmacion = Validaciones.ValidarMenuPrincipal("Desea confirmar la operación:", "\n 1. Si \n 2. No", 1, 2);
+            if (menuConfirmacion == 2)
+            {
+                Console.WriteLine("Ha finalizado la operación. \n Presione 0 para salir.");
+                System.Environment.Exit(0);
+            }
+            if(menuConfirmacion == 1)
+            {
+                //Creamos la orden
+                OrdenDeServicio nuevaOrdenDeServicio = new OrdenDeServicio();
+                // Asignamos todos los valores --> despues se puede modularizar
+                nuevaOrdenDeServicio.NumeroCliente = "123456789";
+                nuevaOrdenDeServicio.OrdenServicio = envioNacional.OrdenDeServicio;
+
+                nuevaOrdenDeServicio.EstadoOrden = "Iniciada";
+
+                nuevaOrdenDeServicio.PesoPaquete = envioNacional.PesoPaquete;
+                nuevaOrdenDeServicio.TarifaPaqueteNacional = envioNacional.TarifaPaqueteNacional;
+
+                nuevaOrdenDeServicio.TipoEnvio = envioNacional.TipoEnvio;
+
+                nuevaOrdenDeServicio.RegionOrigen = envioNacional.RetiroPaquete.RetiroRegion;
+                nuevaOrdenDeServicio.ProvinciaOrigen = envioNacional.RetiroPaquete.RetiroProvincia;
+                nuevaOrdenDeServicio.LocalidadOrigen = envioNacional.RetiroPaquete.RetiroLocalidad;
+                nuevaOrdenDeServicio.TipoRecepcion = envioNacional.RetiroPaquete.TipoRecepcion;
+                nuevaOrdenDeServicio.SucursalOrigen = envioNacional.RetiroPaquete.RetiroSucursal;
+
+                nuevaOrdenDeServicio.RegionEntrega = envioNacional.EntregaPaquete.EntregaRegion;
+                nuevaOrdenDeServicio.ProvinciaEntrega = envioNacional.EntregaPaquete.EntregaProvincia;
+                nuevaOrdenDeServicio.LocalidadEntrega = envioNacional.EntregaPaquete.EntregaLocalidad;
+                nuevaOrdenDeServicio.TipoEntrega = envioNacional.EntregaPaquete.TipoEntrega;
+                nuevaOrdenDeServicio.SucursalEntrega = envioNacional.EntregaPaquete.EntregaSucursal;
+
+                // Agregamos orden a Lista de ordenes de servicio
+                nuevaOrdenDeServicio.ListaOrdenesDeServicio(nuevaOrdenDeServicio);
+
+            }
+
+            return envioNacional;
+        }        
 
     }
 }

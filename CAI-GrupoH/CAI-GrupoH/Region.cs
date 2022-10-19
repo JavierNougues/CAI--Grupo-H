@@ -26,8 +26,8 @@
             var tipoRecepcion = new Region();
             while (true)
             {
-                int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione la opción que mas le convenga: ", "1. Retiro del paquete en puerta. \n 2. Presentación en sucursal.", 1, 2);
-                if (menuPrincipal == 1)
+                int menuOrigenPaquete = Validaciones.ValidarMenuPrincipal("Seleccione la opción que mas le convenga: ", "1. Retiro del paquete en puerta. \n 2. Presentación en sucursal.", 1, 2);
+                if (menuOrigenPaquete == 1)
                 {
                     // No implementado.
                     Console.WriteLine("No implementado.");
@@ -53,7 +53,7 @@
                     tipoRecepcion.RetiroDireccionNumero = direccionNumero;
                     */
                 }
-                if (menuPrincipal == 2)
+                if (menuOrigenPaquete == 2)
                 {
                     tipoRecepcion.TipoRecepcion = "Retiro en sucursal";
 
@@ -108,8 +108,8 @@
             var tipoEntrega = new Region();
             while (true)
             {
-                int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione la opción que mas le convenga: ", "1. Entrega del paquete en puerta. \n 2. Retiro en sucursal.", 1, 2);
-                if (menuPrincipal == 1)
+                int menuEntregaPaquete = Validaciones.ValidarMenuPrincipal("Seleccione la opción que mas le convenga: ", "1. Entrega del paquete en puerta. \n 2. Retiro en sucursal.", 1, 2);
+                if (menuEntregaPaquete == 1)
                 {
                     // No implementado.
                     Console.WriteLine("No implementado.");
@@ -135,7 +135,7 @@
                     tipoEntrega.EntregaDireccionNumero = direccionNumero;
                     */
                 }
-                if (menuPrincipal == 2)
+                if (menuEntregaPaquete == 2)
                 {
                     tipoEntrega.TipoEntrega = "Entrega en sucursal";
 

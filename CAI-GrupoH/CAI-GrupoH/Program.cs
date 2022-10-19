@@ -74,7 +74,7 @@ namespace CAIGrupoH
                     }
                 case 0:
                     {
-                        Console.WriteLine("Ha salido del programa");
+                        Console.WriteLine("Ha salido exitosamente del sistema.");
                         System.Environment.Exit(0);
                         break;
 

@@ -17,13 +17,13 @@
             while (true)
             {
                 string tipoPaquete = "";
-                int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de paquete: ", "1. Correspondencia: hasta 500gr. \n 2. Encomienda: hasta 30kg.", 1, 2);
+                int menuTipoPaquete = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de paquete: ", "1. Correspondencia: hasta 500gr. \n 2. Encomienda: hasta 30kg.", 1, 2);
 
-                if (menuPrincipal == 1)
+                if (menuTipoPaquete == 1)
                 {
                     tipoPaquete = "Correspondencia";
                 }
-                if (menuPrincipal == 2)
+                if (menuTipoPaquete == 2)
                 {
                     Console.WriteLine("No implementado.");
                     //tipoPaquete = "Correspondencia";
