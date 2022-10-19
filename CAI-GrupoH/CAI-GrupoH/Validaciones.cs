@@ -51,29 +51,37 @@ namespace CAIGrupoH
             return dni;
         }
 
-        public static string ValidarOrdenServicio(int numeroOrden)
+        public static string ValidarOrdenServicio(string numeroOrden)
         {
             do
             {
-                if (numeroOrden != 100)
+                if (numeroOrden != "N100" && numeroOrden != "I100")
                 {
                     Console.WriteLine("Orden de Servicio inválida. Intente nuevamente: ");
-                    numeroOrden = int.Parse(Console.ReadLine());
+                    numeroOrden = Console.ReadLine();
                     continue;
                 }
                 else
                 {
+                    Console.WriteLine("\n");
                     Console.WriteLine("El estado de su Orden de Servicio es: 'Iniciado'. ");
-                    Console.WriteLine("Gracias por su consulta!.");
+                    Console.WriteLine("Gracias por su consulta!.\n");
+                    Console.WriteLine("Ingrese cualquier tecla para continuar");
+                    Console.ReadKey();
+                    Console.Clear();
                 }
                 break;
             } while (true);
-            return numeroOrden.ToString();
+            return numeroOrden;
         }
 
         public static string ValidarEstadoCuenta(int numeroCliente)
         {
-            Console.WriteLine("Actualmente posee un saldo negativo: adeuda $1000.");
+            Console.Clear();
+            Console.WriteLine("Actualmente posee un saldo negativo: adeuda $1000.\n");
+            Console.WriteLine("Ingrese cualquier tecla para continuar");
+            Console.ReadKey();
+            Console.Clear();
             return numeroCliente.ToString();
         }
 
