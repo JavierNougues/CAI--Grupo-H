@@ -21,6 +21,7 @@
             var tipoRecepcionInternacional = new RegionInternacional();
             while (true)
             {
+                Console.Clear();
                 int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione la opción que mas le convenga: ", "1. Retiro del paquete en puerta.\n2. Presentación en sucursal.", 1, 2);
                 if (menuPrincipal == 1)
                 {
@@ -54,6 +55,7 @@
                     tipoRecepcionInternacional.TipoRecepcionInternacional = "Retiro en sucursal";
 
                     // Region de retiro
+                    Console.Clear();
                     var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se retira el paquete: ", "");
 
                     // Hardcodeado
@@ -69,6 +71,7 @@
                     tipoRecepcionInternacional.RetiroRegionInternacional = region;
 
                     // Provincia de retiro
+                    Console.Clear();
                     var provincia = Validaciones.ValidarStringIngresado("Ingrese la provincia donde se retira el paquete:", "");
 
                     // Hardcodeado
@@ -84,6 +87,7 @@
                     tipoRecepcionInternacional.RetiroProvinciaInternacional = provincia;
 
                     // Localidad de retiro
+                    Console.Clear();
                     var localidad = Validaciones.ValidarStringIngresado("Ingrese la localidad donde se retira el paquete:", "");
 
                     // Hardcodeado
@@ -98,7 +102,8 @@
                     } while (true);
                     tipoRecepcionInternacional.RetiroLocalidadInternacional = localidad;
 
-                    // Sucursal de retiro                   
+                    // Sucursal de retiro
+                     Console.Clear();
                     var nombreSucursal = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paqete:", "");
 
                     // Hardcodeado
@@ -124,12 +129,14 @@
             var tipoEntregaInternacional = new RegionInternacional();
             while (true)
             {
+                Console.Clear();
                 int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione la opción que mas le convenga: ", "1. Retiro en sucursal.", 1, 1);
                 if (menuPrincipal == 1)
                 {
                     tipoEntregaInternacional.TipoEntregaInternacional = "Entrega en sucursal";
 
                     // Region de entrega
+                    Console.Clear();
                     var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se entrega el paquete: ", "");
 
                     // Harcodeado
@@ -144,7 +151,8 @@
                     } while (true);
                     tipoEntregaInternacional.EntregaRegionInternacional = region;
 
-                    // Pais de entrega               
+                    // Pais de entrega
+                    Console.Clear();
                     var nombrePais = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paqete:", "");
 
                     // Hardcodeado
