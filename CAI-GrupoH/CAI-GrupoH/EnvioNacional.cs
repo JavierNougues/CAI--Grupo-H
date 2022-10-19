@@ -15,6 +15,8 @@ namespace CAIGrupoH
 
         public static EnvioNacional Ingresar()
         {
+            Console.Clear();
+
             var envioNacional = new EnvioNacional();
             Console.WriteLine("Nuevo Envío Nacional: ");
             while (true)
@@ -28,8 +30,13 @@ namespace CAIGrupoH
                 }
                 if (menuTipoPaquete == 2)
                 {
-                    Console.WriteLine("No implementado.");
-                    //tipoPaquete = "Correspondencia";
+                    tipoPaquete = "Encomienda";
+                    Console.WriteLine("No implementado.\n");
+                    Console.WriteLine("Ingrese cualquier tecla para continuar");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    continue;
                 }
 
                 envioNacional.TipoPaquete = tipoPaquete;
@@ -46,7 +53,8 @@ namespace CAIGrupoH
             if (envioNacional.TipoPaquete == "Encomienda")
             {
                 Console.WriteLine("No implementado.");
-                System.Environment.Exit(0);
+
+                
                 /*
                     string pesoEncomienda = "";
                     int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el peso del paquete a enviar: ", "1. Bultos hasta 10Kg. \n 2. Bultos hasta 20Kg.\n 3. Bultos hasta 30Kg.", 1, 3);
@@ -72,7 +80,7 @@ namespace CAIGrupoH
                     envioNacional.PesoPaquete = pesoEncomienda;
                 */
             }
-
+            Console.Clear();
             do
             {
                 int menuTipoEnvio = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de envío:", "1. Envío urgente: 48hs.\n2. Envío normal.", 1, 2);
@@ -80,8 +88,12 @@ namespace CAIGrupoH
                 if (menuTipoEnvio == 1)
                 {
                     //No implemetado
-                    Console.WriteLine("No implementado.");
-                    System.Environment.Exit(0);
+                    Console.WriteLine("No implementado.\n");
+                    Console.WriteLine("Ingrese cualquier tecla para continuar");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    continue;
                     //tipoEnvio = "Envío urgente";
                 }
                 if (menuTipoEnvio == 2)
@@ -155,17 +167,18 @@ namespace CAIGrupoH
             int sigOrdenDeServicio = orden.Next(1, 10);
             */
             //Hardcodeado
-            int sigOrdenDeServicio = 100;
+            String sigOrdenDeServicio = "N100";
 
             // Asignamos nueva orden al envio nacional.
             envioNacional.OrdenDeServicio = sigOrdenDeServicio.ToString();
 
             // Mostramos en pantalla el envio al detalle: --> esto lo podemos modularizar despues.
+            Console.Clear();
             Console.Write("---------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine($"Numero de Orden: {envioNacional.OrdenDeServicio}\n");
             Console.WriteLine("Tipo de Envio: Nacional\n");
             Console.WriteLine($"Tipo de Paquete: {envioNacional.TipoPaquete}\n");
-            Console.WriteLine($"Peso: {envioNacional.PesoPaquete}");
+            Console.WriteLine($"Peso: {envioNacional.PesoPaquete}\n");
             Console.WriteLine($"Importe: ${envioNacional.TarifaPaqueteNacional.ToString()}");
             Console.Write("---------------------------------------------------------------------------------------------------------------------------");
 
@@ -173,12 +186,18 @@ namespace CAIGrupoH
             int menuConfirmacion = Validaciones.ValidarMenuPrincipal("Desea confirmar la operación:", "\nPresione: 1 (Si) \nPresione: 2. (No)", 1, 2);
             if (menuConfirmacion == 2)
             {
+                Console.Clear();
                 Console.WriteLine("Ha finalizado la operación.");
-                System.Environment.Exit(0);
+                Console.WriteLine("Ingrese cualquier tecla para continuar");
+                Console.ReadKey();
+
             }
             if (menuConfirmacion == 1)
             {
+                Console.Clear();
                 Console.WriteLine("Ha generado su solicitud con éxito!\n Gracias por utilizar nuestros servicios!");
+                Console.WriteLine("Ingrese cualquier tecla para continuar");
+                Console.ReadKey();
 
                 /*
                  * No es necesario para el prototipo.
@@ -212,7 +231,7 @@ namespace CAIGrupoH
                 */
 
             }
-
+            Console.Clear();
             return envioNacional;
         }
 
