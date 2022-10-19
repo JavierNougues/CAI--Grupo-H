@@ -2,6 +2,9 @@
 {
     internal class OrdenDeServicio
     {
+         /*
+         * No es necesaria para el prototipo.
+         * 
         //Propiedades
         public string? NumeroCliente { get; set; }
         public string? OrdenServicio { get; set; }
@@ -28,5 +31,6 @@
         {
             ordenesDeServicio.Add(nuevaOrdenDeServicio);
         }
+        */
     }
 }

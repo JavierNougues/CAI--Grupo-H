@@ -2,8 +2,8 @@
 /*
 Prototipo:
 
-Cliente: 123456789
-Contraseña: 123456789
+Cliente: 1234
+Contraseña: 1234
 DNI: 40506070
 
 
@@ -36,20 +36,19 @@ Posible camino de Envio internacional:
 */
 
 namespace CAIGrupoH
-    {
+{
     class Program
     {
         static void Main(string[] strings)
         {
             // Ingreso de Cliente + Contraseña
-            int numeroCliente = Validaciones.ValidarIntIngresado("Bienvenido! \n Ingrese su número de cliente: ", 0, 12345);
+            int numeroCliente = Validaciones.ValidarIntIngresado("Bienvenido! \nIngrese su número de cliente: ", 0, 12345);
             Validaciones.ValidarCliente(numeroCliente);
 
-            string contraseñaCliente = Validaciones.ValidarStringIngresado("Ingrese contraseña: ", "");
-            //string contraseñaCliente = Console.ReadLine();
-            //Validaciones.ValidarStringIngresado("Ingrese contraseña: ", "", contraseñaCliente);
+            Console.WriteLine("Ingrese contraseña: ");
+            string contraseñaCliente = Console.ReadLine();
             Validaciones.ValidarContraseñaCliente(contraseñaCliente);
-            
+
             // Ingreso DNI empleado
             int dniAutorizado = Validaciones.ValidarIntIngresado("Ingrese DNI: ", 0, 60606060);
             Validaciones.ValidarDNI(dniAutorizado);
@@ -76,7 +75,7 @@ namespace CAIGrupoH
                     }
                 case 4:
                     {
-                        //var realizarEstadoDeCuenta = EstadoDeCuenta.ConsultarEstado(numeroCliente);
+                        Validaciones.ValidarEstadoCuenta(numeroCliente);
                         break;
                     }
                 case 0:

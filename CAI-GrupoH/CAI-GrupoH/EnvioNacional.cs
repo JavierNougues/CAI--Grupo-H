@@ -20,7 +20,7 @@ namespace CAIGrupoH
             while (true)
             {
                 string tipoPaquete = "";
-                int menuTipoPaquete = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de paquete: ", "1. Correspondencia: hasta 500gr. \n 2. Encomienda: hasta 30kg.", 1, 2);
+                int menuTipoPaquete = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de paquete: ", "1. Correspondencia: hasta 500gr.\n2. Encomienda: hasta 30kg.", 1, 2);
 
                 if (menuTipoPaquete == 1)
                 {
@@ -46,40 +46,42 @@ namespace CAIGrupoH
             if (envioNacional.TipoPaquete == "Encomienda")
             {
                 Console.WriteLine("No implementado.");
-            /*
-                string pesoEncomienda = "";
-                int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el peso del paquete a enviar: ", "1. Bultos hasta 10Kg. \n 2. Bultos hasta 20Kg.\n 3. Bultos hasta 30Kg.", 1, 3);
+                System.Environment.Exit(0);
+                /*
+                    string pesoEncomienda = "";
+                    int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el peso del paquete a enviar: ", "1. Bultos hasta 10Kg. \n 2. Bultos hasta 20Kg.\n 3. Bultos hasta 30Kg.", 1, 3);
 
-                switch (menuPrincipal)
-                {
-                    case 1:
-                        {
-                            pesoEncomienda = "Bultos hasta 10Kg.";
-                            break;
-                        }
-                    case 2:
-                        {
-                            pesoEncomienda = "Bultos hasta 20Kg.";
-                            break;
-                        }
-                    case 3:
-                        {
-                            pesoEncomienda = "Bultos hasta 30Kg.";
-                            break;
-                        }
-                }
-                envioNacional.PesoPaquete = pesoEncomienda;
-            */
+                    switch (menuPrincipal)
+                    {
+                        case 1:
+                            {
+                                pesoEncomienda = "Bultos hasta 10Kg.";
+                                break;
+                            }
+                        case 2:
+                            {
+                                pesoEncomienda = "Bultos hasta 20Kg.";
+                                break;
+                            }
+                        case 3:
+                            {
+                                pesoEncomienda = "Bultos hasta 30Kg.";
+                                break;
+                            }
+                    }
+                    envioNacional.PesoPaquete = pesoEncomienda;
+                */
             }
 
             do
             {
-                int menuTipoEnvio = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de envío:", "1. Envío urgente: 48hs. \n2. Envío normal.", 1, 2);
+                int menuTipoEnvio = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de envío:", "1. Envío urgente: 48hs.\n2. Envío normal.", 1, 2);
                 string tipoEnvio = "";
                 if (menuTipoEnvio == 1)
                 {
                     //No implemetado
                     Console.WriteLine("No implementado.");
+                    System.Environment.Exit(0);
                     //tipoEnvio = "Envío urgente";
                 }
                 if (menuTipoEnvio == 2)
@@ -115,7 +117,7 @@ namespace CAIGrupoH
                 // Cargo fijo por retiro en sucursal..
                 tarifaPaquete += 100;
             }
-            if(envioNacional.RetiroPaquete.RetiroRegion != envioNacional.EntregaPaquete.EntregaRegion)
+            if (envioNacional.RetiroPaquete.RetiroRegion != envioNacional.EntregaPaquete.EntregaRegion)
             {
                 // Tarifa extra por entega interegional.
                 tarifaPaquete += 500;
@@ -136,7 +138,7 @@ namespace CAIGrupoH
                 }
             }
             */
-            if(envioNacional.EntregaPaquete.TipoEntrega == "Retiro en sucursal")
+            if (envioNacional.EntregaPaquete.TipoEntrega == "Retiro en sucursal")
             {
                 // Cargo fijo por entrega en sucursal.
                 tarifaPaquete += 100;
@@ -159,21 +161,27 @@ namespace CAIGrupoH
             envioNacional.OrdenDeServicio = sigOrdenDeServicio.ToString();
 
             // Mostramos en pantalla el envio al detalle: --> esto lo podemos modularizar despues.
+            Console.Write("---------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine($"Numero de Orden: {envioNacional.OrdenDeServicio}\n");
             Console.WriteLine("Tipo de Envio: Nacional\n");
             Console.WriteLine($"Tipo de Paquete: {envioNacional.TipoPaquete}\n");
-            Console.WriteLine($"Peso: {envioNacional.PesoPaquete}\n\n");
+            Console.WriteLine($"Peso: {envioNacional.PesoPaquete}");
             Console.WriteLine($"Importe: ${envioNacional.TarifaPaqueteNacional.ToString()}");
+            Console.Write("---------------------------------------------------------------------------------------------------------------------------");
 
             // Confirmamos la orden
-            int menuConfirmacion = Validaciones.ValidarMenuPrincipal("Desea confirmar la operación:", "\n 1. Si \n 2. No", 1, 2);
+            int menuConfirmacion = Validaciones.ValidarMenuPrincipal("Desea confirmar la operación:", "\nPresione: 1 (Si) \nPresione: 2. (No)", 1, 2);
             if (menuConfirmacion == 2)
             {
-                Console.WriteLine("Ha finalizado la operación. \n Presione 0 para salir.");
+                Console.WriteLine("Ha finalizado la operación.");
                 System.Environment.Exit(0);
             }
-            if(menuConfirmacion == 1)
+            if (menuConfirmacion == 1)
             {
+                Console.WriteLine("Ha generado su solicitud con éxito!\n Gracias por utilizar nuestros servicios!");
+
+                /*
+                 * No es necesario para el prototipo.
                 //Creamos la orden
                 OrdenDeServicio nuevaOrdenDeServicio = new OrdenDeServicio();
                 // Asignamos todos los valores --> despues se puede modularizar
@@ -201,11 +209,12 @@ namespace CAIGrupoH
 
                 // Agregamos orden a Lista de ordenes de servicio
                 nuevaOrdenDeServicio.ListaOrdenesDeServicio(nuevaOrdenDeServicio);
+                */
 
             }
 
             return envioNacional;
-        }        
+        }
 
     }
 }

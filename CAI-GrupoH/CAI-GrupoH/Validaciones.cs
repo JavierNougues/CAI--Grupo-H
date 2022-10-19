@@ -11,10 +11,12 @@ namespace CAIGrupoH
                 if (cliente != 1234)
                 {
                     Console.WriteLine("Cliente invalido. Intente nuevamente: ");
+                    cliente = int.Parse(Console.ReadLine());
                     continue;
                 }
-
+                break;
             } while (true);
+            return cliente;
         }
 
         static public string ValidarContraseñaCliente(string contraseña)
@@ -25,9 +27,12 @@ namespace CAIGrupoH
                 if (contraseña != "1234")
                 {
                     Console.WriteLine("Contraseña invalida. Intente nuevamente:");
+                    contraseña = Console.ReadLine();
                     continue;
                 }
+                break;
             } while (true);
+            return contraseña;
         }
 
         static public int ValidarDNI(int dni)
@@ -38,9 +43,12 @@ namespace CAIGrupoH
                 if (dni != 40506070)
                 {
                     Console.WriteLine("DNI invalido. Intente nuevamente: ");
+                    dni = int.Parse(Console.ReadLine());
                     continue;
                 }
+                break;
             } while (true);
+            return dni;
         }
 
         public static string ValidarOrdenServicio(int numeroOrden)
@@ -50,14 +58,23 @@ namespace CAIGrupoH
                 if (numeroOrden != 100)
                 {
                     Console.WriteLine("Orden de Servicio inválida. Intente nuevamente: ");
+                    numeroOrden = int.Parse(Console.ReadLine());
                     continue;
                 }
                 else
                 {
-                    Console.WriteLine("El estado de su Orden de Servicio es: 'Iniciado'");
+                    Console.WriteLine("El estado de su Orden de Servicio es: 'Iniciado'. ");
+                    Console.WriteLine("Gracias por su consulta!.");
                 }
+                break;
             } while (true);
+            return numeroOrden.ToString();
+        }
 
+        public static string ValidarEstadoCuenta(int numeroCliente)
+        {
+            Console.WriteLine("Actualmente posee un saldo negativo: adeuda $1000.");
+            return numeroCliente.ToString();
         }
 
         static public int ValidarMenuPrincipal(string mensaje, string mensajeDesc, int min, int max)
@@ -89,59 +106,6 @@ namespace CAIGrupoH
             return opcion;
         }
 
-        /*
-        public static string ValidarStringIngresado(string mensaje, string mensajeDesc, string texto)
-        {
-            do
-            {
-                Console.WriteLine(mensaje);
-                Console.WriteLine(mensajeDesc);
-                bool entero;
-                if (texto.Length <= 0)
-                {
-                    Console.WriteLine("Por favor ingrese una cadena de texto.");
-                    continue;
-                }
-                if (entero = int.TryParse(texto, out int intEntero))
-                {
-                    if (entero == true)
-                    {
-                        Console.WriteLine("Por favor ingrese una cedena de texto.");
-                        continue;
-                    }
-                }
-            } while (true);
-        }
-        */
-        /*
-        public static int ValidarIntIngresado(string mensaje, int min, int max, int intIngresado)
-        {
-            do
-            {
-                int intEntero;
-                Console.WriteLine(mensaje);
-                bool entero = int.TryParse(intIngresado, out intEntero);
-                if (entero == false)
-                {
-                    Console.WriteLine($"Por favor ingrese una altura válida: entre {min} y {max} dígitos.");
-                    continue;
-                }
-                if (intEntero.ToString().Length < min)
-                {
-                    Console.WriteLine($"Por favor ingrese una altura válida: entre {min} y {max} dígitos.");
-                    continue;
-                }
-                if (intEntero.ToString().Length > max)
-                {
-                    Console.WriteLine($"Por favor ingrese una altura válida: entre {min} y {max} dígitos.");
-                    continue;
-                }
-            } while (true);
-        }
-        */
-
-
-        
         static public string ValidarStringIngresado(string mensaje, string mensajeDesc)
         {
 
@@ -169,9 +133,9 @@ namespace CAIGrupoH
             } while (true);
             return stringIngresado;
         }
-        
 
-        
+
+
         static public int ValidarIntIngresado(string mensaje, int min, int max)
         {
 
@@ -200,7 +164,7 @@ namespace CAIGrupoH
             } while (true);
             return intEntero;
         }
-        
+
 
     }
 }
