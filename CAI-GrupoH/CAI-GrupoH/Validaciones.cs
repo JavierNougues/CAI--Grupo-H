@@ -4,56 +4,60 @@ namespace CAIGrupoH
 {
     internal class Validaciones
     {
-        static public string ValidarCliente(string mensaje)
+        static public int ValidarCliente(int cliente)
         {
-            Console.WriteLine(mensaje);
-            string numeroCliente;
             do
             {
-                // Cliente hardcodeado.
-                numeroCliente = Console.ReadLine();
-                if (numeroCliente != "123456789")
+                if (cliente != 1234)
                 {
-                    Console.WriteLine("Cliente invalido.");
+                    Console.WriteLine("Cliente invalido. Intente nuevamente: ");
                     continue;
                 }
 
             } while (true);
-            return numeroCliente;
         }
 
-        static public string ValidarContraseñaCliente(string mensaje)
+        static public string ValidarContraseñaCliente(string contraseña)
         {
-            Console.WriteLine(mensaje);
-            string contraseñaCliente = "";
             do
             {
                 // Cliente hardcodeado.
-                contraseñaCliente = Console.ReadLine();
-                if (contraseñaCliente != "123456789")
+                if (contraseña != "1234")
                 {
-                    Console.WriteLine("Contraseña invalida.");
+                    Console.WriteLine("Contraseña invalida. Intente nuevamente:");
                     continue;
                 }
             } while (true);
-            return contraseñaCliente;
         }
 
-        static public string ValidarDNI(string mensaje)
+        static public int ValidarDNI(int dni)
         {
-            Console.WriteLine(mensaje);
-            string numeroDNI;
             do
             {
                 // DNI hardcodeado.
-                numeroDNI = Console.ReadLine();
-                if (numeroDNI != "40506070")
+                if (dni != 40506070)
                 {
-                    Console.WriteLine("DNI invalido.");
+                    Console.WriteLine("DNI invalido. Intente nuevamente: ");
                     continue;
                 }
             } while (true);
-            return numeroDNI;
+        }
+
+        public static string ValidarOrdenServicio(int numeroOrden)
+        {
+            do
+            {
+                if (numeroOrden != 100)
+                {
+                    Console.WriteLine("Orden de Servicio inválida. Intente nuevamente: ");
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine("El estado de su Orden de Servicio es: 'Iniciado'");
+                }
+            } while (true);
+
         }
 
         static public int ValidarMenuPrincipal(string mensaje, string mensajeDesc, int min, int max)
@@ -85,6 +89,59 @@ namespace CAIGrupoH
             return opcion;
         }
 
+        /*
+        public static string ValidarStringIngresado(string mensaje, string mensajeDesc, string texto)
+        {
+            do
+            {
+                Console.WriteLine(mensaje);
+                Console.WriteLine(mensajeDesc);
+                bool entero;
+                if (texto.Length <= 0)
+                {
+                    Console.WriteLine("Por favor ingrese una cadena de texto.");
+                    continue;
+                }
+                if (entero = int.TryParse(texto, out int intEntero))
+                {
+                    if (entero == true)
+                    {
+                        Console.WriteLine("Por favor ingrese una cedena de texto.");
+                        continue;
+                    }
+                }
+            } while (true);
+        }
+        */
+        /*
+        public static int ValidarIntIngresado(string mensaje, int min, int max, int intIngresado)
+        {
+            do
+            {
+                int intEntero;
+                Console.WriteLine(mensaje);
+                bool entero = int.TryParse(intIngresado, out intEntero);
+                if (entero == false)
+                {
+                    Console.WriteLine($"Por favor ingrese una altura válida: entre {min} y {max} dígitos.");
+                    continue;
+                }
+                if (intEntero.ToString().Length < min)
+                {
+                    Console.WriteLine($"Por favor ingrese una altura válida: entre {min} y {max} dígitos.");
+                    continue;
+                }
+                if (intEntero.ToString().Length > max)
+                {
+                    Console.WriteLine($"Por favor ingrese una altura válida: entre {min} y {max} dígitos.");
+                    continue;
+                }
+            } while (true);
+        }
+        */
+
+
+        
         static public string ValidarStringIngresado(string mensaje, string mensajeDesc)
         {
 
@@ -112,8 +169,10 @@ namespace CAIGrupoH
             } while (true);
             return stringIngresado;
         }
+        
 
-        static public string ValidarIntIngresado(string mensaje, int min, int max)
+        
+        static public int ValidarIntIngresado(string mensaje, int min, int max)
         {
 
             int intEntero;
@@ -139,7 +198,9 @@ namespace CAIGrupoH
                 }
                 break;
             } while (true);
-            return intEntero.ToString();
+            return intEntero;
         }
+        
+
     }
 }

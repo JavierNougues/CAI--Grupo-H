@@ -41,11 +41,18 @@ namespace CAIGrupoH
     {
         static void Main(string[] strings)
         {
-            //Ingreso de Cliente + Contraseña
-            string numeroCliente = Validaciones.ValidarCliente("Bienvenido! \n Ingrese su número de cliente: ");
-            string contraseñaCliente = Validaciones.ValidarContraseñaCliente("Ingrese contraseña: ");
-            string dniAutorizado = Validaciones.ValidarDNI("Ingrese DNI: ");
+            // Ingreso de Cliente + Contraseña
+            int numeroCliente = Validaciones.ValidarIntIngresado("Bienvenido! \n Ingrese su número de cliente: ", 0, 12345);
+            Validaciones.ValidarCliente(numeroCliente);
 
+            string contraseñaCliente = Validaciones.ValidarStringIngresado("Ingrese contraseña: ", "");
+            //string contraseñaCliente = Console.ReadLine();
+            //Validaciones.ValidarStringIngresado("Ingrese contraseña: ", "", contraseñaCliente);
+            Validaciones.ValidarContraseñaCliente(contraseñaCliente);
+            
+            // Ingreso DNI empleado
+            int dniAutorizado = Validaciones.ValidarIntIngresado("Ingrese DNI: ", 0, 60606060);
+            Validaciones.ValidarDNI(dniAutorizado);
 
             // Menu Princiapl: Opciones
             int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione la acción a realizar: ", "1. Envío Nacional \n2. Envío Internacional \n3. Consultar Estado de su Envío \n4. Consultar Estado de su Cuenta Corriente \n0. Salir", 0, 4);
@@ -63,8 +70,8 @@ namespace CAIGrupoH
                     }
                 case 3:
                     {
-                        //var realizarConsultaEnvio = OrdenDeServicio.MostrarOrden();
-                        //Console.ReadLine();
+                        int numeroOrden = Validaciones.ValidarIntIngresado("Ingrese el Número de Orden de Servicio:", 1, 500);
+                        Validaciones.ValidarOrdenServicio(numeroOrden);
                         break;
                     }
                 case 4:
