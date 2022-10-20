@@ -14,6 +14,7 @@ namespace CAIGrupoH
                     cliente = int.Parse(Console.ReadLine());
                     continue;
                 }
+                Console.Clear();
                 break;
             } while (true);
             return cliente;
@@ -30,6 +31,7 @@ namespace CAIGrupoH
                     contraseña = Console.ReadLine();
                     continue;
                 }
+                Console.Clear();
                 break;
             } while (true);
             return contraseña;
@@ -46,6 +48,7 @@ namespace CAIGrupoH
                     dni = int.Parse(Console.ReadLine());
                     continue;
                 }
+                Console.Clear();
                 break;
             } while (true);
             return dni;
@@ -96,16 +99,19 @@ namespace CAIGrupoH
                 bool ingresoCorrecto = int.TryParse(ingreso, out opcion);
                 if (!ingresoCorrecto)
                 {
+                    Console.Clear();
                     Console.WriteLine("La opción seleccionada es inválida, seleccione nuevamente: ");
                     continue;
                 }
                 if (opcion < min)
                 {
+                    Console.Clear();
                     Console.WriteLine($"La opción seleccionada es inválida. No debe ser menor a: {min}");
                     continue;
                 }
                 if (opcion > max)
                 {
+                    Console.Clear();
                     Console.WriteLine($"La opción seleccionada es inválida. No debe ser mayor a: {max}");
                     continue;
                 }

@@ -32,7 +32,7 @@ Posible camino de Envio internacional:
         - Provincia: Buenos Aires
         - Localidad: Belgrano
         - Sucursal: Belgrano
-    - Destino del paquete: 
+    - Destino del paquete(Retiro en Sucursal): 
         - Region: Europa
         - Pais: España
 */
