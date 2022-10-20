@@ -67,11 +67,11 @@
                     Console.Clear();
                     do
                     {
-                        var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se retira el paquete: ", "");
+                        var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se retira el paquete: ", "").ToLower();
 
                     // Hardcodeado
                    
-                        if (region != "CABA")
+                        if (region != "caba")
                         {
                             // No implementado.
                             Console.WriteLine("No implementado.\n");
@@ -88,11 +88,11 @@
                     Console.Clear();
                     do
                     {
-                        var provincia = Validaciones.ValidarStringIngresado("Ingrese la provincia donde se retira el paquete:", "");
+                        var provincia = Validaciones.ValidarStringIngresado("Ingrese la provincia donde se retira el paquete:", "").ToLower();
 
                     // Hardcodeado
                     
-                        if (provincia != "Buenos Aires")
+                        if (provincia != "buenos aires")
                         {
                             // No implementado.
                             Console.WriteLine("No implementado.\n");
@@ -110,11 +110,11 @@
                     Console.Clear();
                     do
                     {
-                        var localidad = Validaciones.ValidarStringIngresado("Ingrese la localidad donde se retira el paquete:", "");
+                        var localidad = Validaciones.ValidarStringIngresado("Ingrese la localidad donde se retira el paquete:", "").ToLower();
 
                     // Hardcodeado
                    
-                        if (localidad != "Belgrano")
+                        if (localidad != "belgrano")
                         {
                             // No implementado.
                             Console.WriteLine("No implementado.\n");
@@ -132,11 +132,11 @@
                     Console.Clear();
                     do
                     {
-                        var nombreSucursal = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paquete:", "");
+                        var nombreSucursal = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paquete:", "").ToLower();
 
                     // Hardcodeado
                     
-                        if (nombreSucursal != "Belgrano")
+                        if (nombreSucursal != "belgrano")
                         {
                             // No implementado.
                             Console.WriteLine("No implementado.\n");
@@ -202,7 +202,7 @@
                     Console.Clear();
                     do
                     {
-                        var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se entrega el paquete: ", "");
+                        var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se entrega el paquete: ", "").ToLower();
 
                     // Hardcodeado
                     
@@ -225,11 +225,11 @@
                     Console.Clear();
                     do
                     {
-                        var provincia = Validaciones.ValidarStringIngresado("Ingrese la provincia donde se entrega el paquete: ", "");
+                        var provincia = Validaciones.ValidarStringIngresado("Ingrese la provincia donde se entrega el paquete: ", "").ToLower();
 
                     // Hardcodeado
                    
-                        if (provincia != "Catamarca")
+                        if (provincia != "catamarca")
                         {
                             // No implementado.
                             Console.WriteLine("No implementado.\n");
@@ -247,11 +247,11 @@
                     Console.Clear();
                     do
                     {
-                        var localidad = Validaciones.ValidarStringIngresado("Ingrese la localidad donde se entrega el paquete:", "");
+                        var localidad = Validaciones.ValidarStringIngresado("Ingrese la localidad donde se entrega el paquete:", "").ToLower();
 
                     // Hardcodeado
                    
-                        if (localidad != "San Fernando del Valle de Catamarca")
+                        if (localidad != "san fernando del valle de catamarca")
                         {
                             // No implementado.
                             Console.WriteLine("No implementado.\n");
@@ -270,11 +270,11 @@
                      Console.Clear();
                     do
                     {
-                        var nombreSucursal = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paquete:", "");
+                        var nombreSucursal = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paquete:", "").ToLower();
 
                     // Hardcodeado
                     
-                        if (nombreSucursal != "San Fernando del Valle de Catamarca")
+                        if (nombreSucursal != "san fernando del valle de catamarca")
                         {
                             // No implementado.
                             Console.WriteLine("No implementado.\n");
