@@ -23,6 +23,7 @@
         // Retiro del paquete para ser enviado
         public static Region RetiroPaquete()
         {
+            Console.Clear();
             var tipoRecepcion = new Region();
             while (true)
             {
@@ -30,8 +31,12 @@
                 if (menuOrigenPaquete == 1)
                 {
                     // No implementado.
-                    Console.WriteLine("No implementado.");
-                    System.Environment.Exit(0);
+                    Console.WriteLine("No implementado.\n");
+                    Console.WriteLine("Ingrese cualquier tecla para continuar");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    continue;
                     /*
                     tipoRecepcion.TipoRecepcion = "Retiro en puerta";
 
@@ -59,64 +64,80 @@
                     tipoRecepcion.TipoRecepcion = "Retiro en sucursal";
 
                     // Region de retiro
-                    var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se retira el paquete: ", "");
-
-                    // Hardcodeado
+                    Console.Clear();
                     do
                     {
+                        var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se retira el paquete: ", "");
+
+                    // Hardcodeado
+                   
                         if (region != "CABA")
                         {
-                            Console.WriteLine("No implementado. Intente nuevamente:");
-                            region = Console.ReadLine();
+                            Console.Clear();
+                            Console.WriteLine("No implementado");
+                            continue;
                         }
+                        tipoRecepcion.RetiroRegion = region;
                         break;
                     } while (true);
-                    tipoRecepcion.RetiroRegion = region;
+                    
 
                     // Provincia de retiro
-                    var provincia = Validaciones.ValidarStringIngresado("Ingrese la provincia donde se retira el paquete:", "");
-
-                    // Hardcodeado
+                    Console.Clear();
                     do
                     {
+                        var provincia = Validaciones.ValidarStringIngresado("Ingrese la provincia donde se retira el paquete:", "");
+
+                    // Hardcodeado
+                    
                         if (provincia != "Buenos Aires")
                         {
-                            Console.WriteLine("No implementado. Intente nuevamente:");
-                            provincia = Console.ReadLine();
+                            Console.Clear();
+                            Console.WriteLine("No implementado");
+                            continue;
                         }
+                        tipoRecepcion.RetiroProvincia = provincia;
                         break;
                     } while (true);
-                    tipoRecepcion.RetiroProvincia = provincia;
+                    
 
                     // Localidad de retiro
-                    var localidad = Validaciones.ValidarStringIngresado("Ingrese la localidad donde se retira el paquete:", "");
-
-                    // Hardcodeado
+                    Console.Clear();
                     do
                     {
+                        var localidad = Validaciones.ValidarStringIngresado("Ingrese la localidad donde se retira el paquete:", "");
+
+                    // Hardcodeado
+                   
                         if (localidad != "Belgrano")
                         {
-                            Console.WriteLine("No implementado. Intente nuevamente:");
-                            localidad = Console.ReadLine();
+                            Console.Clear();
+                            Console.WriteLine("No implementado");
+                            continue;
                         }
+                        tipoRecepcion.RetiroLocalidad = localidad;
                         break;
                     } while (true);
-                    tipoRecepcion.RetiroLocalidad = localidad;
+                    
 
-                    // Sucursal de retiro                   
-                    var nombreSucursal = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paqete:", "");
-
-                    // Hardcodeado
+                    // Sucursal de retiro
+                    Console.Clear();
                     do
                     {
+                        var nombreSucursal = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paquete:", "");
+
+                    // Hardcodeado
+                    
                         if (nombreSucursal != "Belgrano")
                         {
-                            Console.WriteLine("No implementado. Intente nuevamente:");
-                            nombreSucursal = Console.ReadLine();
+                            Console.Clear();
+                            Console.WriteLine("No implementado");
+                            continue;
                         }
+                        tipoRecepcion.RetiroSucursal = nombreSucursal;
                         break;
                     } while (true);
-                    tipoRecepcion.RetiroSucursal = nombreSucursal;
+                    
                 }
                 break;
             }
@@ -129,12 +150,17 @@
             var tipoEntrega = new Region();
             while (true)
             {
+                Console.Clear();
                 int menuEntregaPaquete = Validaciones.ValidarMenuPrincipal("Seleccione la opción que mas le convenga: ", "1. Entrega del paquete en puerta.\n 2. Retiro en sucursal.", 1, 2);
                 if (menuEntregaPaquete == 1)
                 {
                     // No implementado.
-                    Console.WriteLine("No implementado.");
-                    System.Environment.Exit(0);
+                    Console.WriteLine("No implementado.\n");
+                    Console.WriteLine("Ingrese cualquier tecla para continuar");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    continue;
                     /*
                     tipoEntrega.TipoEntrega = "Entrega en puerta";
 
@@ -162,6 +188,7 @@
                     tipoEntrega.TipoEntrega = "Entrega en sucursal";
 
                     // Region de entrega
+                    Console.Clear();
                     var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se entrega el paquete: ", "");
 
                     // Hardcodeado
@@ -171,12 +198,14 @@
                         {
                             Console.WriteLine("No implementado. Intente nuevamente:");
                             region = Console.ReadLine();
+                            
                         }
                         break;
                     } while (true);
                     tipoEntrega.EntregaRegion = region;
 
                     // Provincia de entrega
+                    Console.Clear();
                     var provincia = Validaciones.ValidarStringIngresado("Ingrese la provincia donde se entrega el paquete: ", "");
 
                     // Hardcodeado
@@ -192,6 +221,7 @@
                     tipoEntrega.EntregaProvincia = provincia;
 
                     // Localidad de entrega
+                    Console.Clear();
                     var localidad = Validaciones.ValidarStringIngresado("Ingrese la localidad donde se entrega el paquete:", "");
 
                     // Hardcodeado
@@ -206,8 +236,9 @@
                     } while (true);
                     tipoEntrega.EntregaLocalidad = localidad;
 
-                    // Sucursal de entrega               
-                    var nombreSucursal = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paqete:", "");
+                    // Sucursal de entrega
+                     Console.Clear();
+                    var nombreSucursal = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paquete:", "");
 
                     // Hardcodeado
                     do

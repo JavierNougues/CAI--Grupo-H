@@ -19,6 +19,7 @@
             while (true)
             {
                 string tipoPaquete = "";
+                Console.Clear();
                 int menuTipoPaquete = Validaciones.ValidarMenuPrincipal("Seleccione el tipo de paquete: ", "1. Correspondencia: hasta 500gr.\n2. Encomienda: hasta 30kg.", 1, 2);
 
                 if (menuTipoPaquete == 1)
@@ -105,17 +106,18 @@
             envioInternacional.TarifaPaqueteInternacional = tarifaPaqueteInternacional;
 
             //Hardcodeado
-            int sigOrdenDeServicioInternacional = 100;
+            String sigOrdenDeServicioInternacional = "I100";
 
             // Asignamos nueva orden al envio nacional.
             envioInternacional.OrdenDeServicio = sigOrdenDeServicioInternacional.ToString();
 
             // Mostramos en pantalla el envio al detalle: --> esto lo podemos modularizar despues.
+            Console.Clear();
             Console.Write("---------------------------------------------------------------------------------------------------------------------------");
             Console.WriteLine($"Numero de Orden: {envioInternacional.OrdenDeServicio}\n");
-            Console.WriteLine("Tipo de Envio: Nacional\n");
+            Console.WriteLine("Tipo de Envio: Internacional\n");
             Console.WriteLine($"Tipo de Paquete: {envioInternacional.TipoPaquete}\n");
-            Console.WriteLine($"Peso: {envioInternacional.PesoPaquete}");
+            Console.WriteLine($"Peso: {envioInternacional.PesoPaquete}\n");
             Console.WriteLine($"Importe: ${envioInternacional.TarifaPaqueteInternacional.ToString()}");
             Console.Write("---------------------------------------------------------------------------------------------------------------------------");
 
@@ -123,14 +125,20 @@
             int menuConfirmacion = Validaciones.ValidarMenuPrincipal("Desea confirmar la operación:", "\nPresione: 1 (Si) \nPresione: 2. (No)", 1, 2);
             if (menuConfirmacion == 2)
             {
+                Console.Clear();
                 Console.WriteLine("Ha finalizado la operación.");
-                System.Environment.Exit(0);
+                Console.WriteLine("Ingrese cualquier tecla para continuar");
+                Console.ReadKey();
+
             }
             if (menuConfirmacion == 1)
             {
+                Console.Clear();
                 Console.WriteLine("Ha generado su solicitud con éxito!\n Gracias por utilizar nuestros servicios!");
+                Console.WriteLine("Ingrese cualquier tecla para continuar");
+                Console.ReadKey();
             }
-
+            Console.Clear();
             return envioInternacional;
         }
     }
