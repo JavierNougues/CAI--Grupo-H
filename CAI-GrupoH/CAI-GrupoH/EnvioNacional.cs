@@ -52,10 +52,6 @@ namespace CAIGrupoH
             //No implementado
             if (envioNacional.TipoPaquete == "Encomienda")
             {
-                Console.WriteLine("No implementado.");
-
-                
-                /*
                     string pesoEncomienda = "";
                     int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el peso del paquete a enviar: ", "1. Bultos hasta 10Kg. \n 2. Bultos hasta 20Kg.\n 3. Bultos hasta 30Kg.", 1, 3);
 
@@ -63,22 +59,21 @@ namespace CAIGrupoH
                     {
                         case 1:
                             {
-                                pesoEncomienda = "Bultos hasta 10Kg.";
+                                pesoEncomienda = "Bultos hasta 10Kg";
                                 break;
                             }
                         case 2:
                             {
-                                pesoEncomienda = "Bultos hasta 20Kg.";
+                                pesoEncomienda = "Bultos hasta 20Kg";
                                 break;
                             }
                         case 3:
                             {
-                                pesoEncomienda = "Bultos hasta 30Kg.";
+                                pesoEncomienda = "Bultos hasta 30Kg";
                                 break;
                             }
                     }
                     envioNacional.PesoPaquete = pesoEncomienda;
-                */
             }
             Console.Clear();
             do
@@ -87,6 +82,7 @@ namespace CAIGrupoH
                 string tipoEnvio = "";
                 if (menuTipoEnvio == 1)
                 {
+                    /*
                     //No implemetado
                     Console.WriteLine("No implementado.\n");
                     Console.WriteLine("Ingrese cualquier tecla para continuar");
@@ -94,7 +90,8 @@ namespace CAIGrupoH
                     Console.Clear();
 
                     continue;
-                    //tipoEnvio = "Envío urgente";
+                    */
+                    tipoEnvio = "Envio urgente";
                 }
                 if (menuTipoEnvio == 2)
                 {
@@ -104,8 +101,9 @@ namespace CAIGrupoH
                 break;
             } while (true);
 
+            /***************************************************************/
             // Origen del paquete (en puerta o presentacion en sucursal).
-            // Traigo info de la recepcion del paquete.
+            // Traigo info del retiro del paquete.
             var retiroPaquete = Region.RetiroPaquete();
             envioNacional.RetiroPaquete = retiroPaquete;
 
@@ -113,21 +111,32 @@ namespace CAIGrupoH
             // Traigo info de la entrega del paquete
             var entregaPaquete = Region.EntregaPaquete();
             envioNacional.EntregaPaquete = entregaPaquete;
+            /***************************************************************/
 
-
+            /***************************************************************/
             //Calculo de las tarifas
-            /* No implementado:
- *              - Encomiendas --> 10k, 20kg, 30kg.
- *              - Retiro en puerta.
- *              - Entrega en puerta.
- *              - Envio rapido.
-            */
             int tarifaPaquete = 0;
+
+            if (envioNacional.TipoEnvio == "Envio normal")
+            {
+                // Cargo fijo por envio normal.
+                tarifaPaquete += 200;
+            }
+            if (envioNacional.TipoEnvio == "Envio urgente")
+            {
+                // Cargo fijo por envio urgente.
+                tarifaPaquete += 400;
+            }
 
             if (envioNacional.RetiroPaquete.TipoRecepcion == "Retiro en sucursal")
             {
                 // Cargo fijo por retiro en sucursal..
                 tarifaPaquete += 100;
+            }
+            if (envioNacional.RetiroPaquete.TipoRecepcion == "Retiro en puerta")
+            {
+                // Cargo fijo por retiro en puerta.
+                tarifaPaquete += 400;
             }
             if (envioNacional.RetiroPaquete.RetiroRegion != envioNacional.EntregaPaquete.EntregaRegion)
             {
@@ -155,6 +164,28 @@ namespace CAIGrupoH
                 // Cargo fijo por entrega en sucursal.
                 tarifaPaquete += 100;
             }
+            if (envioNacional.EntregaPaquete.TipoEntrega == "Entrega en puerta")
+            {
+                // Cargo fijo por entrega en puerta.
+                tarifaPaquete += 400;
+            }
+
+            if (envioNacional.PesoPaquete == "Bultos hasta 10Kg")
+            {
+                // Cargo fijo por bulto de 10kg.
+                tarifaPaquete += 700;
+            }
+            if (envioNacional.PesoPaquete == "Bultos hasta 20Kg")
+            {
+                // Cargo fijo por bulto de 20kg.
+                tarifaPaquete += 900;
+            }
+            if (envioNacional.PesoPaquete == "Bultos hasta 30Kg")
+            {
+                // Cargo fijo por bulto de 30kg.
+                tarifaPaquete += 1100;
+            }
+
 
             envioNacional.TarifaPaqueteNacional = tarifaPaquete;
 
