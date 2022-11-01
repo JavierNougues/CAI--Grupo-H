@@ -29,7 +29,7 @@ namespace CAIGrupoH
             var tipoRecepcion = new Region();
             while (true)
             {
-                int menuOrigenPaquete = Validaciones.ValidarMenuPrincipal("Seleccione la opción que mas le convenga: ", "1. Retiro del paquete en puerta.\n2. Presentación en sucursal.", 1, 2);
+                int menuOrigenPaquete = Validaciones.ValidarMenuPrincipal("Retiro del Paquete. \nSeleccione la opción que mas le convenga: ", "1. Retiro del paquete en puerta.\n2. Presentación en sucursal.", 1, 2);
                 if (menuOrigenPaquete == 1)
                 {
                     tipoRecepcion.TipoRecepcion = "Retiro en puerta";
@@ -95,9 +95,9 @@ namespace CAIGrupoH
 
                     // Dirección exacta de retiro
                     Console.Clear();
-                    var direccionCalle = Validaciones.ValidarStringIngresado("Seleccione la calle donde se realizara el retiro del paquete:", "Aclaración: solo la calle.");
+                    var direccionCalle = Validaciones.ValidarStringIngresado("Ingrese la calle donde se realizara el retiro del paquete:", "Aclaración: solo la calle.");
                     Console.Clear();
-                    var direccionNumero = Validaciones.ValidarIntIngresado("Seleccione la altura de la calle donde se realizara el retiro del paquete:", 0, 4);
+                    var direccionNumero = Validaciones.ValidarIntIngresado("Ingrese la altura de la calle donde se realizara el retiro del paquete:", 0, 4);
                     tipoRecepcion.RetiroDireccion = direccionCalle;
                     tipoRecepcion.RetiroDireccionNumero = direccionNumero.ToString();
                     
@@ -198,7 +198,7 @@ namespace CAIGrupoH
             while (true)
             {
                 Console.Clear();
-                int menuEntregaPaquete = Validaciones.ValidarMenuPrincipal("Seleccione la opción que mas le convenga: ", "1. Entrega del paquete en puerta. \n2. Retiro en sucursal.", 1, 2);
+                int menuEntregaPaquete = Validaciones.ValidarMenuPrincipal("Entrega del Paquete. \nSeleccione la opción que mas le convenga: ", "1. Entrega del paquete en puerta. \n2. Retiro en sucursal.", 1, 2);
                 if (menuEntregaPaquete == 1)
                 {
                     tipoEntrega.TipoEntrega = "Entrega en puerta";

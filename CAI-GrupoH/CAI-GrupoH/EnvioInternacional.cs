@@ -28,9 +28,7 @@
                 }
                 if (menuTipoPaquete == 2)
                 {
-                    Console.WriteLine("No implementado.");
-                    System.Environment.Exit(0);
-                    //tipoPaquete = "Correspondencia";
+                    tipoPaquete = "Correspondencia";
                 }
 
                 envioInternacional.TipoPaquete = tipoPaquete;
@@ -43,14 +41,10 @@
                 envioInternacional.PesoPaquete = pesoEncomienda;
             }
 
-            //No implementado
             if (envioInternacional.TipoPaquete == "Encomienda")
             {
-                Console.WriteLine("No implementado.");
-                System.Environment.Exit(0);
-                /*
                     string pesoEncomienda = "";
-                    int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el peso del paquete a enviar: ", "1. Bultos hasta 10Kg.\n 2. Bultos hasta 20Kg.\n 3. Bultos hasta 30Kg.", 1, 3);
+                    int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el peso del paquete a enviar: ", "1. Bultos hasta 10Kg. \n2. Bultos hasta 20Kg. \n3. Bultos hasta 30Kg.", 1, 3);
 
                     switch (menuPrincipal)
                     {
@@ -70,10 +64,10 @@
                                 break;
                             }
                     }
-                    envioNacional.PesoPaquete = pesoEncomienda;
-                */
+                    envioInternacional.PesoPaquete = pesoEncomienda;
             }
 
+            /***************************************************************/
             // Origen del paquete (en puerta o presentacion en sucursal).
             // Traigo info de la recepcion internacional.
             var retiroPaquete = RegionInternacional.RetiroPaqueteInternacional();
@@ -83,13 +77,10 @@
             // Traigo info de la entrega internacional.
             var entregaPaquete = RegionInternacional.EntregaPaqueteInternacional();
             envioInternacional.EntregaPaqueteInternacional = entregaPaquete;
+            /***************************************************************/
 
-
+            /***************************************************************/
             //Calculo de las tarifas
-            /* No implementado:
- *              - Encomiendas --> 10k, 20kg, 30kg.
- *              - Retiro en puerta.
-            */
             int tarifaPaqueteInternacional = 0;
 
             if (envioInternacional.RetiroPaqueteInternacional.TipoRecepcionInternacional == "Retiro en sucursal")
@@ -97,10 +88,31 @@
                 // Cargo fijo por retiro en sucursal..
                 tarifaPaqueteInternacional += 100;
             }
+            if (envioInternacional.RetiroPaqueteInternacional.TipoRecepcionInternacional == "Retiro en puerta")
+            {
+                // Cargo fijo por retiro en puerta.
+                tarifaPaqueteInternacional += 400;
+            }
             if (envioInternacional.EntregaPaqueteInternacional.EntregaRegionInternacional == "Europa")
             {
                 // Cargo por entrega a Europa.
                 tarifaPaqueteInternacional += 30000;
+            }
+
+            if (envioInternacional.PesoPaquete == "Bultos hasta 10Kg")
+            {
+                // Cargo fijo por bulto de 10kg.
+                tarifaPaqueteInternacional += 700;
+            }
+            if (envioInternacional.PesoPaquete == "Bultos hasta 20Kg")
+            {
+                // Cargo fijo por bulto de 20kg.
+                tarifaPaqueteInternacional += 900;
+            }
+            if (envioInternacional.PesoPaquete == "Bultos hasta 30Kg")
+            {
+                // Cargo fijo por bulto de 30kg.
+                tarifaPaqueteInternacional += 1100;
             }
 
             envioInternacional.TarifaPaqueteInternacional = tarifaPaqueteInternacional;
@@ -114,11 +126,26 @@
             // Mostramos en pantalla el envio al detalle: --> esto lo podemos modularizar despues.
             Console.Clear();
             Console.Write("---------------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine($"Numero de Orden: {envioInternacional.OrdenDeServicio}\n");
-            Console.WriteLine("Tipo de Envio: Internacional\n");
-            Console.WriteLine($"Tipo de Paquete: {envioInternacional.TipoPaquete}\n");
-            Console.WriteLine($"Peso: {envioInternacional.PesoPaquete}\n");
-            Console.WriteLine($"Importe: ${envioInternacional.TarifaPaqueteInternacional.ToString()}");
+            Console.WriteLine("Envio Internacional\n");
+            Console.WriteLine($"Numero de Orden: {envioInternacional.OrdenDeServicio.ToUpper()}\n");
+            Console.WriteLine($"Peso Paquete: {envioInternacional.PesoPaquete.ToUpper()}\n");
+            Console.WriteLine($"Importe: ${envioInternacional.TarifaPaqueteInternacional.ToString()}\n\n");
+
+            Console.Write("Origen del Paquete: \n");
+            Console.WriteLine($"Tipo de Retiro: {envioInternacional.RetiroPaqueteInternacional.TipoRecepcionInternacional.ToUpper()}\n");
+            Console.WriteLine($"Región de Retiro: {envioInternacional.RetiroPaqueteInternacional.RetiroRegionInternacional.ToUpper()}\n");
+            Console.WriteLine($"Provincia de Retiro: {envioInternacional.RetiroPaqueteInternacional.RetiroProvinciaInternacional.ToUpper()}\n");
+            Console.WriteLine($"Localidad de Retiro: {envioInternacional.RetiroPaqueteInternacional.RetiroLocalidadInternacional.ToUpper()}\n");
+            if (envioInternacional.RetiroPaqueteInternacional.RetiroSucursalInternacional != " ")
+            {
+                Console.WriteLine($"Sucursal de Retiro: {envioInternacional.RetiroPaqueteInternacional.RetiroSucursalInternacional.ToUpper()}\n \n");
+            }
+
+
+            Console.Write("Destino del Paquete: \n");
+            Console.WriteLine($"Tipo de Entrega: {envioInternacional.EntregaPaqueteInternacional.TipoEntregaInternacional.ToUpper()}\n");
+            Console.WriteLine($"Región de Entrega: {envioInternacional.EntregaPaqueteInternacional.EntregaRegionInternacional.ToUpper()}\n");
+            Console.WriteLine($"Provincia de Entrega: {envioInternacional.EntregaPaqueteInternacional.EntregaPaisInternacional.ToUpper()}\n");
             Console.Write("---------------------------------------------------------------------------------------------------------------------------");
 
             // Confirmamos la orden

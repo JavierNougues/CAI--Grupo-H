@@ -22,37 +22,77 @@
             while (true)
             {
                 Console.Clear();
-                int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione la opción que mas le convenga: ", "1. Retiro del paquete en puerta.\n2. Presentación en sucursal.", 1, 2);
+                int menuPrincipal = Validaciones.ValidarMenuPrincipal("Retiro del Paquete. \nSeleccione la opción que mas le convenga: ", "1. Retiro del paquete en puerta.\n2. Presentación en sucursal.", 1, 2);
                 if (menuPrincipal == 1)
                 {
-                    // No implementado.
-                    Console.WriteLine("No implementado.\n");
-                    Console.WriteLine("Ingrese cualquier tecla para continuar");
-                    Console.ReadKey();
-                    Console.Clear();
-
-                    continue;
-                    /*
-                    tipoRecepcion.TipoRecepcion = "Retiro en puerta";
+                    tipoRecepcionInternacional.TipoRecepcionInternacional = "Retiro en puerta";
 
                     // Region de retiro
-                    var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se retira el paquete: ", "");
-                    tipoRecepcion.RetiroRegion = region;
+                    Console.Clear();
+                    do
+                    {
+                        var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se retira el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
+
+                        // Hardcodeado
+                        if (menuRegion != 5)
+                        {
+                            Console.WriteLine("Region no implementada, intente nuevamente:");
+                            menuRegion = int.Parse(Console.ReadLine());
+                            Console.Clear();
+                            continue;
+                        }
+                        var region = "caba";
+                        tipoRecepcionInternacional.RetiroRegionInternacional = region;
+                        break;
+                    } while (true);
+
 
                     // Provincia de retiro
-                    var provincia = Validaciones.ValidarStringIngresado("Ingrese la provincia donde se retira el paquete: ", "");
-                    tipoRecepcion.RetiroProvincia = provincia;
+                    Console.Clear();
+                    do
+                    {
+                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires", 1, 1);
+
+                        // Hardcodeado
+
+                        if (menuProvincia != 1)
+                        {
+                            Console.WriteLine("Provincia no implementada, intente nuevamente:");
+                            menuProvincia = int.Parse(Console.ReadLine());
+                            Console.Clear();
+                            continue;
+                        }
+                        var provincia = "buenos aires";
+                        tipoRecepcionInternacional.RetiroProvinciaInternacional = provincia;
+                        break;
+                    } while (true);
+
 
                     // Localidad de retiro
-                    var localidad = Validaciones.ValidarStringIngresado("Ingrese la localidad donde se retira el paquete:", "");
-                    tipoRecepcion.RetiroLocalidad = localidad;
+                    Console.Clear();
+                    do
+                    {
+                        int menuLocalidad = Validaciones.ValidarMenuPrincipal("Seleccione la localidad donde se retira el paquete:", "1. Belgrano \n2. Caballito", 1, 2);
+                        if (menuLocalidad != 1)
+                        {
+                            Console.WriteLine("Localidad no implementada, intente nuevamente:");
+                            menuLocalidad = int.Parse(Console.ReadLine());
+                            Console.Clear();
+                            continue;
+                        }
+                        var localidad = "belgrano";
+                        tipoRecepcionInternacional.RetiroLocalidadInternacional = localidad;
+                        break;
+                    } while (true);
 
-                    // Dirección exacta de retiro                   
+
+                    // Dirección exacta de retiro
+                    Console.Clear();
                     var direccionCalle = Validaciones.ValidarStringIngresado("Ingrese la calle donde se realizara el retiro del paquete:", "Aclaración: solo la calle.");
+                    Console.Clear();
                     var direccionNumero = Validaciones.ValidarIntIngresado("Ingrese la altura de la calle donde se realizara el retiro del paquete:", 0, 4);
-                    tipoRecepcion.RetiroDireccion = direccionCalle;
-                    tipoRecepcion.RetiroDireccionNumero = direccionNumero;
-                    */
+                    tipoRecepcionInternacional.RetiroDireccionInternacional = direccionCalle;
+                    tipoRecepcionInternacional.RetiroDireccionNumeroInternacional = direccionNumero.ToString();
                 }
                 if (menuPrincipal == 2)
                 {
@@ -62,93 +102,81 @@
                     Console.Clear();
                     do
                     {
-                        var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se retira el paquete: ", "").ToLower();
+                        var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se retira el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
 
-                    // Hardcodeado
-                    
-                        if (region != "caba")
+                        // Hardcodeado
+                        if (menuRegion != 5)
                         {
-                            // No implementado.
-                            Console.WriteLine("No implementado.\n");
-                            Console.WriteLine("Ingrese cualquier tecla para continuar");
-                            Console.ReadKey();
+                            Console.WriteLine("Region no implementada, intente nuevamente:");
+                            menuRegion = int.Parse(Console.ReadLine());
                             Console.Clear();
-
                             continue;
                         }
+                        var region = "caba";
                         tipoRecepcionInternacional.RetiroRegionInternacional = region;
                         break;
                     } while (true);
-                    
+
 
                     // Provincia de retiro
                     Console.Clear();
                     do
                     {
-                        var provincia = Validaciones.ValidarStringIngresado("Ingrese la provincia donde se retira el paquete:", "").ToLower();
+                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires", 1, 1);
 
-                    // Hardcodeado
-                    
-                        if (provincia != "buenos aires")
+                        // Hardcodeado
+
+                        if (menuProvincia != 1)
                         {
-                            // No implementado.
-                            Console.WriteLine("No implementado.\n");
-                            Console.WriteLine("Ingrese cualquier tecla para continuar");
-                            Console.ReadKey();
+                            Console.WriteLine("Provincia no implementada, intente nuevamente:");
+                            menuProvincia = int.Parse(Console.ReadLine());
                             Console.Clear();
-
                             continue;
                         }
+                        var provincia = "buenos aires";
                         tipoRecepcionInternacional.RetiroProvinciaInternacional = provincia;
                         break;
                     } while (true);
-                    
+
 
                     // Localidad de retiro
                     Console.Clear();
-                    
-
-                    // Hardcodeado
                     do
                     {
-                        var localidad = Validaciones.ValidarStringIngresado("Ingrese la localidad donde se retira el paquete:", "").ToLower();
-                        if (localidad != "belgrano")
+                        int menuLocalidad = Validaciones.ValidarMenuPrincipal("Seleccione la localidad donde se retira el paquete:", "1. Belgrano \n2. Caballito", 1, 2);
+                        if (menuLocalidad != 1)
                         {
-                            // No implementado.
-                            Console.WriteLine("No implementado.\n");
-                            Console.WriteLine("Ingrese cualquier tecla para continuar");
-                            Console.ReadKey();
+                            Console.WriteLine("Localidad no implementada, intente nuevamente:");
+                            menuLocalidad = int.Parse(Console.ReadLine());
                             Console.Clear();
-
                             continue;
                         }
+                        var localidad = "belgrano";
                         tipoRecepcionInternacional.RetiroLocalidadInternacional = localidad;
                         break;
                     } while (true);
-                    
+
 
                     // Sucursal de retiro
-                     Console.Clear();
-                    
-
-                    // Hardcodeado
+                    Console.Clear();
                     do
                     {
-                        var nombreSucursal = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paquete:", "").ToLower();
-                        if (nombreSucursal != "belgrano")
-                        {
-                            // No implementado.
-                            Console.WriteLine("No implementado.\n");
-                            Console.WriteLine("Ingrese cualquier tecla para continuar");
-                            Console.ReadKey();
-                            Console.Clear();
+                        int menuNombreSucursal = Validaciones.ValidarMenuPrincipal("Seleccione la sucursal donde se realizara el retiro del paquete:", "1. Belgrano", 1, 1);
 
+                        // Hardcodeado
+
+                        if (menuNombreSucursal != 1)
+                        {
+                            Console.WriteLine("Sucursal no implementada, intente nuevamente:");
+                            menuNombreSucursal = int.Parse(Console.ReadLine());
+                            Console.Clear();
                             continue;
                         }
+                        var nombreSucursal = "belgrano";
                         tipoRecepcionInternacional.RetiroSucursalInternacional = nombreSucursal;
                         break;
                     } while (true);
-                    
+
                 }
                 break;
             }
@@ -159,61 +187,50 @@
         public static RegionInternacional EntregaPaqueteInternacional()
         {
             var tipoEntregaInternacional = new RegionInternacional();
+          
             while (true)
             {
+                tipoEntregaInternacional.TipoEntregaInternacional = "Entrega en sucursal";
                 Console.Clear();
-                int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione la opción que mas le convenga: ", "1. Retiro en sucursal.", 1, 1);
-                if (menuPrincipal == 1)
-                {
-                    tipoEntregaInternacional.TipoEntregaInternacional = "Entrega en sucursal";
 
                     // Region de entrega
                     Console.Clear();
-                    
-
                     // Harcodeado
                     do
                     {
-                        var region = Validaciones.ValidarStringIngresado("Ingrese la region donde se entrega el paquete: ", "").ToLower();
-                        if (region != "europa")
-                        {
-                            // No implementado.
-                            Console.WriteLine("No implementado.\n");
-                            Console.WriteLine("Ingrese cualquier tecla para continuar");
-                            Console.ReadKey();
-                            Console.Clear();
+                        int menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se entrega el paquete: ", "1. Europa \n2. Asia \n3. America del Norte \n4. Centro America", 1, 4);
 
+                        // Hardcodeado
+                        if (menuRegion != 1)
+                        {
+                            Console.WriteLine("Region no implementada, intente nuevamente:");
+                            menuRegion = int.Parse(Console.ReadLine());
+                            Console.Clear();
                             continue;
                         }
+                        var region = "europa";
                         tipoEntregaInternacional.EntregaRegionInternacional = region;
                         break;
                     } while (true);
-                    
+
 
                     // Pais de entrega
                     Console.Clear();
-                    
-
                     // Hardcodeado
                     do
                     {
-                        var nombrePais = Validaciones.ValidarStringIngresado("Ingrese la sucursal donde se realizara el retiro del paqete:", "").ToLower();
-                        if (nombrePais != "españa")
+                        int menuNombrePais = Validaciones.ValidarMenuPrincipal("Seleccione el país donde se entrega el paqete:", "1. España \n2. Francia \n3. Italia", 1, 3);
+                        if (menuNombrePais != 1)
                         {
-                            // No implementado.
-                            Console.WriteLine("No implementado.\n");
-                            Console.WriteLine("Ingrese cualquier tecla para continuar");
-                            Console.ReadKey();
+                            Console.WriteLine("Region no implementada, intente nuevamente:");
+                            menuNombrePais = int.Parse(Console.ReadLine());
                             Console.Clear();
-
                             continue;
                         }
+                        var nombrePais = "españa";
                         tipoEntregaInternacional.EntregaPaisInternacional = nombrePais;
                         break;
                     } while (true);
-                    
-                }
-                break;
             }
             return tipoEntregaInternacional;
         }
