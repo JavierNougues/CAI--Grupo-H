@@ -44,10 +44,14 @@ namespace CAIGrupoH
                         if (menuRegion != 5)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuRegion = int.Parse(Console.ReadLine());
+                            try {
+                                menuRegion = int.Parse(Console.ReadLine()); }
+                            catch {
+                                menuRegion = -1;
+                            }
                             Console.Clear();
                             continue;
-                        }
+                            }
                         var region = "caba";
                         tipoRecepcion.RetiroRegion = region;
                         break;
@@ -83,7 +87,10 @@ namespace CAIGrupoH
                         if (menuLocalidad != 1)
                         {
                         Console.WriteLine("Localidad no implementada, intente nuevamente:");
+                            try { 
                         menuLocalidad = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuLocalidad = -1; }
                         Console.Clear();
                         continue;
                         }
@@ -116,7 +123,11 @@ namespace CAIGrupoH
                         if (menuRegion != 5)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuRegion = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -137,7 +148,11 @@ namespace CAIGrupoH
                         if (menuProvincia != 1)
                         {
                             Console.WriteLine("Provincia no implementada, intente nuevamente:");
-                            menuProvincia = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuProvincia = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuProvincia = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -155,7 +170,11 @@ namespace CAIGrupoH
                         if (menuLocalidad != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
-                            menuLocalidad = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuLocalidad = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuLocalidad = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -176,7 +195,11 @@ namespace CAIGrupoH
                         if (menuNombreSucursal != 1)
                         {
                             Console.WriteLine("Sucursal no implementada, intente nuevamente:");
-                            menuNombreSucursal = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuNombreSucursal = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuNombreSucursal = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -214,7 +237,14 @@ namespace CAIGrupoH
                         if (menuRegion != 5)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuRegion = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch
+                            {
+                                menuRegion = -1;
+                            }
                             Console.Clear();
                             continue;
                         }
@@ -234,7 +264,11 @@ namespace CAIGrupoH
                         if (menuProvincia != 1)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuProvincia = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuProvincia = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuProvincia = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -253,7 +287,11 @@ namespace CAIGrupoH
                         if (menuLocalidad != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
-                            menuLocalidad = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuLocalidad = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuLocalidad = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -284,7 +322,11 @@ namespace CAIGrupoH
                         if (menuRegion != 5)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuRegion = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -304,7 +346,11 @@ namespace CAIGrupoH
                         if (menuProvincia != 1)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuProvincia = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuProvincia = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuProvincia = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -324,7 +370,11 @@ namespace CAIGrupoH
                         if (menuLocalidad != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
-                            menuLocalidad = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuLocalidad = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuLocalidad = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -345,7 +395,11 @@ namespace CAIGrupoH
                         if (menuNombreSucursal != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
-                            menuNombreSucursal = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuNombreSucursal = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuNombreSucursal = -1; }
                             Console.Clear();
                             continue;
                         }

@@ -37,7 +37,11 @@
                         if (menuRegion != 5)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuRegion = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -58,7 +62,11 @@
                         if (menuProvincia != 1)
                         {
                             Console.WriteLine("Provincia no implementada, intente nuevamente:");
-                            menuProvincia = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuProvincia = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuProvincia = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -76,7 +84,11 @@
                         if (menuLocalidad != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
-                            menuLocalidad = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuLocalidad = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuLocalidad = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -90,7 +102,7 @@
                     Console.Clear();
                     var direccionCalle = Validaciones.ValidarStringIngresado("Ingrese la calle donde se realizara el retiro del paquete:", "Aclaración: solo la calle.");
                     Console.Clear();
-                    var direccionNumero = Validaciones.ValidarIntIngresado("Ingrese la altura de la calle donde se realizara el retiro del paquete:", 0, 4);
+                    var direccionNumero = Validaciones.ValidarIntIngresado("Ingrese la altura de la calle donde se realizara el retiro del paquete:", 1, 4);
                     tipoRecepcionInternacional.RetiroDireccionInternacional = direccionCalle;
                     tipoRecepcionInternacional.RetiroDireccionNumeroInternacional = direccionNumero.ToString();
                 }
@@ -108,7 +120,11 @@
                         if (menuRegion != 5)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuRegion = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -129,7 +145,11 @@
                         if (menuProvincia != 1)
                         {
                             Console.WriteLine("Provincia no implementada, intente nuevamente:");
-                            menuProvincia = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuProvincia = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuProvincia = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -147,7 +167,11 @@
                         if (menuLocalidad != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
-                            menuLocalidad = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuLocalidad = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuLocalidad = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -168,7 +192,11 @@
                         if (menuNombreSucursal != 1)
                         {
                             Console.WriteLine("Sucursal no implementada, intente nuevamente:");
-                            menuNombreSucursal = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuNombreSucursal = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuNombreSucursal = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -188,8 +216,6 @@
         {
             var tipoEntregaInternacional = new RegionInternacional();
           
-            while (true)
-            {
                 tipoEntregaInternacional.TipoEntregaInternacional = "Entrega en sucursal";
                 Console.Clear();
 
@@ -204,8 +230,12 @@
                         if (menuRegion != 1)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
+                        try
+                        {
                             menuRegion = int.Parse(Console.ReadLine());
-                            Console.Clear();
+                        }
+                        catch { menuRegion = -1; }
+                        Console.Clear();
                             continue;
                         }
                         var region = "europa";
@@ -223,15 +253,19 @@
                         if (menuNombrePais != 1)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
+                        try
+                        {
                             menuNombrePais = int.Parse(Console.ReadLine());
-                            Console.Clear();
+                        }
+                        catch { menuNombrePais = -1; }
+                        Console.Clear();
                             continue;
                         }
                         var nombrePais = "españa";
                         tipoEntregaInternacional.EntregaPaisInternacional = nombrePais;
                         break;
                     } while (true);
-            }
+            
             return tipoEntregaInternacional;
         }
     }

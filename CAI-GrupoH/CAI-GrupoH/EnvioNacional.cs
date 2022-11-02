@@ -208,7 +208,7 @@ namespace CAIGrupoH
             Console.WriteLine($"Región de Retiro: {envioNacional.RetiroPaquete.RetiroRegion.ToUpper()}\n");
             Console.WriteLine($"Provincia de Retiro: {envioNacional.RetiroPaquete.RetiroProvincia.ToUpper()}\n");
             Console.WriteLine($"Localidad de Retiro: {envioNacional.RetiroPaquete.RetiroLocalidad.ToUpper()}\n");
-            if (envioNacional.RetiroPaquete.RetiroSucursal != " ")
+            if (envioNacional.RetiroPaquete.RetiroSucursal != null)
             {
                 Console.WriteLine($"Sucursal de Retiro: {envioNacional.RetiroPaquete.RetiroSucursal.ToUpper()}\n \n");
             }
@@ -219,7 +219,7 @@ namespace CAIGrupoH
             Console.WriteLine($"Región de Entrega: {envioNacional.EntregaPaquete.EntregaRegion.ToUpper()}\n");
             Console.WriteLine($"Provincia de Entrega: {envioNacional.EntregaPaquete.EntregaProvincia.ToUpper()}\n");
             Console.WriteLine($"Localidad de Entrega: {envioNacional.EntregaPaquete.EntregaLocalidad.ToUpper()}\n");
-            if (envioNacional.EntregaPaquete.EntregaSucursal != " ")
+            if (envioNacional.EntregaPaquete.EntregaSucursal != null)
             {
                 Console.WriteLine($"Sucursal de Entrega: {envioNacional.EntregaPaquete.EntregaSucursal.ToUpper()}\n");
             }
