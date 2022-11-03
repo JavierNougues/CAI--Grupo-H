@@ -133,7 +133,6 @@
 
             Console.Write("Origen del Paquete: \n");
             Console.WriteLine($"Tipo de Retiro: {envioInternacional.RetiroPaqueteInternacional.TipoRecepcionInternacional.ToUpper()}\n");
-            Console.WriteLine($"Región de Retiro: {envioInternacional.RetiroPaqueteInternacional.RetiroRegionInternacional.ToUpper()}\n");
             Console.WriteLine($"Provincia de Retiro: {envioInternacional.RetiroPaqueteInternacional.RetiroProvinciaInternacional.ToUpper()}\n");
             Console.WriteLine($"Localidad de Retiro: {envioInternacional.RetiroPaqueteInternacional.RetiroLocalidadInternacional.ToUpper()}\n");
             if (envioInternacional.RetiroPaqueteInternacional.RetiroSucursalInternacional != null)

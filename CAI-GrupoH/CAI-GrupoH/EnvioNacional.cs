@@ -132,11 +132,8 @@ namespace CAIGrupoH
                 // Cargo fijo por retiro en puerta.
                 tarifaPaquete += 400;
             }
-            if (envioNacional.RetiroPaquete.RetiroRegion != envioNacional.EntregaPaquete.EntregaRegion)
-            {
-                // Tarifa extra por entega interegional.
-                tarifaPaquete += 500;
-            }
+
+                
             else
             {
                 if(envioNacional.RetiroPaquete.RetiroProvincia != envioNacional.EntregaPaquete.EntregaProvincia)
@@ -205,7 +202,6 @@ namespace CAIGrupoH
 
             Console.Write("Origen del Paquete: \n");
             Console.WriteLine($"Tipo de Retiro: {envioNacional.RetiroPaquete.TipoRecepcion.ToUpper()}\n");
-            Console.WriteLine($"Región de Retiro: {envioNacional.RetiroPaquete.RetiroRegion.ToUpper()}\n");
             Console.WriteLine($"Provincia de Retiro: {envioNacional.RetiroPaquete.RetiroProvincia.ToUpper()}\n");
             Console.WriteLine($"Localidad de Retiro: {envioNacional.RetiroPaquete.RetiroLocalidad.ToUpper()}\n");
             if (envioNacional.RetiroPaquete.RetiroSucursal != null)
@@ -216,7 +212,6 @@ namespace CAIGrupoH
 
             Console.Write("Destino del Paquete: \n");
             Console.WriteLine($"Tipo de Entrega: {envioNacional.EntregaPaquete.TipoEntrega.ToUpper()}\n");
-            Console.WriteLine($"Región de Entrega: {envioNacional.EntregaPaquete.EntregaRegion.ToUpper()}\n");
             Console.WriteLine($"Provincia de Entrega: {envioNacional.EntregaPaquete.EntregaProvincia.ToUpper()}\n");
             Console.WriteLine($"Localidad de Entrega: {envioNacional.EntregaPaquete.EntregaLocalidad.ToUpper()}\n");
             if (envioNacional.EntregaPaquete.EntregaSucursal != null)

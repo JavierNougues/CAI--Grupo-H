@@ -29,7 +29,6 @@ namespace CAI_GrupoH
 
                     Console.Write("Origen del Paquete: \n");
                     Console.WriteLine($"Tipo de Retiro: Retiro en sucursal\n");
-                    Console.WriteLine($"Región de Retiro: CABA\n");
                     Console.WriteLine($"Provincia de Retiro: Buenos Aires \n");
                     Console.WriteLine($"Localidad de Retiro: Belgrano\n");
 
@@ -60,14 +59,12 @@ namespace CAI_GrupoH
 
                     Console.Write("Origen del Paquete: \n");
                     Console.WriteLine($"Tipo de Retiro: Retiro en sucursal\n");
-                    Console.WriteLine($"Región de Retiro: CABA\n");
                     Console.WriteLine($"Provincia de Retiro: Buenos Aires \n");
                     Console.WriteLine($"Localidad de Retiro: Belgrano\n");
 
 
                     Console.Write("Destino del Paquete: \n");
                     Console.WriteLine($"Tipo de Entrega: Entrega en puerta \n");
-                    Console.WriteLine($"Región de Entrega: NOA\n");
                     Console.WriteLine($"Provincia de Entrega:Catamarca \n");
                     Console.WriteLine($"Localidad de Entrega: San Fernando del Valle de Catamarca\n");
                     Console.Write("------------------------------------------------------------------------------------------------------------------------\n");
@@ -88,7 +85,6 @@ namespace CAI_GrupoH
 
                     Console.Write("Origen del Paquete: \n");
                     Console.WriteLine($"Tipo de Retiro: Retiro en puerta\n");
-                    Console.WriteLine($"Región de Retiro: CABA\n");
                     Console.WriteLine($"Provincia de Retiro: Buenos Aires \n");
                     Console.WriteLine($"Localidad de Retiro: Belgrano\n");
 
