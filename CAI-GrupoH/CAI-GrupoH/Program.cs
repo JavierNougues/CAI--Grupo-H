@@ -37,6 +37,8 @@ Posible camino de Envio internacional:
         - Pais: España
 */
 
+using CAI_GrupoH;
+
 namespace CAIGrupoH
 {
     class Program
@@ -82,7 +84,7 @@ namespace CAIGrupoH
                         }
                     case 4:
                         {
-                            Validaciones.ValidarEstadoCuenta(numeroCliente);
+                            EstadoCuenta.EstadodeCuenta();
                             break;
                         }
                     case 0:

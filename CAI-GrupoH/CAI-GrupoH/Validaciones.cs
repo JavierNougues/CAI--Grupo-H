@@ -78,15 +78,7 @@ namespace CAIGrupoH
             return numeroOrden;
         }
 
-        public static string ValidarEstadoCuenta(int numeroCliente)
-        {
-            Console.Clear();
-            Console.WriteLine("Actualmente posee un saldo negativo: adeuda $1000.\n");
-            Console.WriteLine("Ingrese cualquier tecla para continuar");
-            Console.ReadKey();
-            Console.Clear();
-            return numeroCliente.ToString();
-        }
+       
 
         static public int ValidarMenuPrincipal(string mensaje, string mensajeDesc, int min, int max)
         {
@@ -94,6 +86,36 @@ namespace CAIGrupoH
             do
             {
                 Console.WriteLine(mensaje);
+                Console.WriteLine(mensajeDesc);
+                var ingreso = Console.ReadLine();
+                bool ingresoCorrecto = int.TryParse(ingreso, out opcion);
+                if (!ingresoCorrecto)
+                {
+                    Console.Clear();
+                    Console.WriteLine("La opción seleccionada es inválida, seleccione nuevamente: ");
+                    continue;
+                }
+                if (opcion < min)
+                {
+                    Console.Clear();
+                    Console.WriteLine($"La opción seleccionada es inválida. No debe ser menor a: {min}");
+                    continue;
+                }
+                if (opcion > max)
+                {
+                    Console.Clear();
+                    Console.WriteLine($"La opción seleccionada es inválida. No debe ser mayor a: {max}");
+                    continue;
+                }
+                break;
+            } while (true);
+            return opcion;
+        }
+        static public int ValidarEstadoCuenta(string mensajeDesc, int min, int max)
+        {
+            int opcion;
+            do
+            {
                 Console.WriteLine(mensajeDesc);
                 var ingreso = Console.ReadLine();
                 bool ingresoCorrecto = int.TryParse(ingreso, out opcion);
