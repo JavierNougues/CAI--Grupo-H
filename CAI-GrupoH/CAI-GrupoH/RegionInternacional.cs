@@ -29,7 +29,7 @@
 
                     // Region de retiro
                     Console.Clear();
-                    do
+                    /*do
                     {
                         var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se retira el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
 
@@ -49,7 +49,7 @@
                         tipoRecepcionInternacional.RetiroRegionInternacional = region;
                         break;
                     } while (true);
-
+                    */
 
                     // Provincia de retiro
                     Console.Clear();
@@ -112,7 +112,7 @@
 
                     // Region de retiro
                     Console.Clear();
-                    do
+                    /*do
                     {
                         var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se retira el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
 
@@ -132,7 +132,7 @@
                         tipoRecepcionInternacional.RetiroRegionInternacional = region;
                         break;
                     } while (true);
-
+                    */
 
                     // Provincia de retiro
                     Console.Clear();
