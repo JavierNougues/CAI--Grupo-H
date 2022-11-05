@@ -32,7 +32,28 @@ namespace CAIGrupoH
                 {
                     tipoRecepcion.TipoRecepcion = "Retiro en puerta";
 
+                    // Region de retiro
+                    Console.Clear();
+                    do
+                    {
+                        var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se retira el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
 
+                        // Hardcodeado
+                        if (menuRegion != 5)
+                        {
+                            Console.WriteLine("Region no implementada, intente nuevamente:");
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
+                            Console.Clear();
+                            continue;
+                        }
+                        var region = "caba";
+                        tipoRecepcionInternacional.RetiroRegionInternacional = region;
+                        break;
+                    } while (true);
 
                     // Provincia de retiro
                     Console.Clear();
@@ -89,7 +110,28 @@ namespace CAIGrupoH
                 {
                     tipoRecepcion.TipoRecepcion = "Retiro en sucursal";
 
-                    
+                    // Region de retiro
+                    Console.Clear();
+                    do
+                    {
+                        var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se retira el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
+
+                        // Hardcodeado
+                        if (menuRegion != 5)
+                        {
+                            Console.WriteLine("Region no implementada, intente nuevamente:");
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
+                            Console.Clear();
+                            continue;
+                        }
+                        var region = "caba";
+                        tipoRecepcionInternacional.RetiroRegionInternacional = region;
+                        break;
+                    } while (true);
 
                     // Provincia de retiro
                     Console.Clear();
@@ -181,6 +223,29 @@ namespace CAIGrupoH
                     tipoEntrega.TipoEntrega = "Entrega en puerta";
 
 
+                    // Region de entrega
+                    Console.Clear();
+                    do
+                    {
+                        var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se entrega el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
+
+                        // Hardcodeado
+                        if (menuRegion != 1)
+                        {
+                            Console.WriteLine("Region no implementada, intente nuevamente:");
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
+                            Console.Clear();
+                            continue;
+                        }
+                        var region = "caba";
+                        tipoRecepcionInternacional.RetiroRegionInternacional = region;
+                        break;
+                    } while (true);
+                    
                     // Provincia de entrega
                     Console.Clear();
                     do
@@ -239,7 +304,28 @@ namespace CAIGrupoH
                 {
                     tipoEntrega.TipoEntrega = "Entrega en sucursal";
 
+                    // Region de entrega
+                    Console.Clear();
+                    do
+                    {
+                        var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se entrega el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
 
+                        // Hardcodeado
+                        if (menuRegion != 1)
+                        {
+                            Console.WriteLine("Region no implementada, intente nuevamente:");
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
+                            Console.Clear();
+                            continue;
+                        }
+                        var region = "caba";
+                        tipoRecepcionInternacional.RetiroRegionInternacional = region;
+                        break;
+                    } while (true);
 
                     // Provincia de entrega
                     Console.Clear();
