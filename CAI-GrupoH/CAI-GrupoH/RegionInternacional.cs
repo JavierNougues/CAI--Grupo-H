@@ -29,7 +29,7 @@
 
                     // Region de retiro
                     Console.Clear();
-                    do
+                    /*do
                     {
                         var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se retira el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
 
@@ -49,13 +49,13 @@
                         tipoRecepcionInternacional.RetiroRegionInternacional = region;
                         break;
                     } while (true);
-                    
+                    */
 
                     // Provincia de retiro
                     Console.Clear();
                     do
                     {
-                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires", 1, 1);
+                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. 5Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
 
                         // Hardcodeado
 
@@ -80,7 +80,7 @@
                     Console.Clear();
                     do
                     {
-                        int menuLocalidad = Validaciones.ValidarMenuPrincipal("Seleccione la localidad donde se retira el paquete:", "1. Belgrano \n2. Caballito", 1, 2);
+                        int menuLocalidad = Validaciones.ValidarMenuPrincipal("Seleccione la localidad donde se retira el paquete:", "1. Del Viso \n2. Ituzaingo \n3. San Isidro", 1, 3);
                         if (menuLocalidad != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
@@ -92,7 +92,7 @@
                             Console.Clear();
                             continue;
                         }
-                        var localidad = "belgrano";
+                        var localidad = "del viso";
                         tipoRecepcionInternacional.RetiroLocalidadInternacional = localidad;
                         break;
                     } while (true);
@@ -112,7 +112,7 @@
 
                     // Region de retiro
                     Console.Clear();
-                    do
+                    /*do
                     {
                         var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se retira el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
 
@@ -132,13 +132,13 @@
                         tipoRecepcionInternacional.RetiroRegionInternacional = region;
                         break;
                     } while (true);
-                    
+                    */
 
                     // Provincia de retiro
                     Console.Clear();
                     do
                     {
-                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires", 1, 1);
+                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. 5Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
 
                         // Hardcodeado
 
@@ -163,7 +163,7 @@
                     Console.Clear();
                     do
                     {
-                        int menuLocalidad = Validaciones.ValidarMenuPrincipal("Seleccione la localidad donde se retira el paquete:", "1. Belgrano \n2. Caballito", 1, 2);
+                        int menuLocalidad = Validaciones.ValidarMenuPrincipal("Seleccione la localidad donde se retira el paquete:", "1. Del Viso \n2. Ituzaingo \n3. San Isidro", 1, 3);
                         if (menuLocalidad != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
@@ -175,7 +175,7 @@
                             Console.Clear();
                             continue;
                         }
-                        var localidad = "belgrano";
+                        var localidad = "del viso";
                         tipoRecepcionInternacional.RetiroLocalidadInternacional = localidad;
                         break;
                     } while (true);
@@ -185,7 +185,7 @@
                     Console.Clear();
                     do
                     {
-                        int menuNombreSucursal = Validaciones.ValidarMenuPrincipal("Seleccione la sucursal donde se realizara el retiro del paquete:", "1. Belgrano", 1, 1);
+                        int menuNombreSucursal = Validaciones.ValidarMenuPrincipal("Seleccione la sucursal donde se realizara el retiro del paquete:", "1. Sucursal A", 1, 1);
 
                         // Hardcodeado
 
@@ -200,7 +200,7 @@
                             Console.Clear();
                             continue;
                         }
-                        var nombreSucursal = "belgrano";
+                        var nombreSucursal = "sucursal a";
                         tipoRecepcionInternacional.RetiroSucursalInternacional = nombreSucursal;
                         break;
                     } while (true);
