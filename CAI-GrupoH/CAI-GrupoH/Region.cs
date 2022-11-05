@@ -241,7 +241,7 @@ namespace CAIGrupoH
                             Console.Clear();
                             continue;
                         }
-                        var region = "caba";
+                        var region = "noa";
                         tipoRecepcionInternacional.RetiroRegionInternacional = region;
                         break;
                     } while (true);
@@ -322,7 +322,7 @@ namespace CAIGrupoH
                             Console.Clear();
                             continue;
                         }
-                        var region = "caba";
+                        var region = "noa";
                         tipoRecepcionInternacional.RetiroRegionInternacional = region;
                         break;
                     } while (true);
