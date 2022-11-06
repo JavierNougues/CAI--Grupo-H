@@ -2,39 +2,54 @@
 /*
 Prototipo:
 
+Prototipo:
 Cliente: 1234
 Contraseña: 1234
 DNI: 40506070
 
+Opciones de Envio:
+    - Tipo de paquete: 
+	- Correspondencia.
+	- Encomienda.
+    - Tipo de envio: 
+	- Normal.
+	- Urgente.
 
 Posible camino de Envio Nacional:
-    - Tipo de paquete: correspondencia.
-    - Tipo de envio: normal.
     - Origen del paquete(Presentacion en Sucursal): 
-        - Region: CABA
         - Provincia: Buenos Aires
-        - Localidad: Belgrano
-        - Sucursal: Belgrano
+        - Localidad: Del Viso
+        - Sucursal: Sucursal A
+    - Origen del paquete(En puerta): 
+        - Provincia: Buenos Aires
+        - Localidad: Del Viso
 
-    - Origen del paquete(Retiro en Sucursal): 
-        - Region: NOA
+
+    - Entrega del paquete(En Sucursal): 
         - Provincia: Catamarca
         - Localidad: San Fernando del Valle de Catamarca
-        - Sucursal: San Fernando del Valle de Catamarca
+        - Sucursal: Sucursal A
+    - Entrega del paquete(En Puerta):
+        - Provincia: Catamarca
+        - Localidad: San Fernando del Valle de Catamarca
 
    
-
-
 Posible camino de Envio internacional:
-    - Tipo de paquete: correspondencia.
     - Origen del paquete(Presentacion en Sucursal): 
-        - Region: CABA
         - Provincia: Buenos Aires
-        - Localidad: Belgrano
-        - Sucursal: Belgrano
-    - Destino del paquete(Retiro en Sucursal): 
+        - Localidad: Del Viso
+        - Sucursal: Sucursal A
+    - Origen del paquete(En puerta): 
+        - Provincia: Buenos Aires
+        - Localidad: Del Viso
+
+    - Destino del paquete: 
         - Region: Europa
-        - Pais: España
+	- Pais: España
+
+
+Trackeo de Envio Naciona: N100
+Trackeo de Envio Internacional: I100
 */
 
 using CAI_GrupoH;
