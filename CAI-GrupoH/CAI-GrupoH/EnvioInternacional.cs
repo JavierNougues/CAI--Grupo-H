@@ -133,10 +133,9 @@
 
             Console.Write("Origen del Paquete: \n");
             Console.WriteLine($"Tipo de Retiro: {envioInternacional.RetiroPaqueteInternacional.TipoRecepcionInternacional.ToUpper()}\n");
-            Console.WriteLine($"Región de Retiro: {envioInternacional.RetiroPaqueteInternacional.RetiroRegionInternacional.ToUpper()}\n");
             Console.WriteLine($"Provincia de Retiro: {envioInternacional.RetiroPaqueteInternacional.RetiroProvinciaInternacional.ToUpper()}\n");
             Console.WriteLine($"Localidad de Retiro: {envioInternacional.RetiroPaqueteInternacional.RetiroLocalidadInternacional.ToUpper()}\n");
-            if (envioInternacional.RetiroPaqueteInternacional.RetiroSucursalInternacional != " ")
+            if (envioInternacional.RetiroPaqueteInternacional.RetiroSucursalInternacional != null)
             {
                 Console.WriteLine($"Sucursal de Retiro: {envioInternacional.RetiroPaqueteInternacional.RetiroSucursalInternacional.ToUpper()}\n \n");
             }
@@ -144,8 +143,8 @@
 
             Console.Write("Destino del Paquete: \n");
             Console.WriteLine($"Tipo de Entrega: {envioInternacional.EntregaPaqueteInternacional.TipoEntregaInternacional.ToUpper()}\n");
-            Console.WriteLine($"Región de Entrega: {envioInternacional.EntregaPaqueteInternacional.EntregaRegionInternacional.ToUpper()}\n");
-            Console.WriteLine($"Provincia de Entrega: {envioInternacional.EntregaPaqueteInternacional.EntregaPaisInternacional.ToUpper()}\n");
+            Console.WriteLine($"Continente de Entrega: {envioInternacional.EntregaPaqueteInternacional.EntregaRegionInternacional.ToUpper()}\n");
+            Console.WriteLine($"Pais de Entrega: {envioInternacional.EntregaPaqueteInternacional.EntregaPaisInternacional.ToUpper()}\n");
             Console.Write("---------------------------------------------------------------------------------------------------------------------------");
 
             // Confirmamos la orden

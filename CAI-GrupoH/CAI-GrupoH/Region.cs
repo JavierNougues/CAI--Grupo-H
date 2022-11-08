@@ -6,7 +6,6 @@ namespace CAIGrupoH
     {
         //Propiedades Recepcion
         public string? TipoRecepcion { get; set; }
-        public string? RetiroRegion { get; set; }
         public string? RetiroProvincia { get; set; }
         public string? RetiroLocalidad { get; set; }
         public string? RetiroDireccion { get; set; }
@@ -15,7 +14,6 @@ namespace CAIGrupoH
 
         //Propiedades Entrega
         public string? TipoEntrega { get; set; }
-        public string? EntregaRegion { get; set; }
         public string? EntregaProvincia { get; set; }
         public string? EntregaLocalidad { get; set; }
         public string? EntregaDireccion { get; set; }
@@ -36,7 +34,7 @@ namespace CAIGrupoH
 
                     // Region de retiro
                     Console.Clear();
-                    do
+                    /*do
                     {
                         var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se retira el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
 
@@ -44,21 +42,24 @@ namespace CAIGrupoH
                         if (menuRegion != 5)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuRegion = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
                             Console.Clear();
                             continue;
                         }
                         var region = "caba";
-                        tipoRecepcion.RetiroRegion = region;
+                        tipoRecepcionInternacional.RetiroRegionInternacional = region;
                         break;
                     } while (true);
-
-
+                    */
                     // Provincia de retiro
                     Console.Clear();
                     do
                     {
-                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires", 1, 1);
+                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. 5Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
 
                         // Hardcodeado
 
@@ -79,15 +80,18 @@ namespace CAIGrupoH
                     Console.Clear();
                     do
                     {
-                        int menuLocalidad = Validaciones.ValidarMenuPrincipal("Seleccione la localidad donde se retira el paquete:", "1. Belgrano \n2. Caballito", 1, 2);
+                        int menuLocalidad = Validaciones.ValidarMenuPrincipal("Seleccione la localidad donde se retira el paquete:", "1. Del Viso \n2. Ituzaingo \n3. San Isidro", 1, 3);
                         if (menuLocalidad != 1)
                         {
                         Console.WriteLine("Localidad no implementada, intente nuevamente:");
+                            try { 
                         menuLocalidad = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuLocalidad = -1; }
                         Console.Clear();
                         continue;
                         }
-                        var localidad = "belgrano";
+                        var localidad = "del viso";
                         tipoRecepcion.RetiroLocalidad = localidad;
                     break;
                 } while (true) ;
@@ -108,7 +112,7 @@ namespace CAIGrupoH
 
                     // Region de retiro
                     Console.Clear();
-                    do
+                    /*do
                     {
                         var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se retira el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
 
@@ -116,28 +120,35 @@ namespace CAIGrupoH
                         if (menuRegion != 5)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuRegion = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
                             Console.Clear();
                             continue;
                         }
                         var region = "caba";
-                        tipoRecepcion.RetiroRegion = region;
+                        tipoRecepcionInternacional.RetiroRegionInternacional = region;
                         break;
                     } while (true);
-                    
-
+                    */
                     // Provincia de retiro
                     Console.Clear();
                     do
                     {
-                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires", 1, 1);
+                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. 5Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
 
                         // Hardcodeado
 
                         if (menuProvincia != 1)
                         {
                             Console.WriteLine("Provincia no implementada, intente nuevamente:");
-                            menuProvincia = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuProvincia = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuProvincia = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -151,15 +162,19 @@ namespace CAIGrupoH
                     Console.Clear();
                     do
                     {
-                        int menuLocalidad = Validaciones.ValidarMenuPrincipal("Seleccione la localidad donde se retira el paquete:", "1. Belgrano \n2. Caballito", 1, 2);
+                        int menuLocalidad = Validaciones.ValidarMenuPrincipal("Seleccione la localidad donde se retira el paquete:", "1. Del Viso \n2. Ituzaingo \n3. San Isidro", 1, 3);
                         if (menuLocalidad != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
-                            menuLocalidad = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuLocalidad = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuLocalidad = -1; }
                             Console.Clear();
                             continue;
                         }
-                        var localidad = "belgrano";
+                        var localidad = "del viso";
                         tipoRecepcion.RetiroLocalidad = localidad;
                         break;
                     } while (true);
@@ -169,18 +184,22 @@ namespace CAIGrupoH
                     Console.Clear();
                     do
                     {
-                        int menuNombreSucursal = Validaciones.ValidarMenuPrincipal("Seleccione la sucursal donde se realizara el retiro del paquete:", "1. Belgrano", 1, 1);
+                        int menuNombreSucursal = Validaciones.ValidarMenuPrincipal("Seleccione la sucursal donde se realizara el retiro del paquete:", "1. Sucursal A", 1, 1);
 
                     // Hardcodeado
                     
                         if (menuNombreSucursal != 1)
                         {
                             Console.WriteLine("Sucursal no implementada, intente nuevamente:");
-                            menuNombreSucursal = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuNombreSucursal = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuNombreSucursal = -1; }
                             Console.Clear();
                             continue;
                         }
-                        var nombreSucursal = "belgrano";
+                        var nombreSucursal = "sucursal a";
                         tipoRecepcion.RetiroSucursal = nombreSucursal;
                         break;
                     } while (true);
@@ -206,35 +225,42 @@ namespace CAIGrupoH
 
                     // Region de entrega
                     Console.Clear();
-                    do
+                    /*do
                     {
-                        int menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se entrega el paquete: ", "1. CABA \n2. NEA \n3. Cuyo \n4. Centro \n5. NOA \n6. Sur", 1, 6);
+                        var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se entrega el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
 
                         // Hardcodeado
-                        if (menuRegion != 5)
+                        if (menuRegion != 1)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuRegion = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
                             Console.Clear();
                             continue;
                         }
-                        var region = "noa"; 
-                        tipoEntrega.EntregaRegion = region;
+                        var region = "noa";
+                        tipoRecepcionInternacional.RetiroRegionInternacional = region;
                         break;
                     } while (true);
-
-
+                    */
                     // Provincia de entrega
                     Console.Clear();
                     do
                     {
-                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se entrega el paquete: ", "1. Catamarca \n2. Jujuy \n3. Tucumán \n4. Salta \n5. Santiago del Estero", 1, 5);
+                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la Provincia donde se entrega el paquete: ", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. 5Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
 
                         // Hardcodeado
-                        if (menuProvincia != 1)
+                        if (menuProvincia != 3)
                         {
-                            Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuProvincia = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Provincia no implementada, intente nuevamente:");
+                            try
+                            {
+                                menuProvincia = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuProvincia = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -253,7 +279,11 @@ namespace CAIGrupoH
                         if (menuLocalidad != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
-                            menuLocalidad = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuLocalidad = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuLocalidad = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -276,35 +306,42 @@ namespace CAIGrupoH
 
                     // Region de entrega
                     Console.Clear();
-                    do
+                    /*do
                     {
-                        int menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se entrega el paquete: ", "1. CABA \n2. NEA \n3. Cuyo \n4. Centro \n5. NOA \n6. Sur", 1, 6);
+                        var menuRegion = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se entrega el paquete: ", "1. NOA \n2. NEA \n3. Cuyo \n4. Centro \n5. CABA \n6. Sur", 1, 6);
 
                         // Hardcodeado
-                        if (menuRegion != 5)
+                        if (menuRegion != 1)
                         {
                             Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuRegion = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuRegion = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuRegion = -1; }
                             Console.Clear();
                             continue;
                         }
                         var region = "noa";
-                        tipoEntrega.EntregaRegion = region;
+                        tipoRecepcionInternacional.RetiroRegionInternacional = region;
                         break;
                     } while (true);
-
-
+                    */
                     // Provincia de entrega
                     Console.Clear();
                     do
                     {
-                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la region donde se entrega el paquete: ", "1. Catamarca \n2. Jujuy \n3. Tucumán \n4. Salta \n5. Santiago del Estero", 1, 5);
+                        int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la Provincia donde se entrega el paquete: ", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. 5Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
 
                         // Hardcodeado
-                        if (menuProvincia != 1)
+                        if (menuProvincia != 3)
                         {
-                            Console.WriteLine("Region no implementada, intente nuevamente:");
-                            menuProvincia = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Provincia no implementada, intente nuevamente:");
+                            try
+                            {
+                                menuProvincia = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuProvincia = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -324,7 +361,11 @@ namespace CAIGrupoH
                         if (menuLocalidad != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
-                            menuLocalidad = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuLocalidad = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuLocalidad = -1; }
                             Console.Clear();
                             continue;
                         }
@@ -338,18 +379,22 @@ namespace CAIGrupoH
                     Console.Clear();
                     do
                     {
-                        int menuNombreSucursal = Validaciones.ValidarMenuPrincipal("Seleccione la sucursal donde se realizara el retiro del paquete:", "1. San Fernando del Valle de Catamarca", 1, 1);
+                        int menuNombreSucursal = Validaciones.ValidarMenuPrincipal("Seleccione la sucursal donde se realizara el retiro del paquete:", "1. Sucursal A", 1, 1);
 
                     // Hardcodeado
                     
                         if (menuNombreSucursal != 1)
                         {
                             Console.WriteLine("Localidad no implementada, intente nuevamente:");
-                            menuNombreSucursal = int.Parse(Console.ReadLine());
+                            try
+                            {
+                                menuNombreSucursal = int.Parse(Console.ReadLine());
+                            }
+                            catch { menuNombreSucursal = -1; }
                             Console.Clear();
                             continue;
                         }
-                        var nombreSucursal = "san fernando del valle de catamarca";
+                        var nombreSucursal = "sucursal a";
                         tipoEntrega.EntregaSucursal = nombreSucursal;
                         break;
                     } while (true);
