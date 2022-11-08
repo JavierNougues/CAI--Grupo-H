@@ -1,0 +1,15 @@
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\bin\Debug\net6.0\GrupoH - Proyecto.exe
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\bin\Debug\net6.0\GrupoH - Proyecto.deps.json
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\bin\Debug\net6.0\GrupoH - Proyecto.runtimeconfig.json
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\bin\Debug\net6.0\GrupoH - Proyecto.dll
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\bin\Debug\net6.0\GrupoH - Proyecto.pdb
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\obj\Debug\net6.0\GrupoH - Proyecto.csproj.AssemblyReference.cache
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\obj\Debug\net6.0\GrupoH - Proyecto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\obj\Debug\net6.0\GrupoH - Proyecto.AssemblyInfoInputs.cache
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\obj\Debug\net6.0\GrupoH - Proyecto.AssemblyInfo.cs
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\obj\Debug\net6.0\GrupoH - Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\obj\Debug\net6.0\GrupoH - Proyecto.dll
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\obj\Debug\net6.0\refint\GrupoH - Proyecto.dll
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\obj\Debug\net6.0\GrupoH - Proyecto.pdb
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\obj\Debug\net6.0\GrupoH - Proyecto.genruntimeconfig.cache
+C:\Users\javier.nougues@sap.com\Documents\GitHub\CAI--Grupo-H\GrupoH - Proyecto\GrupoH - Proyecto\obj\Debug\net6.0\ref\GrupoH - Proyecto.dll

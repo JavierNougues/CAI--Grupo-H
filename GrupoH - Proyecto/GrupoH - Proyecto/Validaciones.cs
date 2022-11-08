@@ -62,7 +62,7 @@
             return stringIngresado;
         }
 
-        static public int ValidarIntIngresado(string mensaje, int min, int max)
+        static public int ValidarIntIngresado(string mensaje, int min, long max)
         {
 
             int intEntero;

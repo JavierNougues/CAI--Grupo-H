@@ -12,8 +12,6 @@
         public string SucursalDireccion { get; private set; }
 
 
-
-
         // Propiedades Retiro
         public string? TipoRecepcion { get; set; }
         public string? RetiroProvincia { get; set; }
@@ -30,7 +28,10 @@
         public string? EntregaDireccion { get; set; }
         public string? EntregaDireccionNumero { get; set; }
         public string? EntregaSucursal { get; set; }
+
+        // Propiedades Extra
         public string? EntregaInternacionalInfo { get; set; }
+        public string? TipoEnvio { get; set; }
 
 
         const string maestroProvincias = "MaestroProvincias.txt";
@@ -40,20 +41,20 @@
         public EnvioDetalle(string linea)
         {
             var datos = linea.Split('|');
-            CodigoProvincia = int.Parse(datos[2]);
-            NombreProvincia = datos[3];
-            CodigoLocalidad = int.Parse(datos[4]);
-            NombreLocalidad = datos[5];
-            CodigoSucursal = int.Parse(datos[6]);
-            NombreSucursal = datos[7];
-            SucursalDireccion = datos[8];
+            CodigoProvincia = int.Parse(datos[0]);
+            NombreProvincia = datos[1];
+            CodigoLocalidad = int.Parse(datos[2]);
+            NombreLocalidad = datos[3];
+            CodigoSucursal = int.Parse(datos[4]);
+            NombreSucursal = datos[5];
+            SucursalDireccion = datos[6];
         }
 
         public EnvioDetalle()
         {
         }
 
-        public static EnvioDetalle Paquete()
+        public static EnvioDetalle RetiroPaquete()
         {
             Console.Clear();
             var tipoRecepcion = new EnvioDetalle();
@@ -379,10 +380,12 @@
                     case 1:
                         {
                             tipoEntrega.EntregaPais = "argentina";
+                            tipoEntrega.TipoEnvio = "Envío Nacional";
                             break;
                         }
                     case 2:
                         {
+                            tipoEntrega.TipoEnvio = "Envío Internacional";
                             int menuOtroPais = Validaciones.ValidarMenuPrincipal("Seleccione el país donde se entrega el paquete:", "América Latina: \n10. Brasil \n11. Bolivia \n12. Paraguay \n13. Uruguay \n14. Chile \n15. Colombia \n16. Perú \n17. Venezuela \n18. Ecuador \n \nAmérica del Norte \n20. Estados Unidos \n21. México \n23. Canadá \n \nEuropa \n30. Alemania \n31. Francia \n32. España \n33. Italia \n34. Inglaterra \n \nAsia \n40. Japón \n41. China \n42. Corea del Sur", 1, 42);
                             switch (menuOtroPais)
                             {
@@ -489,7 +492,7 @@
                                 default:
                                     {
                                         Console.WriteLine("La opción ingresada es inválida, intente nuevamente:");
-                                        break;
+                                        continue;
                                     }
                             }
                             break;
@@ -497,7 +500,7 @@
                     default:
                         {
                             Console.WriteLine("La opción ingresada es inválida, intente nuevamente:");
-                            break;
+                            continue;
                         }
                 }
 
@@ -650,6 +653,7 @@
                             int codLocalidad = tipoEntrega.VerLocalidadPorProvincia(tipoEntrega.CodigoProvincia);
                             localidadSeleccionada = tipoEntrega.DevuelveNombreLocalidad(codLocalidad);
                             tipoEntrega.NombreLocalidad = localidadSeleccionada;
+                            
                             tipoEntrega.CodigoLocalidad = codLocalidad;
 
                             // Dirección exacta de etrega
@@ -661,6 +665,7 @@
                             tipoEntrega.RetiroDireccionNumero = direccionNumero.ToString();
 
                         }
+                        
                         if (menuEntregaPaquete == 2)
                         {
                             tipoEntrega.TipoEntrega = "Entrega en sucursal";
@@ -812,7 +817,7 @@
                         }
                         break;
                     }
-                    
+                    break;
                 }
                 // Entrega en OTRO PAIS
                 else
