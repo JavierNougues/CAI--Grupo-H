@@ -1,95 +1,7 @@
-﻿using System;
-
-namespace CAIGrupoH
+﻿namespace CAIGrupoH
 {
     internal class Validaciones
     {
-        static public int ValidarCliente(int cliente)
-        {
-            do
-            {
-                if (cliente != 1234)
-                {
-                    Console.WriteLine("Cliente invalido. Intente nuevamente: ");
-                    cliente = int.Parse(Console.ReadLine());
-                    continue;
-                }
-                Console.Clear();
-                break;
-            } while (true);
-            return cliente;
-        }
-
-        static public string ValidarContraseñaCliente(string contraseña)
-        {
-            do
-            {
-                // Cliente hardcodeado.
-                if (contraseña != "1234")
-                {
-                    Console.WriteLine("Contraseña invalida. Intente nuevamente:");
-                    contraseña = Console.ReadLine();
-                    continue;
-                }
-                Console.Clear();
-                break;
-            } while (true);
-            return contraseña;
-        }
-
-        static public int ValidarDNI(int dni)
-        {
-            do
-            {
-                // DNI hardcodeado.
-                if (dni != 40506070)
-                {
-                    Console.WriteLine("DNI invalido. Intente nuevamente: ");
-                    dni = int.Parse(Console.ReadLine());
-                    continue;
-                }
-                Console.Clear();
-                break;
-            } while (true);
-            return dni;
-        }
-
-        
-        public static string ValidarOrdenServicio(string numeroOrden)
-        {
-            do
-            {
-                if (numeroOrden != "n100" && numeroOrden != "i100")
-                {
-                    Console.WriteLine("Orden de Servicio inválida. Intente nuevamente: ");
-                    numeroOrden = Console.ReadLine();
-                    continue;
-                }
-                else
-                {
-                    Console.WriteLine("\n");
-                    Console.WriteLine("El estado de su Orden de Servicio es: 'Iniciado'. ");
-                    Console.WriteLine("Gracias por su consulta!.\n");
-                    Console.WriteLine("Ingrese cualquier tecla para continuar");
-                    Console.ReadKey();
-                    Console.Clear();
-                }
-                break;
-            } while (true);
-            return numeroOrden;
-        }
-        
-
-        public static string ValidarEstadoCuenta(int numeroCliente)
-        {
-            Console.Clear();
-            Console.WriteLine("Actualmente posee un saldo negativo: adeuda $1000.\n");
-            Console.WriteLine("Ingrese cualquier tecla para continuar");
-            Console.ReadKey();
-            Console.Clear();
-            return numeroCliente.ToString();
-        }
-
         static public int ValidarMenuPrincipal(string mensaje, string mensajeDesc, int min, int max)
         {
             int opcion;
@@ -150,8 +62,6 @@ namespace CAIGrupoH
             return stringIngresado;
         }
 
-
-
         static public int ValidarIntIngresado(string mensaje, int min, int max)
         {
 
@@ -180,7 +90,5 @@ namespace CAIGrupoH
             } while (true);
             return intEntero;
         }
-
-
     }
 }

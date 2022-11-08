@@ -1,8 +1,6 @@
-﻿using System.Reflection.Metadata.Ecma335;
-
-namespace CAIGrupoH
+﻿namespace CAIGrupoH
 {
-    internal class EnvioNacional
+    internal class Envio
     {
         public string? TipoPaquete { get; set; }
         public string? PesoPaquete { get; set; }
@@ -13,11 +11,11 @@ namespace CAIGrupoH
         Region RetiroPaquete = new Region();
         Region EntregaPaquete = new Region();
 
-        public static EnvioNacional Ingresar()
+        public static Envio Ingresar()
         {
             Console.Clear();
 
-            var envioNacional = new EnvioNacional();
+            var envioNacional = new Envio();
             Console.WriteLine("Nuevo Envío Nacional: ");
             while (true)
             {
@@ -46,28 +44,28 @@ namespace CAIGrupoH
             Console.Clear();
             if (envioNacional.TipoPaquete == "Encomienda")
             {
-                    string pesoEncomienda = "";
-                    int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el peso del paquete a enviar: ", "1. Bultos hasta 10Kg. \n2. Bultos hasta 20Kg. \n3. Bultos hasta 30Kg.", 1, 3);
+                string pesoEncomienda = "";
+                int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione el peso del paquete a enviar: ", "1. Bultos hasta 10Kg. \n2. Bultos hasta 20Kg. \n3. Bultos hasta 30Kg.", 1, 3);
 
-                    switch (menuPrincipal)
-                    {
-                        case 1:
-                            {
-                                pesoEncomienda = "Bultos hasta 10Kg";
-                                break;
-                            }
-                        case 2:
-                            {
-                                pesoEncomienda = "Bultos hasta 20Kg";
-                                break;
-                            }
-                        case 3:
-                            {
-                                pesoEncomienda = "Bultos hasta 30Kg";
-                                break;
-                            }
-                    }
-                    envioNacional.PesoPaquete = pesoEncomienda;
+                switch (menuPrincipal)
+                {
+                    case 1:
+                        {
+                            pesoEncomienda = "Bultos hasta 10Kg";
+                            break;
+                        }
+                    case 2:
+                        {
+                            pesoEncomienda = "Bultos hasta 20Kg";
+                            break;
+                        }
+                    case 3:
+                        {
+                            pesoEncomienda = "Bultos hasta 30Kg";
+                            break;
+                        }
+                }
+                envioNacional.PesoPaquete = pesoEncomienda;
             }
             Console.Clear();
             do
@@ -76,15 +74,6 @@ namespace CAIGrupoH
                 string tipoEnvio = "";
                 if (menuTipoEnvio == 1)
                 {
-                    /*
-                    //No implemetado
-                    Console.WriteLine("No implementado.\n");
-                    Console.WriteLine("Ingrese cualquier tecla para continuar");
-                    Console.ReadKey();
-                    Console.Clear();
-
-                    continue;
-                    */
                     tipoEnvio = "Envio urgente";
                 }
                 if (menuTipoEnvio == 2)
@@ -132,14 +121,11 @@ namespace CAIGrupoH
                 // Cargo fijo por retiro en puerta.
                 tarifaPaquete += 400;
             }
-            if (envioNacional.RetiroPaquete.RetiroRegion != envioNacional.EntregaPaquete.EntregaRegion)
-            {
-                // Tarifa extra por entega interegional.
-                tarifaPaquete += 500;
-            }
+
+
             else
             {
-                if(envioNacional.RetiroPaquete.RetiroProvincia != envioNacional.EntregaPaquete.EntregaProvincia)
+                if (envioNacional.RetiroPaquete.RetiroProvincia != envioNacional.EntregaPaquete.EntregaProvincia)
                 {
                     // Tarifa extra por entrega interprovincial.
                     tarifaPaquete += 300;
@@ -147,7 +133,7 @@ namespace CAIGrupoH
                 else
                 {
                     // Tarifa extra por entrega provincial.
-                    tarifaPaquete += 150; 
+                    tarifaPaquete += 150;
                 }
             }
             if (envioNacional.EntregaPaquete.TipoEntrega == "Retiro en sucursal")
@@ -205,19 +191,22 @@ namespace CAIGrupoH
 
             Console.Write("Origen del Paquete: \n");
             Console.WriteLine($"Tipo de Retiro: {envioNacional.RetiroPaquete.TipoRecepcion.ToUpper()}\n");
-            Console.WriteLine($"Región de Retiro: {envioNacional.RetiroPaquete.RetiroRegion.ToUpper()}\n");
             Console.WriteLine($"Provincia de Retiro: {envioNacional.RetiroPaquete.RetiroProvincia.ToUpper()}\n");
             Console.WriteLine($"Localidad de Retiro: {envioNacional.RetiroPaquete.RetiroLocalidad.ToUpper()}\n");
-            Console.WriteLine($"Sucursal de Retiro: {envioNacional.RetiroPaquete.RetiroSucursal.ToUpper()}\n \n");
-            
+            if (envioNacional.RetiroPaquete.RetiroSucursal != null)
+            {
+                Console.WriteLine($"Sucursal de Retiro: {envioNacional.RetiroPaquete.RetiroSucursal.ToUpper()}\n \n");
+            }
+
 
             Console.Write("Destino del Paquete: \n");
             Console.WriteLine($"Tipo de Entrega: {envioNacional.EntregaPaquete.TipoEntrega.ToUpper()}\n");
-            Console.WriteLine($"Región de Entrega: {envioNacional.EntregaPaquete.EntregaRegion.ToUpper()}\n");
             Console.WriteLine($"Provincia de Entrega: {envioNacional.EntregaPaquete.EntregaProvincia.ToUpper()}\n");
             Console.WriteLine($"Localidad de Entrega: {envioNacional.EntregaPaquete.EntregaLocalidad.ToUpper()}\n");
-            Console.WriteLine($"Sucursal de Entrega: {envioNacional.EntregaPaquete.EntregaSucursal.ToUpper()}\n");
-            
+            if (envioNacional.EntregaPaquete.EntregaSucursal != null)
+            {
+                Console.WriteLine($"Sucursal de Entrega: {envioNacional.EntregaPaquete.EntregaSucursal.ToUpper()}\n");
+            }
             Console.Write("---------------------------------------------------------------------------------------------------------------------------");
 
             // Confirmamos la orden
@@ -232,39 +221,36 @@ namespace CAIGrupoH
             }
             if (menuConfirmacion == 1)
             {
-              
+                Console.Clear();
+                Console.WriteLine("Ha generado su solicitud con éxito!\n Gracias por utilizar nuestros servicios!");
+                Console.WriteLine("Ingrese cualquier tecla para continuar");
+                Console.ReadKey();
+
+                /*
+                 * No es necesario para el prototipo.
                 //Creamos la orden
                 OrdenDeServicio nuevaOrdenDeServicio = new OrdenDeServicio();
                 // Asignamos todos los valores --> despues se puede modularizar
-                nuevaOrdenDeServicio.NumeroCliente = "1234";
-                nuevaOrdenDeServicio.OrdenServicio = envioNacional.OrdenDeServicio.ToLower();
-
+                nuevaOrdenDeServicio.NumeroCliente = "123456789";
+                nuevaOrdenDeServicio.OrdenServicio = envioNacional.OrdenDeServicio;
                 nuevaOrdenDeServicio.EstadoOrden = "Iniciada";
-
                 nuevaOrdenDeServicio.PesoPaquete = envioNacional.PesoPaquete;
                 nuevaOrdenDeServicio.TarifaPaqueteNacional = envioNacional.TarifaPaqueteNacional;
-
                 nuevaOrdenDeServicio.TipoEnvio = envioNacional.TipoEnvio;
-
                 nuevaOrdenDeServicio.RegionOrigen = envioNacional.RetiroPaquete.RetiroRegion;
                 nuevaOrdenDeServicio.ProvinciaOrigen = envioNacional.RetiroPaquete.RetiroProvincia;
                 nuevaOrdenDeServicio.LocalidadOrigen = envioNacional.RetiroPaquete.RetiroLocalidad;
                 nuevaOrdenDeServicio.TipoRecepcion = envioNacional.RetiroPaquete.TipoRecepcion;
                 nuevaOrdenDeServicio.SucursalOrigen = envioNacional.RetiroPaquete.RetiroSucursal;
-
                 nuevaOrdenDeServicio.RegionEntrega = envioNacional.EntregaPaquete.EntregaRegion;
                 nuevaOrdenDeServicio.ProvinciaEntrega = envioNacional.EntregaPaquete.EntregaProvincia;
                 nuevaOrdenDeServicio.LocalidadEntrega = envioNacional.EntregaPaquete.EntregaLocalidad;
                 nuevaOrdenDeServicio.TipoEntrega = envioNacional.EntregaPaquete.TipoEntrega;
                 nuevaOrdenDeServicio.SucursalEntrega = envioNacional.EntregaPaquete.EntregaSucursal;
-
                 // Agregamos orden a Lista de ordenes de servicio
-                nuevaOrdenDeServicio.AgregarOrdenesDeServicio(nuevaOrdenDeServicio);
+                nuevaOrdenDeServicio.ListaOrdenesDeServicio(nuevaOrdenDeServicio);
+                */
 
-                Console.Clear();
-                Console.WriteLine("Ha generado su solicitud con éxito!\n Gracias por utilizar nuestros servicios!");
-                Console.WriteLine("Ingrese cualquier tecla para continuar");
-                Console.ReadKey();
             }
             Console.Clear();
             return envioNacional;

@@ -6,35 +6,63 @@ Cliente: 1234
 Contraseña: 1234
 DNI: 40506070
 
+/********************************************************************
 
 Posible camino de Envio Nacional:
-    - Tipo de paquete: correspondencia.
-    - Tipo de envio: normal.
+    - Tipo de paquete: 
+        - Correspondencia.
+        - Encomienda.
+    - Tipo de envio: 
+        - Normal.
+        - Urgente.
     - Origen del paquete(Presentacion en Sucursal): 
         - Region: CABA
         - Provincia: Buenos Aires
         - Localidad: Belgrano
         - Sucursal: Belgrano
 
-    - Origen del paquete(Retiro en Sucursal): 
+    - Origen del paquete(Retiro en Puerta):
+        - Region: CABA
+        - Provincia: Buenos Aires
+        - Localidad: Belgrano
+
+    - Entrega del paquete (Entrega en Sucursal):
         - Region: NOA
         - Provincia: Catamarca
         - Localidad: San Fernando del Valle de Catamarca
         - Sucursal: San Fernando del Valle de Catamarca
 
+    - Entrega del paquete (Entrega en Puerta):
+        - Region: NOA
+        - Provincia: Catamarca
+        - Localidad: San Fernando del Valle de Catamarca
    
-
+/********************************************************************
 
 Posible camino de Envio internacional:
-    - Tipo de paquete: correspondencia.
+    - Tipo de paquete: 
+        - Correspondencia.
+        - Encomienda.
     - Origen del paquete(Presentacion en Sucursal): 
         - Region: CABA
         - Provincia: Buenos Aires
         - Localidad: Belgrano
         - Sucursal: Belgrano
-    - Destino del paquete(Retiro en Sucursal): 
+
+    - Origen del paquete(Retiro en Puerta):
+        - Region: CABA
+        - Provincia: Buenos Aires
+        - Localidad: Belgrano
+
+    - Destino del paquete: 
         - Region: Europa
         - Pais: España
+
+/********************************************************************
+
+Estado de Envio Nacional: N100
+
+Estado de Envio Internacional: I100
 */
 
 namespace CAIGrupoH
@@ -75,9 +103,10 @@ namespace CAIGrupoH
                     case 3:
                         {
                             Console.Clear();
-                            Console.WriteLine("Ingrese el Número de Orden de Servicio:");
-                            string numeroOrden = Console.ReadLine();
-                            Validaciones.ValidarOrdenServicio(numeroOrden);
+                            var numeroOrden = OrdenDeServicio.MostrarOrden();
+                            //Console.WriteLine("Ingrese el Número de Orden de Servicio:");
+                            //string numeroOrden = Console.ReadLine().ToLower();
+                            //Validaciones.ValidarOrdenServicio(numeroOrden);
                             break;
                         }
                     case 4:
