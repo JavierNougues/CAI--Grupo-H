@@ -1,4 +1,11 @@
-﻿namespace CAIGrupoH
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace CAIGrupoH
 {
     internal class EnvioDetalle
     {
@@ -34,7 +41,7 @@
         public string? TipoEnvio { get; set; }
 
 
-        const string maestroProvincias = "MaestroProvincias.txt";
+        const string maestroProvincias = "maestroprovincias.txt";
 
         public List<EnvioDetalle> provincias = new List<EnvioDetalle>();
 

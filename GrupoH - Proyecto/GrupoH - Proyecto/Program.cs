@@ -1,4 +1,12 @@
-﻿namespace CAIGrupoH
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+using GrupoH___Proyecto;
+
+namespace CAIGrupoH
 {
     class Program
     {
@@ -27,7 +35,8 @@
                         }
                     case 3:
                         {
-                            //var consultarEstadoCuenta = 
+                            //Falta generar el inicio donde se obtendra el codigo de cliente.
+                            //var consultarEstadoCuentaCorriente = CuentaCorriente.ConsultarCuentaCorriente(codCliente);
                             break;
                         }
                     case 0:

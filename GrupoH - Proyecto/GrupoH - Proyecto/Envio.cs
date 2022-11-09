@@ -1,4 +1,11 @@
-﻿namespace CAIGrupoH
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace CAIGrupoH
 {
     internal class Envio
     {
@@ -250,7 +257,7 @@
                    
                 nuevaOS.NroOrdenServicio = nuevoEnvio.OrdenDeServicio;
                 //nuevaOS.NumeroCliente = ;
-                nuevaOS.Fecha = DateTime.Today;
+                nuevaOS.FechaOS = DateTime.Today;
                 nuevaOS.EstadoOrden = "Iniciada";
                 nuevaOS.TipoEnvio = nuevoEnvio.TipoEnvio;
                 nuevaOS.PesoPaquete = nuevoEnvio.PesoPaquete;

@@ -1,9 +1,16 @@
-﻿namespace CAIGrupoH
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace CAIGrupoH
 {
     internal class OrdenDeServicio
     {
         //Propiedades
-        public DateTime? Fecha { get; set; }
+        public DateTime? FechaOS { get; set; }
         public string? NumeroCliente { get; set; }
         public string? NroOrdenServicio { get; set; }
         public string? EstadoOrden { get; set; }
@@ -37,7 +44,7 @@
             var datos = linea.Split('|');
             NroOrdenServicio = datos[0];
             NumeroCliente = datos[1];
-            Fecha = DateTime.Parse(datos[2]);
+            FechaOS = DateTime.Parse(datos[2]);
             EstadoOrden = datos[3];
             TipoEnvio = datos[4];
             PesoPaquete = datos[5];
@@ -94,7 +101,7 @@
 
             foreach (OrdenDeServicio OS in ordenesDeServicio)
             {
-                nuevaSW.WriteLine(OS.NroOrdenServicio + "|" + OS.NumeroCliente + "|" + OS.Fecha + "|" + OS.EstadoOrden + "|" + OS.TipoEnvio + "|"
+                nuevaSW.WriteLine(OS.NroOrdenServicio + "|" + OS.NumeroCliente + "|" + OS.FechaOS + "|" + OS.EstadoOrden + "|" + OS.TipoEnvio + "|"
                     + OS.PesoPaquete + "|" + OS.Tarifa + "|" + OS.TipoRecepcion + "|" + OS.RetiroProvincia + "|" + OS.RetiroLocalidad + "|"
                     + OS.RetiroDireccion + "|" + OS.RetiroDireccionNumero + "|" + OS.RetiroSucursal + "|" + OS.TipoEntrega + "|"
                     + OS.EntregaPais + "|" + OS.EntregaProvincia + "|" + OS.EntregaLocalidad + "|" + OS.EntregaDireccion + "|" + OS.EntregaDireccion + "|"
@@ -102,7 +109,7 @@
             }
 
             nuevaSW.Close();
-            Console.WriteLine("La Orden de Servicio se guardó correctamente.");
+            Console.WriteLine("La 'Orden de Servicio' se guardó correctamente en el archivo.");
         }
 
         public static OrdenDeServicio ConsultarEstadoOrden()
@@ -120,7 +127,7 @@
 
             consultarOS.MostrarOrdenServicio(numeroOrden);
             Console.WriteLine("Gracias por utilizar nuestros servicios.");
-            Console.WriteLine("Ingrese cualquier tecla para continuar");
+            Console.WriteLine("Ingrese cualquier tecla para continuar.");
             Console.ReadKey();
             return consultarOS;
         }
@@ -143,9 +150,11 @@
             }
             if (!auxOrdenes.ContainsKey(numeroOrden))
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("---------------------------------------------------------");
                 Console.WriteLine("El 'Número de Orden de Servicio' ingresado es incorrecto.");
-                Console.WriteLine("Ingrese cualquier tecla para continuar");
+                Console.WriteLine("---------------------------------------------------------");
+                Console.WriteLine("Gracias por utilizar nuestros servicios.");
+                Console.WriteLine("Ingrese cualquier tecla para continuar.");
                 Console.ReadKey();
             }
 
@@ -153,6 +162,29 @@
             {
                 Console.WriteLine($"{item.Key} \t\t{item.Value}");
             }
+        }
+
+        public void MostrarOSPendientesFacturar(string codCliente)
+        {
+            Console.WriteLine("Fecha \t\tNúmero Orden de Servicio  \t\tEstado \t\tMonto");
+            for (int i = 0; i < ordenesDeServicio.Count; i++)
+            {
+                if (ordenesDeServicio[i].NumeroCliente == codCliente)
+                {
+                    Console.WriteLine($"{ordenesDeServicio[i].FechaOS} \t\t{ordenesDeServicio[i].NroOrdenServicio} \t\t{ordenesDeServicio[i].EstadoOrden} \t\t{ordenesDeServicio[i].Tarifa}");
+                    
+                }
+                else
+                {
+                    Console.WriteLine("------------------------------------------------------");
+                    Console.WriteLine("No se encontraron 'Ordenes Pendientes de Facturar'");
+                    Console.WriteLine("------------------------------------------------------");
+                    Console.WriteLine("Gracias por utilizar nuestros servicios.");
+                    Console.WriteLine("Ingrese cualquier tecla para continuar.");
+                    Console.ReadKey();
+                }
+            }
+
         }
     }
 }
