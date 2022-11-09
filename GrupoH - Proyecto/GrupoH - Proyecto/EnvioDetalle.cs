@@ -41,7 +41,7 @@ namespace CAIGrupoH
         public string? TipoEnvio { get; set; }
 
 
-        const string maestroProvincias = "maestroprovincias.txt";
+        const string maestroProvincias = "C:\\Users\\javier.nougues@sap.com\\Documents\\GitHub\\CAI--Grupo-H\\GrupoH - Proyecto\\maestroprovincias.txt";
 
         public List<EnvioDetalle> provincias = new List<EnvioDetalle>();
 
@@ -355,7 +355,7 @@ namespace CAIGrupoH
                     // Localidad de retiro
                     Console.Clear();
                     Console.WriteLine("Seleccione la localidad donde se retira el paquete:");
-                    int codLocalidad = tipoRecepcion.VerLocalidadPorProvincia(tipoRecepcion.CodigoProvincia);
+                    int codLocalidad = tipoRecepcion.VerLocalidadPorProvincia(menuProvincia);
                     localidadSeleccionada = tipoRecepcion.DevuelveNombreLocalidad(codLocalidad);
                     tipoRecepcion.NombreLocalidad = localidadSeleccionada;
                     tipoRecepcion.CodigoLocalidad = codLocalidad;
@@ -657,7 +657,7 @@ namespace CAIGrupoH
                             // Localidad de entrega
                             Console.Clear();
                             Console.WriteLine("Seleccione la localidad donde se entrega el paquete:");
-                            int codLocalidad = tipoEntrega.VerLocalidadPorProvincia(tipoEntrega.CodigoProvincia);
+                            int codLocalidad = tipoEntrega.VerLocalidadPorProvincia(menuProvincia);
                             localidadSeleccionada = tipoEntrega.DevuelveNombreLocalidad(codLocalidad);
                             tipoEntrega.NombreLocalidad = localidadSeleccionada;
                             
@@ -838,16 +838,17 @@ namespace CAIGrupoH
                     tipoEntrega.EntregaDireccionNumero = direccionNumero.ToString();
                     tipoEntrega.EntregaInternacionalInfo = infoAdicional;
                 }
+                break;
             }
             return tipoEntrega;
         }
 
 
 
-            //***********************************************************************************************************************************************************************************//
-            //***********************************************************************************************************************************************************************************//
-            // Leer Maestro Provincias
-            public void LeerMaestroProvincias()
+     //***********************************************************************************************************************************************************************************//
+     //***********************************************************************************************************************************************************************************//
+     // Leer Maestro Provincias
+        public void LeerMaestroProvincias()
         {
             if (File.Exists(maestroProvincias))
             {
@@ -870,7 +871,7 @@ namespace CAIGrupoH
             Console.WriteLine("Código Localidad \tNombre Localidad");
 
             Dictionary<int, string> auxProvincias = new Dictionary<int, string>();
-            bool encontrado = false;
+            bool encontrado;
             foreach (var prov in provincias)
             {
                 if (prov.CodigoProvincia == codProvIngresado)
