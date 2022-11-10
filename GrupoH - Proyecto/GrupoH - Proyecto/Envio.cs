@@ -189,7 +189,7 @@ namespace CAIGrupoH
 
             // Mostramos en pantalla el envio al detalle
             Console.Clear();
-            Console.Write("---------------------------------------------------------------------------------------------------------------------------\n");
+            Console.Write("-----------------------------------------------------------------------------------------------------------------------\n");
             Console.WriteLine($"Tipo de Envío: {nuevoEnvio.EntregaPaquete.TipoEnvio}\n");
             Console.WriteLine($"Numero de Orden: {nuevoEnvio.OrdenDeServicio.ToUpper()}\n");
             Console.WriteLine($"Peso Paquete: {nuevoEnvio.PesoPaquete.ToUpper()}\n");
@@ -232,7 +232,7 @@ namespace CAIGrupoH
                 Console.WriteLine($"información Adicional: {nuevoEnvio.EntregaPaquete.EntregaInternacionalInfo}\n");
             }
             
-            Console.Write("---------------------------------------------------------------------------------------------------------------------------");
+            Console.Write("-----------------------------------------------------------------------------------------------------------------------");
 
 
             // Confirmamos la orden de envio

@@ -209,6 +209,7 @@ namespace CAIGrupoH
                    int codLocalidad = tipoRecepcion.VerLocalidadPorProvincia(tipoRecepcion.CodigoProvincia);
                    localidadSeleccionada = tipoRecepcion.DevuelveNombreLocalidad(codLocalidad);
                    tipoRecepcion.NombreLocalidad = localidadSeleccionada;
+                   tipoRecepcion.RetiroLocalidad = localidadSeleccionada;
                    tipoRecepcion.CodigoLocalidad = codLocalidad;
 
                     // Dirección exacta de retiro
@@ -358,6 +359,7 @@ namespace CAIGrupoH
                     int codLocalidad = tipoRecepcion.VerLocalidadPorProvincia(menuProvincia);
                     localidadSeleccionada = tipoRecepcion.DevuelveNombreLocalidad(codLocalidad);
                     tipoRecepcion.NombreLocalidad = localidadSeleccionada;
+                    tipoRecepcion.RetiroLocalidad = localidadSeleccionada;
                     tipoRecepcion.CodigoLocalidad = codLocalidad;
 
                     // Sucursal de retiro
@@ -366,6 +368,7 @@ namespace CAIGrupoH
                     int codSucursal = tipoRecepcion.VerSucursalPorLocalidad(tipoRecepcion.CodigoLocalidad);
                     sucursalSeleccionada = tipoRecepcion.DevuelveNombreSucursal(codSucursal);
                     tipoRecepcion.NombreSucursal = sucursalSeleccionada;
+                    tipoRecepcion.RetiroSucursal = sucursalSeleccionada;
                     tipoRecepcion.CodigoSucursal = codSucursal;
 
                 }
@@ -380,6 +383,7 @@ namespace CAIGrupoH
 
             while (true)
             {
+                Console.Clear();
                 int menuPais = Validaciones.ValidarMenuPrincipal("Seleccione el país donde se entrega el paquete:", "1. Argentina \n2. Otro", 1, 2);
 
                 switch (menuPais)
@@ -660,7 +664,7 @@ namespace CAIGrupoH
                             int codLocalidad = tipoEntrega.VerLocalidadPorProvincia(menuProvincia);
                             localidadSeleccionada = tipoEntrega.DevuelveNombreLocalidad(codLocalidad);
                             tipoEntrega.NombreLocalidad = localidadSeleccionada;
-                            
+                            tipoEntrega.EntregaLocalidad = localidadSeleccionada;
                             tipoEntrega.CodigoLocalidad = codLocalidad;
 
                             // Dirección exacta de etrega
@@ -668,8 +672,8 @@ namespace CAIGrupoH
                             var direccionCalle = Validaciones.ValidarStringIngresado("Ingrese la calle donde se realizara la entrega del paquete:", "Aclaración: solo la calle.");
                             Console.Clear();
                             var direccionNumero = Validaciones.ValidarIntIngresado("Ingrese la altura de la calle donde se realizara la entrega del paquete:", 0, 4);
-                            tipoEntrega.RetiroDireccion = direccionCalle;
-                            tipoEntrega.RetiroDireccionNumero = direccionNumero.ToString();
+                            tipoEntrega.EntregaDireccion = direccionCalle;
+                            tipoEntrega.EntregaDireccionNumero = direccionNumero.ToString();
 
                         }
                         
@@ -808,9 +812,10 @@ namespace CAIGrupoH
                             // Localidad de entrega
                             Console.Clear();
                             Console.WriteLine("Seleccione la localidad donde se entrega el paquete:");
-                            int codLocalidad = tipoEntrega.VerLocalidadPorProvincia(tipoEntrega.CodigoProvincia);
+                            int codLocalidad = tipoEntrega.VerLocalidadPorProvincia(menuProvincia);
                             localidadSeleccionada = tipoEntrega.DevuelveNombreLocalidad(codLocalidad);
                             tipoEntrega.NombreLocalidad = localidadSeleccionada;
+                            tipoEntrega.EntregaLocalidad = localidadSeleccionada;
                             tipoEntrega.CodigoLocalidad = codLocalidad;
 
                             // Sucursal de entrega
@@ -819,6 +824,7 @@ namespace CAIGrupoH
                             int codSucursal = tipoEntrega.VerSucursalPorLocalidad(tipoEntrega.CodigoLocalidad);
                             sucursalSeleccionada = tipoEntrega.DevuelveNombreSucursal(codSucursal);
                             tipoEntrega.NombreSucursal = sucursalSeleccionada;
+                            tipoEntrega.EntregaSucursal = sucursalSeleccionada;
                             tipoEntrega.CodigoSucursal = codSucursal;
 
                         }
@@ -868,6 +874,7 @@ namespace CAIGrupoH
         // Seleccion de localidad por provincia
         public int VerLocalidadPorProvincia(int codProvIngresado)
         {
+
             Console.WriteLine("Código Localidad \tNombre Localidad");
 
             Dictionary<int, string> auxProvincias = new Dictionary<int, string>();
@@ -896,51 +903,29 @@ namespace CAIGrupoH
                 bool ingresoOpcionValida = false;
 
                 bool seleccionCorrecta = int.TryParse(localidad, out opcLocalidad);
-                if (seleccionCorrecta == true)
+                foreach (var item in auxProvincias)
                 {
-                    foreach (var item in auxProvincias)
+                    if (item.Key == opcLocalidad)
                     {
-                        if (item.Key == opcLocalidad)
-                        {
-                            ingresoOpcionValida = true;
-                        }
+                        ingresoOpcionValida = true;
+                        break;
                     }
                 }
-                else
+                if (seleccionCorrecta == false)
                 {
-                    Console.WriteLine("La opción seleccionada es incorrecta, intente nuevamente:");
+                    Console.WriteLine("El código ingresado debe ser un número, intente nuevamente:");
                     continue;
                 }
+                if (ingresoOpcionValida == false)
+                {
+                    Console.WriteLine("Opción inválida, intente nuevamente:");
+                    continue;
+                }
+                
                 break;
             } while (true);
             return opcLocalidad;
         }
-
-        // Devuelve la localidad segun el codigo de localidad
-        public string DevuelveNombreLocalidad(int codigoLocalidad)
-        {
-            Dictionary<int, string> auxLocalidad = new Dictionary<int, string>();
-            bool encontrado = false;
-            foreach (var prov in provincias)
-            {
-                if (prov.CodigoLocalidad == codigoLocalidad)
-                {
-                    encontrado = auxLocalidad.ContainsKey(prov.CodigoLocalidad);
-                    if (!encontrado)
-                    {
-                        auxLocalidad.Add(prov.CodigoLocalidad, prov.NombreLocalidad);
-                    }
-                }
-            }
-            string localidadNombre = "";
-            foreach (var item in auxLocalidad)
-            {
-                Console.WriteLine($"{item.Key} \t\t\t{item.Value}");
-                localidadNombre = item.Value;
-            }
-            return localidadNombre;
-        }
-
 
         // Seleccion de sucursal por localidad
         public int VerSucursalPorLocalidad(int codLocIngresada)
@@ -973,25 +958,54 @@ namespace CAIGrupoH
                 bool ingresoOpcionValida = false;
 
                 bool seleccionCorrecta = int.TryParse(sucursal, out opcSucursal);
-                if (seleccionCorrecta == true)
+                foreach (var item in auxLocalidades)
                 {
-                    foreach (var item in auxLocalidades)
+                    if (item.Key == opcSucursal)
                     {
-                        if (item.Key == opcSucursal)
-                        {
-                            ingresoOpcionValida = true;
-                        }
+                        ingresoOpcionValida = true;
                     }
                 }
-                else
+                if (seleccionCorrecta == false)
                 {
-                    Console.WriteLine("La opción seleccionada es incorrecta, intente nuevamente:");
+                    Console.WriteLine("El código ingresado debe ser un número, intente nuevamente:");
+                    continue;
+                }
+                if(ingresoOpcionValida == false)
+                {
+                    Console.WriteLine("Opción inválida, intente nuevamente:");
                     continue;
                 }
                 break;
             } while (true);
             return opcSucursal;
         }
+
+
+        // Devuelve la localidad segun el codigo de localidad
+        public string DevuelveNombreLocalidad(int codigoLocalidad)
+        {
+            Dictionary<int, string> auxLocalidad = new Dictionary<int, string>();
+            bool encontrado = false;
+            foreach (var prov in provincias)
+            {
+                if (prov.CodigoLocalidad == codigoLocalidad)
+                {
+                    encontrado = auxLocalidad.ContainsKey(prov.CodigoLocalidad);
+                    if (!encontrado)
+                    {
+                        auxLocalidad.Add(prov.CodigoLocalidad, prov.NombreLocalidad);
+                    }
+                }
+            }
+            string localidadNombre = "";
+            foreach (var item in auxLocalidad)
+            {
+                Console.WriteLine($"{item.Key} \t\t\t{item.Value}");
+                localidadNombre = item.Value;
+            }
+            return localidadNombre;
+        }
+
 
         // Devuelve la sucursal segun el codigo de localidad
         public string DevuelveNombreSucursal(int codigoSucursal)
@@ -1002,10 +1016,10 @@ namespace CAIGrupoH
             {
                 if (prov.CodigoSucursal == codigoSucursal)
                 {
-                    encontrado = auxSucursal.ContainsKey(prov.CodigoLocalidad);
+                    encontrado = auxSucursal.ContainsKey(prov.CodigoSucursal);
                     if (!encontrado)
                     {
-                        auxSucursal.Add(prov.CodigoLocalidad, prov.NombreLocalidad);
+                        auxSucursal.Add(prov.CodigoSucursal, prov.NombreSucursal);
                     }
                 }
             }
