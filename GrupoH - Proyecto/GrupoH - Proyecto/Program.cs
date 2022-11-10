@@ -13,10 +13,20 @@ namespace CAIGrupoH
         static void Main(string[] strings)
         {
             // Ingreso de Cliente + Contraseña + DNI Autorizado
+            int numeroCliente = Validaciones.ValidarIntCliente("¡Bienvenido! \nIngrese su 'Número de Cliente' para continuar:");
+            Console.WriteLine("Ingrese su contraseña:");
+            string contraCliente = Console.ReadLine();
+            int dniCliente = Validaciones.ValidarDNICliente("Ingrese el 'DNI del Personal Autorizado':");
+
+            ClienteCorporativo cliente = new ClienteCorporativo();
+
+            string nroCliente = numeroCliente.ToString();
+            string dni =dniCliente.ToString(); 
+
+            cliente.LeerMaestroCliente(nroCliente, contraCliente, dni);
 
 
             Console.Clear();
-
             // Menu Princiapl: Opciones
             while (true)
             {

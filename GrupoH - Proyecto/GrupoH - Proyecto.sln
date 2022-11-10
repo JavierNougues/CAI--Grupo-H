@@ -7,6 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrupoH - Proyecto", "GrupoH
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2678A19C-A37F-4F14-A60B-8DDBFF049AF0}"
 	ProjectSection(SolutionItems) = preProject
+		maestroclientecorporativo.txt = maestroclientecorporativo.txt
+		maestrofacturas.txt = maestrofacturas.txt
+		maestroordenesservicio.txt = maestroordenesservicio.txt
 		maestroprovincias.txt = maestroprovincias.txt
 	EndProjectSection
 EndProject

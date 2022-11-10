@@ -35,7 +35,7 @@ namespace CAIGrupoH
         public string? EntregaSucursal { get; set; }
 
 
-        const string maestroOrdenesServicio = "maestroOrdenesServicio.txt";
+        const string maestroOrdenesServicio = "maestroordenesservicio.txt";
 
         List<OrdenDeServicio> ordenesDeServicio = new List<OrdenDeServicio>();
 
@@ -116,15 +116,12 @@ namespace CAIGrupoH
         {
             var consultarOS = new OrdenDeServicio();
 
+            Console.Clear();
+
             consultarOS.LeerMaestroOrdenes();
             string numeroOrden;
-            do
-            {
-                Console.WriteLine("Ingrese el 'Número de Orden de Servicio':");
-                var numeroOSIngresado = Validaciones.ValidarIntIngresado("Ingrese el 'Número de Orden de Servicio:", 0, 9999999999);
-                numeroOrden = numeroOSIngresado.ToString();
-            } while (true);
-
+            var numeroOSIngresado = Validaciones.ValidarIntIngresado("Ingrese el 'Número de Orden de Servicio:");
+            numeroOrden = numeroOSIngresado.ToString();
             consultarOS.MostrarOrdenServicio(numeroOrden);
             Console.WriteLine("Gracias por utilizar nuestros servicios.");
             Console.WriteLine("Ingrese cualquier tecla para continuar.");
@@ -150,6 +147,7 @@ namespace CAIGrupoH
             }
             if (!auxOrdenes.ContainsKey(numeroOrden))
             {
+                Console.Clear();
                 Console.WriteLine("---------------------------------------------------------");
                 Console.WriteLine("El 'Número de Orden de Servicio' ingresado es incorrecto.");
                 Console.WriteLine("---------------------------------------------------------");

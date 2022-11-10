@@ -69,7 +69,7 @@ namespace CAIGrupoH
             return stringIngresado;
         }
 
-        static public int ValidarIntIngresado(string mensaje, int min, long max)
+        static public int ValidarAlturaIngresada(string mensaje, int min, long max)
         {
 
             int intEntero;
@@ -91,6 +91,78 @@ namespace CAIGrupoH
                 if (intEntero.ToString().Length > max)
                 {
                     Console.WriteLine($"Por favor ingrese una altura válida: entre {min} y {max} dígitos.");
+                    continue;
+                }
+                break;
+            } while (true);
+            return intEntero;
+        }
+
+        static public int ValidarIntIngresado(string mensaje)
+        {
+
+            int intEntero;
+            do
+            {
+                Console.WriteLine(mensaje);
+                var intIngresado = Console.ReadLine();
+                bool entero = int.TryParse(intIngresado, out intEntero);
+                if (entero == false)
+                {
+                    Console.WriteLine("Por favor ingrese un número.");
+                    continue;
+                }
+                if (intEntero == null)
+                {
+                    Console.WriteLine("Por favor ingrese un número.");
+                    continue;
+                }
+                break;
+            } while (true);
+            return intEntero;
+        }
+
+        static public int ValidarIntCliente(string mensaje)
+        {
+
+            int intEntero;
+            do
+            {
+                Console.WriteLine(mensaje);
+                var intIngresado = Console.ReadLine();
+                bool entero = int.TryParse(intIngresado, out intEntero);
+                if (entero == false)
+                {
+                    Console.WriteLine("El 'Número de Cliente' contiene solo números, intente nuevamnete:");
+                    continue;
+                }
+                if (intEntero == null)
+                {
+                    Console.WriteLine("Por favor ingrese su 'Número de Cliente':");
+                    continue;
+                }
+                break;
+            } while (true);
+            return intEntero;
+        }
+
+        static public int ValidarDNICliente(string mensaje)
+        {
+
+            int intEntero;
+            do
+            {
+                Console.WriteLine(mensaje);
+                var intIngresado = Console.ReadLine();
+                bool entero = int.TryParse(intIngresado, out intEntero);
+                if (entero == false)
+                {
+                    Console.WriteLine("El 'DNI del Personal Autorizado' contiene solo números, intente nuevamnete:");
+                    continue;
+                }
+                if (intEntero == null)
+                {
+                    Console.WriteLine("Por favor ingrese su 'DNI de Personal Autorizado':");
                     continue;
                 }
                 break;

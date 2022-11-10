@@ -216,7 +216,7 @@ namespace CAIGrupoH
                     Console.Clear();
                     var direccionCalle = Validaciones.ValidarStringIngresado("Ingrese la calle donde se realizara el retiro del paquete:", "Aclaración: solo la calle.");
                     Console.Clear();
-                    var direccionNumero = Validaciones.ValidarIntIngresado("Ingrese la altura de la calle donde se realizara el retiro del paquete:", 0, 4);
+                    var direccionNumero = Validaciones.ValidarAlturaIngresada("Ingrese la altura de la calle donde se realizara el retiro del paquete:", 0, 4);
                     tipoRecepcion.RetiroDireccion = direccionCalle;
                     tipoRecepcion.RetiroDireccionNumero = direccionNumero.ToString();
 
@@ -671,7 +671,7 @@ namespace CAIGrupoH
                             Console.Clear();
                             var direccionCalle = Validaciones.ValidarStringIngresado("Ingrese la calle donde se realizara la entrega del paquete:", "Aclaración: solo la calle.");
                             Console.Clear();
-                            var direccionNumero = Validaciones.ValidarIntIngresado("Ingrese la altura de la calle donde se realizara la entrega del paquete:", 0, 4);
+                            var direccionNumero = Validaciones.ValidarAlturaIngresada("Ingrese la altura de la calle donde se realizara la entrega del paquete:", 0, 4);
                             tipoEntrega.EntregaDireccion = direccionCalle;
                             tipoEntrega.EntregaDireccionNumero = direccionNumero.ToString();
 
@@ -838,7 +838,7 @@ namespace CAIGrupoH
                     // Dirección exacta de etrega
                     Console.Clear();
                     var direccionCalle = Validaciones.ValidarStringIngresado("Ingrese la calle donde se realizara la entrega del paquete:", "Aclaración: solo la calle.");
-                    var direccionNumero = Validaciones.ValidarIntIngresado("Ingrese la altura de la calle donde se realizara la entrega del paquete:", 0, 4);
+                    var direccionNumero = Validaciones.ValidarAlturaIngresada("Ingrese la altura de la calle donde se realizara la entrega del paquete:", 0, 4);
                     var infoAdicional = Validaciones.ValidarStringIngresado("Ingrese cualquier información adicional que considere relevante; ", "");
                     tipoEntrega.EntregaDireccion = direccionCalle;
                     tipoEntrega.EntregaDireccionNumero = direccionNumero.ToString();
