@@ -21,6 +21,7 @@ namespace CAIGrupoH
 
         // Propiedades Retiro
         public string? TipoRecepcion { get; set; }
+        public string? RetiroRegion { get; set; }
         public string? RetiroProvincia { get; set; }
         public string? RetiroLocalidad { get; set; }
         public string? RetiroDireccion { get; set; }
@@ -29,6 +30,7 @@ namespace CAIGrupoH
 
         // Propiedades Entrega
         public string? EntregaPais { get; set; }
+        public string? EntregaRegion { get; set; }
         public string? EntregaPaisRegion { get; set; }
         public string? TipoEntrega { get; set; }
         public string? EntregaProvincia { get; set; }
@@ -87,116 +89,139 @@ namespace CAIGrupoH
                         case 1:
                             {
                                 tipoRecepcion.RetiroProvincia = "buenos aires";
+                                tipoRecepcion.RetiroRegion = "centro";
                                 break;
                             }
                         case 2:
                             {
                                 tipoRecepcion.RetiroProvincia = "chubut";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
                         case 3:
                             {
                                 tipoRecepcion.RetiroProvincia = "catamarca";
+                                tipoRecepcion.RetiroRegion = "noa";
                                 break;
                             }
                         case 4:
                             {
                                 tipoRecepcion.RetiroProvincia = "chaco";
+                                tipoRecepcion.RetiroRegion = "nea";
                                 break;
                             }
                         case 5:
                             {
                                 tipoRecepcion.RetiroProvincia = "caba";
+                                tipoRecepcion.RetiroRegion = "centro";
                                 break;
                             }
                         case 6:
                             {
                                 tipoRecepcion.RetiroProvincia = "cordoba";
+                                tipoRecepcion.RetiroRegion = "centro";
                                 break;
                             }
                         case 7:
                             {
                                 tipoRecepcion.RetiroProvincia = "corrientes";
+                                tipoRecepcion.RetiroRegion = "nea";
                                 break;
                             }
                         case 8:
                             {
                                 tipoRecepcion.RetiroProvincia = "entre rios";
+                                tipoRecepcion.RetiroRegion = "centro";
                                 break;
                             }
                         case 9:
                             {
                                 tipoRecepcion.RetiroProvincia = "formosa";
+                                tipoRecepcion.RetiroRegion = "nea";
                                 break;
                             }
                         case 10:
                             {
                                 tipoRecepcion.RetiroProvincia = "jujuy";
+                                tipoRecepcion.RetiroRegion = "noa";
                                 break;
                             }
                         case 11:
                             {
                                 tipoRecepcion.RetiroProvincia = "la pampa";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
                         case 12:
                             {
                                 tipoRecepcion.RetiroProvincia = "la rioja";
+                                tipoRecepcion.RetiroRegion = "cuyo";
                                 break;
                             }
                         case 13:
                             {
                                 tipoRecepcion.RetiroProvincia = "mendoza";
+                                tipoRecepcion.RetiroRegion = "cuyo";
                                 break;
                             }
                         case 14:
                             {
                                 tipoRecepcion.RetiroProvincia = "misiones";
+                                tipoRecepcion.RetiroRegion = "nea";
                                 break;
                             }
                         case 15:
                             {
                                 tipoRecepcion.RetiroProvincia = "neuquen";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
                         case 16:
                             {
                                 tipoRecepcion.RetiroProvincia = "rio negro";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
                         case 17:
                             {
                                 tipoRecepcion.RetiroProvincia = "salta";
+                                tipoRecepcion.RetiroRegion = "noa";
                                 break;
                             }
                         case 18:
                             {
                                 tipoRecepcion.RetiroProvincia = "san juan";
+                                tipoRecepcion.RetiroRegion = "cuyo";
                                 break;
                             }
                         case 19:
                             {
                                 tipoRecepcion.RetiroProvincia = "san luis";
+                                tipoRecepcion.RetiroRegion = "cuyo";
                                 break;
                             }
                         case 20:
                             {
                                 tipoRecepcion.RetiroProvincia = "santa cruz";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
                         case 21:
                             {
                                 tipoRecepcion.RetiroProvincia = "santa fe";
+                                tipoRecepcion.RetiroRegion = "centro";
                                 break;
                             }
                         case 22:
                             {
                                 tipoRecepcion.RetiroProvincia = "santiago del estero";
+                                tipoRecepcion.RetiroRegion = "noa";
                                 break;
                             }
                         case 23:
                             {
                                 tipoRecepcion.RetiroProvincia = "tierra del fuego";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
 
@@ -237,116 +262,139 @@ namespace CAIGrupoH
                         case 1:
                             {
                                 tipoRecepcion.RetiroProvincia = "buenos aires";
+                                tipoRecepcion.RetiroRegion = "centro";
                                 break;
                             }
                         case 2:
                             {
                                 tipoRecepcion.RetiroProvincia = "chubut";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
                         case 3:
                             {
                                 tipoRecepcion.RetiroProvincia = "catamarca";
+                                tipoRecepcion.RetiroRegion = "noa";
                                 break;
                             }
                         case 4:
                             {
                                 tipoRecepcion.RetiroProvincia = "chaco";
+                                tipoRecepcion.RetiroRegion = "nea";
                                 break;
                             }
                         case 5:
                             {
                                 tipoRecepcion.RetiroProvincia = "caba";
+                                tipoRecepcion.RetiroRegion = "centro";
                                 break;
                             }
                         case 6:
                             {
                                 tipoRecepcion.RetiroProvincia = "cordoba";
+                                tipoRecepcion.RetiroRegion = "centro";
                                 break;
                             }
                         case 7:
                             {
                                 tipoRecepcion.RetiroProvincia = "corrientes";
+                                tipoRecepcion.RetiroRegion = "nea";
                                 break;
                             }
                         case 8:
                             {
                                 tipoRecepcion.RetiroProvincia = "entre rios";
+                                tipoRecepcion.RetiroRegion = "centro";
                                 break;
                             }
                         case 9:
                             {
                                 tipoRecepcion.RetiroProvincia = "formosa";
+                                tipoRecepcion.RetiroRegion = "nea";
                                 break;
                             }
                         case 10:
                             {
                                 tipoRecepcion.RetiroProvincia = "jujuy";
+                                tipoRecepcion.RetiroRegion = "noa";
                                 break;
                             }
                         case 11:
                             {
                                 tipoRecepcion.RetiroProvincia = "la pampa";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
                         case 12:
                             {
                                 tipoRecepcion.RetiroProvincia = "la rioja";
+                                tipoRecepcion.RetiroRegion = "cuyo";
                                 break;
                             }
                         case 13:
                             {
                                 tipoRecepcion.RetiroProvincia = "mendoza";
+                                tipoRecepcion.RetiroRegion = "cuyo";
                                 break;
                             }
                         case 14:
                             {
                                 tipoRecepcion.RetiroProvincia = "misiones";
+                                tipoRecepcion.RetiroRegion = "nea";
                                 break;
                             }
                         case 15:
                             {
                                 tipoRecepcion.RetiroProvincia = "neuquen";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
                         case 16:
                             {
                                 tipoRecepcion.RetiroProvincia = "rio negro";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
                         case 17:
                             {
                                 tipoRecepcion.RetiroProvincia = "salta";
+                                tipoRecepcion.RetiroRegion = "noa";
                                 break;
                             }
                         case 18:
                             {
                                 tipoRecepcion.RetiroProvincia = "san juan";
+                                tipoRecepcion.RetiroRegion = "cuyo";
                                 break;
                             }
                         case 19:
                             {
                                 tipoRecepcion.RetiroProvincia = "san luis";
+                                tipoRecepcion.RetiroRegion = "cuyo";
                                 break;
                             }
                         case 20:
                             {
                                 tipoRecepcion.RetiroProvincia = "santa cruz";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
                         case 21:
                             {
                                 tipoRecepcion.RetiroProvincia = "santa fe";
+                                tipoRecepcion.RetiroRegion = "centro";
                                 break;
                             }
                         case 22:
                             {
                                 tipoRecepcion.RetiroProvincia = "santiago del estero";
+                                tipoRecepcion.RetiroRegion = "noa";
                                 break;
                             }
                         case 23:
                             {
                                 tipoRecepcion.RetiroProvincia = "tierra del fuego";
+                                tipoRecepcion.RetiroRegion = "patagonia";
                                 break;
                             }
 
@@ -562,116 +610,139 @@ namespace CAIGrupoH
                                 case 1:
                                     {
                                         tipoEntrega.EntregaProvincia = "buenos aires";
+                                        tipoEntrega.EntregaRegion = "centro";
                                         break;
                                     }
                                 case 2:
                                     {
                                         tipoEntrega.EntregaProvincia = "chubut";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
                                 case 3:
                                     {
                                         tipoEntrega.EntregaProvincia = "catamarca";
+                                        tipoEntrega.EntregaRegion = "noa";
                                         break;
                                     }
                                 case 4:
                                     {
                                         tipoEntrega.EntregaProvincia = "chaco";
+                                        tipoEntrega.EntregaRegion = "nea";
                                         break;
                                     }
                                 case 5:
                                     {
                                         tipoEntrega.EntregaProvincia = "caba";
+                                        tipoEntrega.EntregaRegion = "centro";
                                         break;
                                     }
                                 case 6:
                                     {
                                         tipoEntrega.EntregaProvincia = "cordoba";
+                                        tipoEntrega.EntregaRegion = "centro";
                                         break;
                                     }
                                 case 7:
                                     {
                                         tipoEntrega.EntregaProvincia = "corrientes";
+                                        tipoEntrega.EntregaRegion = "nea";
                                         break;
                                     }
                                 case 8:
                                     {
                                         tipoEntrega.EntregaProvincia = "entre rios";
+                                        tipoEntrega.EntregaRegion = "centro";
                                         break;
                                     }
                                 case 9:
                                     {
                                         tipoEntrega.EntregaProvincia = "formosa";
+                                        tipoEntrega.EntregaRegion = "nea";
                                         break;
                                     }
                                 case 10:
                                     {
                                         tipoEntrega.EntregaProvincia = "jujuy";
+                                        tipoEntrega.EntregaRegion = "noa";
                                         break;
                                     }
                                 case 11:
                                     {
                                         tipoEntrega.EntregaProvincia = "la pampa";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
                                 case 12:
                                     {
                                         tipoEntrega.EntregaProvincia = "la rioja";
+                                        tipoEntrega.EntregaRegion = "cuyo";
                                         break;
                                     }
                                 case 13:
                                     {
                                         tipoEntrega.EntregaProvincia = "mendoza";
+                                        tipoEntrega.EntregaRegion = "cuyo";
                                         break;
                                     }
                                 case 14:
                                     {
                                         tipoEntrega.EntregaProvincia = "misiones";
+                                        tipoEntrega.EntregaRegion = "nea";
                                         break;
                                     }
                                 case 15:
                                     {
                                         tipoEntrega.EntregaProvincia = "neuquen";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
                                 case 16:
                                     {
                                         tipoEntrega.EntregaProvincia = "rio negro";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
                                 case 17:
                                     {
                                         tipoEntrega.EntregaProvincia = "salta";
+                                        tipoEntrega.EntregaRegion = "noa";
                                         break;
                                     }
                                 case 18:
                                     {
                                         tipoEntrega.EntregaProvincia = "san juan";
+                                        tipoEntrega.EntregaRegion = "cuyo";
                                         break;
                                     }
                                 case 19:
                                     {
                                         tipoEntrega.EntregaProvincia = "san luis";
+                                        tipoEntrega.EntregaRegion = "cuyo";
                                         break;
                                     }
                                 case 20:
                                     {
                                         tipoEntrega.EntregaProvincia = "santa cruz";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
                                 case 21:
                                     {
                                         tipoEntrega.EntregaProvincia = "santa fe";
+                                        tipoEntrega.EntregaRegion = "centro";
                                         break;
                                     }
                                 case 22:
                                     {
                                         tipoEntrega.EntregaProvincia = "santiago del estero";
+                                        tipoEntrega.EntregaRegion = "noa";
                                         break;
                                     }
                                 case 23:
                                     {
                                         tipoEntrega.EntregaProvincia = "tierra del fuego";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
 
@@ -714,116 +785,139 @@ namespace CAIGrupoH
                                 case 1:
                                     {
                                         tipoEntrega.EntregaProvincia = "buenos aires";
+                                        tipoEntrega.EntregaRegion = "centro";
                                         break;
                                     }
                                 case 2:
                                     {
                                         tipoEntrega.EntregaProvincia = "chubut";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
                                 case 3:
                                     {
                                         tipoEntrega.EntregaProvincia = "catamarca";
+                                        tipoEntrega.EntregaRegion = "noa";
                                         break;
                                     }
                                 case 4:
                                     {
                                         tipoEntrega.EntregaProvincia = "chaco";
+                                        tipoEntrega.EntregaRegion = "nea";
                                         break;
                                     }
                                 case 5:
                                     {
                                         tipoEntrega.EntregaProvincia = "caba";
+                                        tipoEntrega.EntregaRegion = "centro";
                                         break;
                                     }
                                 case 6:
                                     {
                                         tipoEntrega.EntregaProvincia = "cordoba";
+                                        tipoEntrega.EntregaRegion = "centro";
                                         break;
                                     }
                                 case 7:
                                     {
                                         tipoEntrega.EntregaProvincia = "corrientes";
+                                        tipoEntrega.EntregaRegion = "nea";
                                         break;
                                     }
                                 case 8:
                                     {
                                         tipoEntrega.EntregaProvincia = "entre rios";
+                                        tipoEntrega.EntregaRegion = "centro";
                                         break;
                                     }
                                 case 9:
                                     {
                                         tipoEntrega.EntregaProvincia = "formosa";
+                                        tipoEntrega.EntregaRegion = "nea";
                                         break;
                                     }
                                 case 10:
                                     {
                                         tipoEntrega.EntregaProvincia = "jujuy";
+                                        tipoEntrega.EntregaRegion = "noa";
                                         break;
                                     }
                                 case 11:
                                     {
                                         tipoEntrega.EntregaProvincia = "la pampa";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
                                 case 12:
                                     {
                                         tipoEntrega.EntregaProvincia = "la rioja";
+                                        tipoEntrega.EntregaRegion = "cuyo";
                                         break;
                                     }
                                 case 13:
                                     {
                                         tipoEntrega.EntregaProvincia = "mendoza";
+                                        tipoEntrega.EntregaRegion = "cuyo";
                                         break;
                                     }
                                 case 14:
                                     {
                                         tipoEntrega.EntregaProvincia = "misiones";
+                                        tipoEntrega.EntregaRegion = "nea";
                                         break;
                                     }
                                 case 15:
                                     {
                                         tipoEntrega.EntregaProvincia = "neuquen";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
                                 case 16:
                                     {
                                         tipoEntrega.EntregaProvincia = "rio negro";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
                                 case 17:
                                     {
                                         tipoEntrega.EntregaProvincia = "salta";
+                                        tipoEntrega.EntregaRegion = "noa";
                                         break;
                                     }
                                 case 18:
                                     {
                                         tipoEntrega.EntregaProvincia = "san juan";
+                                        tipoEntrega.EntregaRegion = "cuyo";
                                         break;
                                     }
                                 case 19:
                                     {
                                         tipoEntrega.EntregaProvincia = "san luis";
+                                        tipoEntrega.EntregaRegion = "cuyo";
                                         break;
                                     }
                                 case 20:
                                     {
                                         tipoEntrega.EntregaProvincia = "santa cruz";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
                                 case 21:
                                     {
                                         tipoEntrega.EntregaProvincia = "santa fe";
+                                        tipoEntrega.EntregaRegion = "centro";
                                         break;
                                     }
                                 case 22:
                                     {
                                         tipoEntrega.EntregaProvincia = "santiago del estero";
+                                        tipoEntrega.EntregaRegion = "noa";
                                         break;
                                     }
                                 case 23:
                                     {
                                         tipoEntrega.EntregaProvincia = "tierra del fuego";
+                                        tipoEntrega.EntregaRegion = "patagonia";
                                         break;
                                     }
                                     tipoEntrega.CodigoProvincia = menuProvincia;

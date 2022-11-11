@@ -130,14 +130,22 @@ namespace CAIGrupoH
                     {
                         tarifaPaquete += 350;
                     }
-                    // Tarifa provincial
-                    if (nuevoEnvio.RetiroPaquete.RetiroProvincia == nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                    // Tarifa regional
+                    if (nuevoEnvio.RetiroPaquete.RetiroRegion == nuevoEnvio.EntregaPaquete.EntregaRegion)
                     {
-                        tarifaPaquete += 550;
+                        // Tarifa Provincial
+                        if (nuevoEnvio.RetiroPaquete.RetiroProvincia == nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                        {
+                            tarifaPaquete += 550;
+                        }
+                        // Tarifa Regional
+                        else
+                        {
+                            tarifaPaquete += 750;
+                        }
                     }
-
-                    // Tarifa interprovincial 
-                    if (nuevoEnvio.RetiroPaquete.RetiroProvincia != nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                    else
+                    //Tarifa Nacional
                     {
                         tarifaPaquete += 950;
                     }
@@ -152,14 +160,22 @@ namespace CAIGrupoH
                         {
                             tarifaPaquete += 3500;
                         }
-                        // Tarifa provincial
-                        if (nuevoEnvio.RetiroPaquete.RetiroProvincia == nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                        // Tarifa regional
+                        if (nuevoEnvio.RetiroPaquete.RetiroRegion == nuevoEnvio.EntregaPaquete.EntregaRegion)
                         {
-                            tarifaPaquete += 5500;
+                            // Tarifa Provincial
+                            if (nuevoEnvio.RetiroPaquete.RetiroProvincia == nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                            {
+                                tarifaPaquete += 5500;
+                            }
+                            // Tarifa Regional
+                            else
+                            {
+                                tarifaPaquete += 7500;
+                            }
                         }
-
-                        // Tarifa interprovincial 
-                        if (nuevoEnvio.RetiroPaquete.RetiroProvincia != nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                        else
+                        //Tarifa Nacional
                         {
                             tarifaPaquete += 9500;
                         }
@@ -171,13 +187,22 @@ namespace CAIGrupoH
                         {
                             tarifaPaquete += 4200;
                         }
-                        // Tarifa provincial
-                        if (nuevoEnvio.RetiroPaquete.RetiroProvincia == nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                        // Tarifa regional
+                        if (nuevoEnvio.RetiroPaquete.RetiroRegion == nuevoEnvio.EntregaPaquete.EntregaRegion)
                         {
-                            tarifaPaquete += 6600;
+                            // Tarifa Provincial
+                            if (nuevoEnvio.RetiroPaquete.RetiroProvincia == nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                            {
+                                tarifaPaquete += 6600;
+                            }
+                            // Tarifa Regional
+                            else
+                            {
+                                tarifaPaquete += 9000;
+                            }
                         }
-                        // Tarifa interprovincial 
-                        if (nuevoEnvio.RetiroPaquete.RetiroProvincia != nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                        else
+                        //Tarifa Nacional
                         {
                             tarifaPaquete += 11400;
                         }
@@ -189,13 +214,22 @@ namespace CAIGrupoH
                         {
                             tarifaPaquete += 5250;
                         }
-                        // Tarifa provincial
-                        if (nuevoEnvio.RetiroPaquete.RetiroProvincia == nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                        // Tarifa regional
+                        if (nuevoEnvio.RetiroPaquete.RetiroRegion == nuevoEnvio.EntregaPaquete.EntregaRegion)
                         {
-                            tarifaPaquete += 8250;
+                            // Tarifa Provincial
+                            if (nuevoEnvio.RetiroPaquete.RetiroProvincia == nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                            {
+                                tarifaPaquete += 8250;
+                            }
+                            // Tarifa Regional
+                            else
+                            {
+                                tarifaPaquete += 11250;
+                            }
                         }
-                        // Tarifa interprovincial 
-                        if (nuevoEnvio.RetiroPaquete.RetiroProvincia != nuevoEnvio.EntregaPaquete.EntregaProvincia)
+                        else
+                        //Tarifa Nacional
                         {
                             tarifaPaquete += 14250;
                         }
