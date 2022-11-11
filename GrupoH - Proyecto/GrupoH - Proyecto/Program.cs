@@ -14,8 +14,9 @@ namespace CAIGrupoH
         {
             // Ingreso de Cliente + Contraseña + DNI Autorizado
             int numeroCliente = Validaciones.ValidarIntCliente("¡Bienvenido! \nIngrese su 'Número de Cliente' para continuar:");
-            Console.WriteLine("Ingrese su contraseña:");
-            string contraCliente = Console.ReadLine();
+            Console.Clear();
+            string contraCliente = Validaciones.ValidarContraseñaIngresada("Ingrese su contraseña:");
+            Console.Clear();
             int dniCliente = Validaciones.ValidarDNICliente("Ingrese el 'DNI del Personal Autorizado':");
 
             ClienteCorporativo cliente = new ClienteCorporativo();
@@ -23,13 +24,18 @@ namespace CAIGrupoH
             string nroCliente = numeroCliente.ToString();
             string dni =dniCliente.ToString(); 
 
+            //Valido datos de inicio de sesión
             cliente.LeerMaestroCliente(nroCliente, contraCliente, dni);
 
-
+            //Muestro datos de cliente
             Console.Clear();
+            cliente.VisualizarCliente();
+
+
             // Menu Princiapl: Opciones
             while (true)
             {
+                Console.Clear();
                 int menuPrincipal = Validaciones.ValidarMenuPrincipal("Seleccione la acción a realizar: ", "1. Realizar Envío \n2. Consultar Estado de su Envío \n3. Consultar Estado de su Cuenta Corriente \n0. Salir", 0, 3);
                 switch (menuPrincipal)
                 {
@@ -45,8 +51,7 @@ namespace CAIGrupoH
                         }
                     case 3:
                         {
-                            //Falta generar el inicio donde se obtendra el codigo de cliente.
-                            //var consultarEstadoCuentaCorriente = CuentaCorriente.ConsultarCuentaCorriente(codCliente);
+                            var consultarEstadoCuentaCorriente = CuentaCorriente.ConsultarCuentaCorriente(nroCliente);
                             break;
                         }
                     case 0:

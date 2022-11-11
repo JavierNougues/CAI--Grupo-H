@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using GrupoH___Proyecto;
 
 namespace CAIGrupoH
 {
@@ -17,7 +18,7 @@ namespace CAIGrupoH
 
         EnvioDetalle RetiroPaquete = new EnvioDetalle();
         EnvioDetalle EntregaPaquete = new EnvioDetalle();
-
+        ClienteCorporativo Cliente = new ClienteCorporativo();
         public static Envio Ingresar()
         {
             Console.Clear();
@@ -256,7 +257,7 @@ namespace CAIGrupoH
                 OrdenDeServicio nuevaOS = new OrdenDeServicio();
                    
                 nuevaOS.NroOrdenServicio = nuevoEnvio.OrdenDeServicio;
-                //nuevaOS.NumeroCliente = ;
+                nuevaOS.NumeroCliente = nuevoEnvio.Cliente.Cliente();
                 nuevaOS.FechaOS = DateTime.Today;
                 nuevaOS.EstadoOrden = "Iniciada";
                 nuevaOS.TipoEnvio = nuevoEnvio.TipoEnvio;

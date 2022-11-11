@@ -124,7 +124,6 @@ namespace CAIGrupoH
 
         static public int ValidarIntCliente(string mensaje)
         {
-
             int intEntero;
             do
             {
@@ -146,6 +145,23 @@ namespace CAIGrupoH
             return intEntero;
         }
 
+        static public string ValidarContraseñaIngresada(string mensaje)
+        {
+            string stringIngresado = "";
+            do
+            {
+                Console.WriteLine(mensaje);
+                stringIngresado = Console.ReadLine();
+                bool entero;
+                if (stringIngresado.Length <= 0)
+                {
+                    Console.WriteLine("Por favor ingrese una contraseña:");
+                    continue;
+                }
+                break;
+            } while (true);
+            return stringIngresado;
+        }
         static public int ValidarDNICliente(string mensaje)
         {
 

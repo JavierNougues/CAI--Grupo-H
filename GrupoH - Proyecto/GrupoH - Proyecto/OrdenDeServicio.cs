@@ -35,7 +35,7 @@ namespace CAIGrupoH
         public string? EntregaSucursal { get; set; }
 
 
-        const string maestroOrdenesServicio = "maestroordenesservicio.txt";
+        const string maestroOrdenesServicio = "C:\\Users\\javier.nougues@sap.com\\Documents\\GitHub\\CAI--Grupo-H\\GrupoH - Proyecto\\maestroordenesservicio.txt";
 
         List<OrdenDeServicio> ordenesDeServicio = new List<OrdenDeServicio>();
 
@@ -123,9 +123,6 @@ namespace CAIGrupoH
             var numeroOSIngresado = Validaciones.ValidarIntIngresado("Ingrese el 'Número de Orden de Servicio:");
             numeroOrden = numeroOSIngresado.ToString();
             consultarOS.MostrarOrdenServicio(numeroOrden);
-            Console.WriteLine("Gracias por utilizar nuestros servicios.");
-            Console.WriteLine("Ingrese cualquier tecla para continuar.");
-            Console.ReadKey();
             return consultarOS;
         }
 

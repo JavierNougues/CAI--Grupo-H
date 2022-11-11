@@ -18,9 +18,8 @@ namespace GrupoH___Proyecto
 
             while (true)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Clear();
                 int menuConsulta = Validaciones.ValidarMenuPrincipal("Consulta de 'Estado de Cuenta Corriente'", " \n1. Consultar 'Ordenes Pendientes de Facturar'  \n2. Consultar 'Saldo Adeudado'", 1, 2);
-                Console.ResetColor();
 
                 switch (menuConsulta)
                 {
