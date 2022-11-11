@@ -95,5 +95,15 @@ namespace GrupoH___Proyecto
             }
             return cliente;
         }
+
+        public string NroCliente()
+        {
+            string nroCliente = "";
+            for (int i = 0; i < clientes.Count; i++)
+            {
+                nroCliente = clientes[i].NumeroCliente;
+            }
+            return nroCliente;
+        }
     }
 }

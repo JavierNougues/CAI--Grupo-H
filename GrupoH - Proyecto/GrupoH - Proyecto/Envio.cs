@@ -257,7 +257,8 @@ namespace CAIGrupoH
                 OrdenDeServicio nuevaOS = new OrdenDeServicio();
                    
                 nuevaOS.NroOrdenServicio = nuevoEnvio.OrdenDeServicio;
-                nuevaOS.NumeroCliente = nuevoEnvio.Cliente.Cliente();
+                nuevaOS.NumeroCliente = nuevoEnvio.Cliente.NroCliente();
+                nuevaOS.NombreCliente = nuevoEnvio.Cliente.Cliente();
                 nuevaOS.FechaOS = DateTime.Today;
                 nuevaOS.EstadoOrden = "Iniciada";
                 nuevaOS.TipoEnvio = nuevoEnvio.TipoEnvio;

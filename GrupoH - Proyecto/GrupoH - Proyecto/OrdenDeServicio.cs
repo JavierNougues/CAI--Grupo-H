@@ -13,6 +13,7 @@ namespace CAIGrupoH
         //Propiedades
         public DateTime? FechaOS { get; set; }
         public string? NumeroCliente { get; set; }
+        public string? NombreCliente { get; set; }
         public string? NroOrdenServicio { get; set; }
         public string? EstadoOrden { get; set; }
         public string? TipoEnvio { get; set; }
@@ -65,6 +66,8 @@ namespace CAIGrupoH
             EntregaDireccion = datos[17];
             EntregaDireccionNumero = datos[18];
             EntregaSucursal = datos[19];
+
+            NombreCliente = datos[20];
         }
 
 
@@ -106,7 +109,7 @@ namespace CAIGrupoH
                     + OS.PesoPaquete + "|" + OS.Tarifa + "|" + OS.TipoRecepcion + "|" + OS.RetiroProvincia + "|" + OS.RetiroLocalidad + "|"
                     + OS.RetiroDireccion + "|" + OS.RetiroDireccionNumero + "|" + OS.RetiroSucursal + "|" + OS.TipoEntrega + "|"
                     + OS.EntregaPais + "|" + OS.EntregaProvincia + "|" + OS.EntregaLocalidad + "|" + OS.EntregaDireccion + "|" + OS.EntregaDireccion + "|"
-                    + OS.EntregaDireccionNumero + "|" + OS.EntregaSucursal);
+                    + OS.EntregaDireccionNumero + "|" + OS.EntregaSucursal + "|" + OS.NombreCliente);
             }
 
             nuevaSW.Close();
@@ -174,13 +177,8 @@ namespace CAIGrupoH
             {
                 if (ordenesDeServicio[i].NumeroCliente == codCliente)
                 {
-                    Console.WriteLine("Fecha \t\tNúmero Orden de Servicio  \t\tEstado \t\tMonto");
-                    Console.WriteLine($"{ordenesDeServicio[i].FechaOS} \t\t{ordenesDeServicio[i].NroOrdenServicio} \t\t{ordenesDeServicio[i].EstadoOrden} \t\t{ordenesDeServicio[i].Tarifa}");
-
-                    Console.WriteLine("\n\n");
-                    Console.WriteLine("Gracias por utilizar nuestros servicios.");
-                    Console.WriteLine("Ingrese cualquier tecla para continuar.");
-                    Console.ReadKey();
+                    Console.WriteLine("Fecha \t\t\tNúmero Orden de Servicio  \tEstado \t\tMonto");
+                    Console.WriteLine($"{ordenesDeServicio[i].FechaOS} \t\t{ordenesDeServicio[i].NroOrdenServicio} \t\t\t{ordenesDeServicio[i].EstadoOrden} \t{ordenesDeServicio[i].Tarifa}");
                     OSPendiente = true;
                 }
                 else
@@ -193,9 +191,6 @@ namespace CAIGrupoH
                 Console.WriteLine("------------------------------------------------------");
                 Console.WriteLine("No se encontraron 'Ordenes Pendientes de Facturar'");
                 Console.WriteLine("------------------------------------------------------");
-                Console.WriteLine("Gracias por utilizar nuestros servicios.");
-                Console.WriteLine("Ingrese cualquier tecla para continuar.");
-                Console.ReadKey();
             }
         }
     }
