@@ -206,7 +206,7 @@ namespace CAIGrupoH
                     // Localidad de retiro
                     Console.Clear();
                    Console.WriteLine("Seleccione la localidad donde se retira el paquete:");
-                   int codLocalidad = tipoRecepcion.VerLocalidadPorProvincia(tipoRecepcion.CodigoProvincia);
+                   int codLocalidad = tipoRecepcion.VerLocalidadPorProvincia(menuProvincia);
                    localidadSeleccionada = tipoRecepcion.DevuelveNombreLocalidad(codLocalidad);
                    tipoRecepcion.NombreLocalidad = localidadSeleccionada;
                    tipoRecepcion.RetiroLocalidad = localidadSeleccionada;
@@ -365,7 +365,7 @@ namespace CAIGrupoH
                     // Sucursal de retiro
                     Console.Clear();
                     Console.WriteLine("Seleccione la sucursal donde se hace retiro del paquete:");
-                    int codSucursal = tipoRecepcion.VerSucursalPorLocalidad(tipoRecepcion.CodigoLocalidad);
+                    int codSucursal = tipoRecepcion.VerSucursalPorLocalidad(codLocalidad);
                     sucursalSeleccionada = tipoRecepcion.DevuelveNombreSucursal(codSucursal);
                     tipoRecepcion.NombreSucursal = sucursalSeleccionada;
                     tipoRecepcion.RetiroSucursal = sucursalSeleccionada;
@@ -821,7 +821,7 @@ namespace CAIGrupoH
                             // Sucursal de entrega
                             Console.Clear();
                             Console.WriteLine("Seleccione la sucursal donde se hace entrega del paquete:");
-                            int codSucursal = tipoEntrega.VerSucursalPorLocalidad(tipoEntrega.CodigoLocalidad);
+                            int codSucursal = tipoEntrega.VerSucursalPorLocalidad(codLocalidad);
                             sucursalSeleccionada = tipoEntrega.DevuelveNombreSucursal(codSucursal);
                             tipoEntrega.NombreSucursal = sucursalSeleccionada;
                             tipoEntrega.EntregaSucursal = sucursalSeleccionada;

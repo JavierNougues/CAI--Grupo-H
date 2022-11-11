@@ -183,7 +183,7 @@ namespace CAIGrupoH
             // Crear orden de servicio
             // Generamos numero aleatorio
             var numeroOS = new Random();
-            int sigOrdenDeServicio = numeroOS.Next(1, 10);
+            int sigOrdenDeServicio = numeroOS.Next(1000, 9999);
 
             // Asignamos nueva orden al envio nacional.
             nuevoEnvio.OrdenDeServicio = sigOrdenDeServicio.ToString();

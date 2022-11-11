@@ -1,0 +1,4 @@
+2|DISTRIBUIDORA DE BEBIDAS .SRL|11/11/2022 12:00:00 AM|Iniciada|Envio urgente|Correspondencia hasta 500g|1200|Retiro en puerta|buenos aires|Pilar|g|3||Entrega en puerta|argentina|buenos aires|Quilmes|g|g|g|g
+4155|DISTRIBUIDORA DE BEBIDAS .SRL|11/11/2022 12:00:00 AM|Iniciada|Envio normal|Correspondencia hasta 500g|600|Retiro en sucursal|buenos aires|Pilar|||Kiosco Pilar|Entrega en sucursal|argentina|chubut|Rawson||||
+3389|DISTRIBUIDORA DE BEBIDAS .SRL|11/11/2022 12:00:00 AM|Iniciada|Envio urgente|Bultos hasta 10Kg|1500|Retiro en sucursal|chubut|Rawson|||Kiosco Raw|Entrega en sucursal|argentina|neuquen|Neuquen||||
+3579|DISTRIBUIDORA DE BEBIDAS .SRL|11/11/2022 12:00:00 AM|Iniciada|Envio normal|Correspondencia hasta 500g|600|Retiro en sucursal|buenos aires|Quilmes|||Libreria Quil|Entrega en sucursal|argentina|chaco|Campo Largo||||Kiosco CL

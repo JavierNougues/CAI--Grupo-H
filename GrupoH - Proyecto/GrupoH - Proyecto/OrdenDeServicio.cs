@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using GrupoH___Proyecto;
 
 namespace CAIGrupoH
 {
@@ -131,14 +132,14 @@ namespace CAIGrupoH
 
             Dictionary<string, string> auxOrdenes = new Dictionary<string, string>();
             bool encontrado = false;
-            foreach (var orden in ordenesDeServicio)
+            for (int i = 0; i < ordenesDeServicio.Count; i++)
             {
-                if (orden.NroOrdenServicio == numeroOrden)
+                if (ordenesDeServicio[i].NroOrdenServicio == numeroOrden)
                 {
-                    encontrado = auxOrdenes.ContainsKey(orden.NroOrdenServicio);
+                    encontrado = auxOrdenes.ContainsKey(ordenesDeServicio[i].NroOrdenServicio);
                     if (!encontrado)
                     {
-                        auxOrdenes.Add(orden.NroOrdenServicio, orden.EstadoOrden);
+                        auxOrdenes.Add(ordenesDeServicio[i].NroOrdenServicio, ordenesDeServicio[i].EstadoOrden);
                     }
                 }
             }
@@ -155,7 +156,14 @@ namespace CAIGrupoH
 
             foreach (var item in auxOrdenes)
             {
-                Console.WriteLine($"{item.Key} \t\t{item.Value}");
+                Console.Clear();
+                Console.WriteLine("|Número de Orden| \t|Estado|");
+                Console.WriteLine($"{item.Key} \t\t\t{item.Value}");
+                Console.WriteLine("");
+                Console.WriteLine("--------------------------------------------");
+                Console.WriteLine("Gracias por utilizar nuestros servicios.");
+                Console.WriteLine("Ingrese cualquier tecla para continuar.");
+                Console.ReadKey();
             }
         }
 
