@@ -29,6 +29,7 @@ namespace CAIGrupoH
 
         // Propiedades Entrega
         public string? EntregaPais { get; set; }
+        public string? EntregaPaisRegion { get; set; }
         public string? TipoEntrega { get; set; }
         public string? EntregaProvincia { get; set; }
         public string? EntregaLocalidad { get; set; }
@@ -397,107 +398,127 @@ namespace CAIGrupoH
                     case 2:
                         {
                             tipoEntrega.TipoEnvio = "Envío Internacional";
-                            int menuOtroPais = Validaciones.ValidarMenuPrincipal("Seleccione el país donde se entrega el paquete:", "América Latina: \n10. Brasil \n11. Bolivia \n12. Paraguay \n13. Uruguay \n14. Chile \n15. Colombia \n16. Perú \n17. Venezuela \n18. Ecuador \n \nAmérica del Norte \n20. Estados Unidos \n21. México \n23. Canadá \n \nEuropa \n30. Alemania \n31. Francia \n32. España \n33. Italia \n34. Inglaterra \n \nAsia \n40. Japón \n41. China \n42. Corea del Sur", 1, 42);
+                            int menuOtroPais = Validaciones.ValidarMenuPrincipal("Seleccione el país donde se entrega el paquete:", "País Limítrofe \n10. Brasil \n11. Bolivia \n12. Paraguay \n13. Uruguay \n14. Chile \nAmérica Latina \n15. Colombia \n16. Perú \n17. Venezuela \n18. Ecuador \n \nAmérica del Norte \n20. Estados Unidos \n21. México \n23. Canadá \n \nEuropa \n30. Alemania \n31. Francia \n32. España \n33. Italia \n34. Inglaterra \n \nAsia \n40. Japón \n41. China \n42. Corea del Sur", 1, 42);
                             switch (menuOtroPais)
                             {
                                 case 10:
                                     {
                                         tipoEntrega.EntregaPais = "brasil";
+                                        tipoEntrega.EntregaPaisRegion = "pais limitrofe";
                                         break;
                                     }
                                 case 11:
                                     {
                                         tipoEntrega.EntregaPais = "bolivia";
+                                        tipoEntrega.EntregaPaisRegion = "pais limitrofe";
                                         break;
                                     }
                                 case 12:
                                     {
                                         tipoEntrega.EntregaPais = "paraguay";
+                                        tipoEntrega.EntregaPaisRegion = "pais limitrofe";
                                         break;
                                     }
                                 case 13:
                                     {
                                         tipoEntrega.EntregaPais = "uruguay";
+                                        tipoEntrega.EntregaPaisRegion = "pais limitrofe";
                                         break;
                                     }
                                 case 14:
                                     {
                                         tipoEntrega.EntregaPais = "chile";
+                                        tipoEntrega.EntregaPaisRegion = "pais limitrofe";
                                         break;
                                     }
                                 case 15:
                                     {
                                         tipoEntrega.EntregaPais = "colombia";
+                                        tipoEntrega.EntregaPaisRegion = "america latina";
                                         break;
                                     }
                                 case 16:
                                     {
                                         tipoEntrega.EntregaPais = "perú";
+                                        tipoEntrega.EntregaPaisRegion = "america latina";
                                         break;
                                     }
                                 case 17:
                                     {
                                         tipoEntrega.EntregaPais = "venezuela";
+                                        tipoEntrega.EntregaPaisRegion = "america latina";
                                         break;
                                     }
                                 case 18:
                                     {
                                         tipoEntrega.EntregaPais = "ecuador";
+                                        tipoEntrega.EntregaPaisRegion = "america latina";
                                         break;
                                     }
                                 case 20:
                                     {
                                         tipoEntrega.EntregaPais = "estados unidos";
+                                        tipoEntrega.EntregaPaisRegion = "america del norte";
                                         break;
                                     }
                                 case 21:
                                     {
                                         tipoEntrega.EntregaPais = "méxico";
+                                        tipoEntrega.EntregaPaisRegion = "america del norte";
                                         break;
                                     }
                                 case 22:
                                     {
                                         tipoEntrega.EntregaPais = "canadá";
+                                        tipoEntrega.EntregaPaisRegion = "america del norte";
                                         break;
                                     }
                                 case 30:
                                     {
                                         tipoEntrega.EntregaPais = "alemania";
+                                        tipoEntrega.EntregaPaisRegion = "europa";
                                         break;
                                     }
                                 case 31:
                                     {
                                         tipoEntrega.EntregaPais = "francia";
+                                        tipoEntrega.EntregaPaisRegion = "europa";
                                         break;
                                     }
                                 case 32:
                                     {
                                         tipoEntrega.EntregaPais = "españa";
+                                        tipoEntrega.EntregaPaisRegion = "europa";
                                         break;
                                     }
                                 case 33:
                                     {
                                         tipoEntrega.EntregaPais = "italia";
+                                        tipoEntrega.EntregaPaisRegion = "europa";
                                         break;
                                     }
                                 case 34:
                                     {
                                         tipoEntrega.EntregaPais = "inglaterra";
+                                        tipoEntrega.EntregaPaisRegion = "europa";
                                         break;
                                     }
                                 case 40:
                                     {
                                         tipoEntrega.EntregaPais = "japón";
+                                        tipoEntrega.EntregaPaisRegion = "asia";
                                         break;
                                     }
                                 case 41:
                                     {
                                         tipoEntrega.EntregaPais = "china";
+                                        tipoEntrega.EntregaPaisRegion = "asia";
                                         break;
                                     }
                                 case 42:
                                     {
                                         tipoEntrega.EntregaPais = "corea del sur";
+                                        tipoEntrega.EntregaPaisRegion = "asia";
                                         break;
                                     }
                                 default:

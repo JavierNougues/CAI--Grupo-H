@@ -48,10 +48,10 @@ namespace GrupoH___Proyecto
                             Console.ReadKey();
                             break;
                         }
-
-                        return cuentaCorriente;
                 }
+                break;
             }
+            return cuentaCorriente;
         }
     }
 }

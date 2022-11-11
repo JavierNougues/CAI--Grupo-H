@@ -173,11 +173,11 @@ namespace CAIGrupoH
         public void MostrarOSPendientesFacturar(string codCliente)
         {
             bool OSPendiente = false;
+            Console.WriteLine("Fecha \t\t\tNúmero Orden de Servicio  \tEstado \t\tMonto");
             for (int i = 0; i < ordenesDeServicio.Count; i++)
             {
                 if (ordenesDeServicio[i].NumeroCliente == codCliente)
                 {
-                    Console.WriteLine("Fecha \t\t\tNúmero Orden de Servicio  \tEstado \t\tMonto");
                     Console.WriteLine($"{ordenesDeServicio[i].FechaOS} \t\t{ordenesDeServicio[i].NroOrdenServicio} \t\t\t{ordenesDeServicio[i].EstadoOrden} \t{ordenesDeServicio[i].Tarifa}");
                     OSPendiente = true;
                 }

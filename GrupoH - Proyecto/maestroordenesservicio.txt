@@ -1,1 +1,3 @@
-8647|123456|11/11/2022 12:00:00 AM|Iniciada|Envio normal|Correspondencia hasta 500g|600|Retiro en sucursal|chubut|Rawson|||Kiosco Raw|Entrega en sucursal|argentina|chaco|Campo Largo||||Kiosco CL|DISTRIBUIDORA DE BEBIDAS .SRL
+8647|123456|11/11/2022 12:00:00 AM|Iniciada|Envio normal|Correspondencia hasta 500g|600|Retiro en sucursal|chubut|Rawson|||Kiosco Raw|Entrega en sucursal|argentina|chaco|Campo Largo|||||
+3518|123456|11/11/2022 12:00:00 AM|Entregada|Envio normal|Correspondencia hasta 500g|600|Retiro en sucursal|chaco|Campo Largo|||Kiosco CL|Entrega en sucursal|argentina|san luis|Algarrobo Grande|||||Kiosco Alga
+5197|123456|11/11/2022 12:00:00 AM|En Proceso|Envio normal|Bultos hasta 30Kg|2200|Retiro en sucursal|entre rios|Colon|||Kiosco Colon||brasil|||Av. Brasil|Av. Brasil|1234||DISTRIBUIDORA DE BEBIDAS .SRL
