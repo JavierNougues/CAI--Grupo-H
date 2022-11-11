@@ -25,26 +25,19 @@ namespace GrupoH___Proyecto
                 {
                     case 1:
                         {
-
+                            Console.Clear();
                             OrdenDeServicio OS = new OrdenDeServicio();
                             OS.LeerMaestroOrdenes();
                             OS.MostrarOSPendientesFacturar(cuentaCorriente.NumeroCliente);
-
-                            Console.WriteLine("Gracias por utilizar nuestros servicios.");
-                            Console.WriteLine("Ingrese cualquier tecla para continuar.");
-                            Console.ReadKey();
                             break;
                         }
                     case 2:
                         {
+                            Console.Clear();
                             Factura Factura = new Factura();
                             Factura.LeerMaestroFacturas();
                             Factura.DesplegarFacturasCliente(cuentaCorriente.NumeroCliente);
                             Factura.MostrarSaldoCliente(cuentaCorriente.NumeroCliente);
-
-                            Console.WriteLine("Gracias por utilizar nuestros servicios.");
-                            Console.WriteLine("Ingrese cualquier tecla para continuar.");
-                            Console.ReadKey();
                             break;
                         }
 

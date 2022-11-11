@@ -55,39 +55,64 @@ namespace GrupoH___Proyecto
         public void DesplegarFacturasCliente(string codCliente)
         {
             Console.Clear();
-            Console.WriteLine("Fecha \t\tNúmero Factura  \t\tEstado \t\tMonto");
+            bool factura = false;
             for (int i = 0; i < facturas.Count; i++)
             {
                 if (facturas[i].NumeroCliente == codCliente)
                 {
+                    Console.WriteLine("Fecha \t\tNúmero Factura  \t\tEstado \t\tMonto");
                     Console.WriteLine($"{facturas[i].FechaFactura} \t\t{facturas[i].NumeroFactura} \t\t{facturas[i].EstadoFactura} \t\t{facturas[i].MontoFactura} ");
-                }
-                else
-                {
-                    Console.WriteLine("No se econtraron facturas emitidas.");
+
+                    Console.WriteLine("\n\n");
                     Console.WriteLine("Gracias por utilizar nuestros servicios.");
                     Console.WriteLine("Ingrese cualquier tecla para continuar.");
                     Console.ReadKey();
+                    factura = true;
                 }
+                else
+                {
+                    factura = false;
+                }
+            }
+            if (factura == false)
+            {
+                Console.WriteLine("------------------------------------------------------");
+                Console.WriteLine("No se econtraron facturas emitidas.");
+                Console.WriteLine("------------------------------------------------------");
+                Console.WriteLine("Gracias por utilizar nuestros servicios.");
+                Console.WriteLine("Ingrese cualquier tecla para continuar.");
+                Console.ReadKey();
             }
         }
         public void MostrarSaldoCliente(string codCliente)
         {
+            var monto = new Factura();
+            bool montoNegativo = false;
             Console.Clear();
             for (int i = 0; i < facturas.Count; i++)
             {
-
-                if (codCliente == facturas[i].NumeroCliente && facturas[i].EstadoFactura == "Impaga")
+                if (facturas[i].NumeroCliente == codCliente &&  "Impaga" == facturas[i].EstadoFactura)
                 {
-                    MontoFactura += facturas[i].MontoFactura;
+                    monto.MontoFactura += facturas[i].MontoFactura;
+                    Console.WriteLine("------------------------------------------------------");
+                    Console.WriteLine($"Posee un saldo deudor de: ${monto.MontoFactura}");
+                    Console.WriteLine("------------------------------------------------------");
+                    var montoAcumulado = monto.MontoFactura;
+                    if (montoAcumulado > 0)
+                    {
+                        montoNegativo = true;
+                    }
                 }
             }
-            Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine($"Posee un saldo deudor de: ${MontoFactura}");
-            Console.WriteLine("------------------------------------------------------");
-            Console.WriteLine("Gracias por utilizar nuestros servicios.");
-            Console.WriteLine("Ingrese cualquier tecla para continuar.");
-            Console.ReadKey();
+            if (montoNegativo == false)
+            {
+                Console.WriteLine("------------------------------------------------------");
+                Console.WriteLine("No posee un saldo deudor de cuenta.");
+                Console.WriteLine("------------------------------------------------------");
+                Console.WriteLine("Gracias por utilizar nuestros servicios.");
+                Console.WriteLine("Ingrese cualquier tecla para continuar.");
+                Console.ReadKey();
+            }
         }
     }
 }

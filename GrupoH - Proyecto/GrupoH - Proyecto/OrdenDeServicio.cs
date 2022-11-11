@@ -161,25 +161,34 @@ namespace CAIGrupoH
 
         public void MostrarOSPendientesFacturar(string codCliente)
         {
-            Console.WriteLine("Fecha \t\tNúmero Orden de Servicio  \t\tEstado \t\tMonto");
+            bool OSPendiente = false;
             for (int i = 0; i < ordenesDeServicio.Count; i++)
             {
                 if (ordenesDeServicio[i].NumeroCliente == codCliente)
                 {
+                    Console.WriteLine("Fecha \t\tNúmero Orden de Servicio  \t\tEstado \t\tMonto");
                     Console.WriteLine($"{ordenesDeServicio[i].FechaOS} \t\t{ordenesDeServicio[i].NroOrdenServicio} \t\t{ordenesDeServicio[i].EstadoOrden} \t\t{ordenesDeServicio[i].Tarifa}");
-                    
-                }
-                else
-                {
-                    Console.WriteLine("------------------------------------------------------");
-                    Console.WriteLine("No se encontraron 'Ordenes Pendientes de Facturar'");
-                    Console.WriteLine("------------------------------------------------------");
+
+                    Console.WriteLine("\n\n");
                     Console.WriteLine("Gracias por utilizar nuestros servicios.");
                     Console.WriteLine("Ingrese cualquier tecla para continuar.");
                     Console.ReadKey();
+                    OSPendiente = true;
+                }
+                else
+                {
+                    OSPendiente = false;
                 }
             }
-
+            if (OSPendiente == false)
+            {
+                Console.WriteLine("------------------------------------------------------");
+                Console.WriteLine("No se encontraron 'Ordenes Pendientes de Facturar'");
+                Console.WriteLine("------------------------------------------------------");
+                Console.WriteLine("Gracias por utilizar nuestros servicios.");
+                Console.WriteLine("Ingrese cualquier tecla para continuar.");
+                Console.ReadKey();
+            }
         }
     }
 }

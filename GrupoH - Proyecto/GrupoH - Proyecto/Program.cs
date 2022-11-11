@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 using System.IO;
 using GrupoH___Proyecto;
 
+/*
+ * CLIENTE:     123456 
+ * CONTRASEÑA:  ******
+ * DNI:         40506070
+*/
+
 namespace CAIGrupoH
 {
     class Program
@@ -30,7 +36,7 @@ namespace CAIGrupoH
             //Muestro datos de cliente
             Console.Clear();
             cliente.VisualizarCliente();
-
+            
 
             // Menu Princiapl: Opciones
             while (true)
