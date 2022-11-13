@@ -44,7 +44,7 @@ namespace CAIGrupoH
         public string? TipoEnvio { get; set; }
 
 
-        const string maestroProvincias = "C:\\Users\\javier.nougues@sap.com\\Documents\\GitHub\\CAI--Grupo-H\\GrupoH - Proyecto\\maestroprovincias.txt";
+        const string maestroProvincias = "maestroprovincias.txt";
 
         public List<EnvioDetalle> provincias = new List<EnvioDetalle>();
 

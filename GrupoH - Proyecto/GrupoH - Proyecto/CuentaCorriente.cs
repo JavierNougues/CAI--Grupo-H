@@ -19,7 +19,7 @@ namespace GrupoH___Proyecto
             while (true)
             {
                 Console.Clear();
-                int menuConsulta = Validaciones.ValidarMenuPrincipal("Consulta de 'Estado de Cuenta Corriente'", " \n1. Consultar 'Ordenes Pendientes de Facturar'  \n2. Consultar 'Saldo Adeudado'", 1, 2);
+                int menuConsulta = Validaciones.ValidarMenuPrincipal("Consulta de 'Estado de Cuenta Corriente'", " \n1. Consultar 'Ordenes Pendientes de Facturar'  \n2. Consultar 'Saldo Adeudado' \n0.  Volver", 0, 2);
 
                 switch (menuConsulta)
                 {
@@ -46,6 +46,10 @@ namespace GrupoH___Proyecto
                             Console.WriteLine("Gracias por utilizar nuestros servicios.");
                             Console.WriteLine("Ingrese cualquier tecla para continuar.");
                             Console.ReadKey();
+                            break;
+                        }
+                    case 0:
+                        {
                             break;
                         }
                 }

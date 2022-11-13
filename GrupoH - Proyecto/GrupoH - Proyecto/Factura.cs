@@ -17,7 +17,7 @@ namespace GrupoH___Proyecto
         public string? EstadoFactura { get; set; }
         public int? MontoFactura { get; set; }
 
-        const string maestroFacturas = "C:\\Users\\javier.nougues@sap.com\\Documents\\GitHub\\CAI--Grupo-H\\GrupoH - Proyecto\\maestrofacturas.txt";
+        const string maestroFacturas = "maestrofacturas.txt";
 
         public List<Factura> facturas = new List<Factura>();
 

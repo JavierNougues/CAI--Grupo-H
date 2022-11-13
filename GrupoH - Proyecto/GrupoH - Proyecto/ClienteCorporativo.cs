@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using CAIGrupoH;
 
 namespace GrupoH___Proyecto
 {
@@ -16,7 +17,7 @@ namespace GrupoH___Proyecto
         public string DNIPersonalAutorizado { get; }
         public string NombrePersonalAutorizado { get; }
 
-        const string maestroClienteCorporativo = "C:\\Users\\javier.nougues@sap.com\\Documents\\GitHub\\CAI--Grupo-H\\GrupoH - Proyecto\\maestroclientecorporativo.txt";
+        const string maestroClienteCorporativo = "maestroclientecorporativo.txt";
 
         static List<ClienteCorporativo> clientes = new List<ClienteCorporativo>();
         public ClienteCorporativo() { }
@@ -30,8 +31,9 @@ namespace GrupoH___Proyecto
             DNIPersonalAutorizado = datos[4];
             NombrePersonalAutorizado = datos[5];
         }
+      
 
-        public void LeerMaestroCliente(string nroCliente, string contraCliente, string dniCliente)
+        public static bool LeerMaestroCliente(string nroCliente, string contraCliente, string dniCliente)
         {
 
             if (File.Exists(maestroClienteCorporativo))
@@ -64,10 +66,13 @@ namespace GrupoH___Proyecto
                         Console.WriteLine("Los datos de inicio de sesión ingresados son incorrectos.");
                         Console.WriteLine("Presione cualquier tecla para continuar.");
                         Console.ReadKey();
-                        System.Environment.Exit(0);
+                        return false;
                     }
+                    
                 }
+                
             }
+            return true;
         }
 
         public void VisualizarCliente()

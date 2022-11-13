@@ -37,7 +37,7 @@ namespace CAIGrupoH
         public string? EntregaSucursal { get; set; }
 
 
-        const string maestroOrdenesServicio = "C:\\Users\\javier.nougues@sap.com\\Documents\\GitHub\\CAI--Grupo-H\\GrupoH - Proyecto\\maestroordenesservicio.txt";
+        const string maestroOrdenesServicio = "maestroordenesservicio.txt";
 
         List<OrdenDeServicio> ordenesDeServicio = new List<OrdenDeServicio>();
 

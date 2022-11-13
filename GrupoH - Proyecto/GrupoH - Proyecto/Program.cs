@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using GrupoH___Proyecto;
+﻿using GrupoH___Proyecto;
 
 /*
  * CLIENTE:     123456 
@@ -18,25 +12,38 @@ namespace CAIGrupoH
     {
         static void Main(string[] strings)
         {
-            // Ingreso de Cliente + Contraseña + DNI Autorizado
-            int numeroCliente = Validaciones.ValidarIntCliente("¡Bienvenido! \nIngrese su 'Número de Cliente' para continuar:");
-            Console.Clear();
-            string contraCliente = Validaciones.ValidarContraseñaIngresada("Ingrese su contraseña:");
-            Console.Clear();
-            int dniCliente = Validaciones.ValidarDNICliente("Ingrese el 'DNI del Personal Autorizado':");
-
             ClienteCorporativo cliente = new ClienteCorporativo();
+            string nroCliente;
+            string dni;
 
-            string nroCliente = numeroCliente.ToString();
-            string dni =dniCliente.ToString(); 
+            do
+            {
+                // Ingreso de Cliente + Contraseña + DNI Autorizado
+                int numeroCliente = Validaciones.ValidarIntCliente("¡Bienvenido! \nIngrese su 'Número de Cliente' para continuar:");
+                Console.Clear();
+                string contraCliente = Validaciones.ValidarContraseñaIngresada("Ingrese su contraseña:");
+                Console.Clear();
+                int dniCliente = Validaciones.ValidarDNICliente("Ingrese el 'DNI del Personal Autorizado':");
 
-            //Valido datos de inicio de sesión
-            cliente.LeerMaestroCliente(nroCliente, contraCliente, dni);
+
+                nroCliente = numeroCliente.ToString();
+                dni = dniCliente.ToString();
+
+                //Valido datos de inicio de sesión
+                if (ClienteCorporativo.LeerMaestroCliente(nroCliente, contraCliente, dni))
+                {
+                    
+                    break;
+                }
+                Console.Clear();
+            } while (true);
+
+
 
             //Muestro datos de cliente
             Console.Clear();
             cliente.VisualizarCliente();
-            
+
 
             // Menu Princiapl: Opciones
             while (true)

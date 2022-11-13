@@ -1,0 +1,69 @@
+1|Buenos Aires|10|Pilar|100|Kiosco Pilar|Av. Pilar 123|
+1|Buenos Aires|11|Quilmes|101|Libreria Quil|Av. Quilmes 123|
+1|Buenos Aires|12|Ituzaingo|102|Almacen Ituza|Av. Ituzaingo 123|
+2|Chubut|20|Rawson|200|Kiosco Raw|Av. Rawson 123|
+2|Chubut|21|Trelew|201|Libreria Trel|Av. Trelew 123|
+2|Chubut|22|Esquel|202|Almacen Esk|Av. Trelew 123|
+3|Catamarca|30|San Fernando del Valle de Catamarca|300|Kiosco SF|Av. San Fernando 123|
+3|Catamarca|31|Aconquija|301|Libreria Acon|Av. Aconquija 123|
+3|Catamarca|32|Ancasti|302|Almacen Ancas|Av. Ancasti 123|
+4|Chaco|40|Campo Largo|400|Kiosco CL|Av. Largo 123|
+4|Chaco|41|Charata|401|Libreria Char|Av. Charata 123|
+4|Chaco|42|Colonia Benitez|402|Almacen Ben|Av. Benitez 123|
+5|CABA|50|Belgrano|500|Kiosco Bel|Av. Belgrano 123|
+5|CABA|51|Flores|501|Libreria Flo|Av. Flores 123|
+5|CABA|52|Almagro|502|Almacen Alma|Av. Almagro 123|
+6|Cordoba|60|Ciudad de Cordoba|600|Kiosco Cor|Av. Cordoba 123|
+6|Cordoba|61|Jesus Maria|601|Libreria Maria|Av. Maria 123|
+6|Cordoba|62|Dean Funes|602|Almacen Funes|Av. Funes 123|
+7|Corrientes|70|9 de Julio|700|Kiosco Julio|Av. Julio 123|
+7|Corrientes|71|Alvear|701|Libreria Alvear|Av. Alvear 123|
+7|Corrientes|72|Bella Vista|702|Almacen Vista|Av. Vista 123|
+8|Entre Rios|80|Colon|800|Kiosco Colon|Av. Colon 123|
+8|Entre Rios|81|Parana|801|Libreria Parana|Av. Parana 123|
+8|Entre Rios|82|Gualeguaychu|802|Almacen Gualeguay|Av. Gualeguay 123|
+9|Formosa|90|Clorinda|900|Kiosco Clorinda|Av. Clorinda 123|
+9|Formosa|91|Colorado|901|Libreria Colorado|Av. Colorado 123|
+9|Formosa|92|Fontina|902|Almacen Fontina|Av. Fontina 123|
+10|Jujuy|100|San Salvador|1000|Kiosco Clorinda|Av. Clorinda 123|
+10|Jujuy|101|Iruya|1001|Libreria Colorado|Av. Colorado 123|
+10|Jujuy|102|Tilcara|1002|Almacen Fontina|Av. Fontina 123|
+11|La Pampa|110|Santa Rosa|1110|Kiosco Rosa|Av. Rosa 123|
+11|La Pampa|111|General Pico|1111|Libreria Pico|Av. Pico 123|
+11|La Pampa|112|Macachin|1112|Almacen Maca|Av. Macachin 123|
+12|La Rioja|120|La Rioja|1210|Kiosco Rio|Av. Rioja 123|
+12|La Rioja|121|Aminga|1211|Libreria Aminga|Av. Aminga 123|
+12|La Rioja|122|Chamical|1212|Almacen Cha|Av. Chamical 123|
+13|Mendoza|130|Mendoza|1310|Kiosco Mendo|Av. Mendoza 123|
+13|Mendoza|131|Valle de Uco|1311|Libreria Uco|Av. Uco 123|
+13|Mendoza|132|Cuyo|1312|Almacen Cuyo|Av. Cuyo 123|
+14|Misiones|140|Posadas|1410|Kiosco Po|Av. Posadas 123|
+14|Misiones|141|25 de Mayo|1411|Libreria Mayo| Av. Mayo 123|
+14|Misiones|142|Alma|1412|Almacen Alma|Av. Alma 123|
+15|Neuquén|150|Neuquen|1510|Kiosco Neu|Av. Neuquen 123|
+15|Neuquén|151|Chipoleti|1511|Libreria Chipo|Av. Chipoleti 123|
+15|Neuquén|152|Alumine|1512|Almacen Alu|Av. Almacen 123|
+16|Río Negro|160|General Roca|1610|Kiosco Roca|Av. Roca 123|
+16|Río Negro|161|Ayen|1612|Libreria Ayen|Av. Ayen 123|
+16|Río Negro|162|Bariloche|1613|Almacen Bari|Av. Bariloche 123|
+17|Salta|170|Cafayate|1710|Kiosco Cafa|Av. Cafayate 123|
+17|Salta|171|Quilmes|1711|Libreria Quilmes|Av. Quilmes 123|
+17|Salta|172|Oran|1712|Almacen Oran|Av. Oran 123|
+18|San Juan|180|Jachal|1810|Kiosco Jacha|Av. Jachal 132|
+18|San Juan|181|Rawson|1811|Libreria Raw|Av. Rawson 123|
+18|San Juan|182|Chimbas|1812|Almacen Chimba|Av. Chimbas 123|
+19|San Luis|190|Algarrobo Grande|1910|Kiosco Alga|Av. Algarrobo 123|
+19|San Luis|191|Alsa|1911|Libreria Alsa|Av. Alsa 123|
+19|San Luis|192|Merlo|1912|Almacen Merlo|Av. Merlo 123|
+20|Santa Cruz|200|Rio Gallegos|2010|Kiosco Galle|Av. Gallegos 123|
+20|Santa Cruz|201|Calafate|2011|Libreria Cala|Av. Calafate 123|
+20|Santa Cruz|202|Chalten|2012|Almacen Cha|Av. Chalten 123|
+21|Santa Fe|210|Rosario|2110|Kiosco Ro|Av. Rosario 123|
+21|Santa Fe|211|Granadero Baigorria|2111|Libreria Baigo|Av. Baigorria 123|
+21|Santa Fe|212|Casilda|2112|Almacen Casi|Av. Casilda 123|
+22|Santiago del Estero|220|Añatuya|2210|Kiosco Aña|Av. Añatuya 123|
+22|Santiago del Estero|221|Termas Rio Hondo|2211|Libreria Terma|Av. Hondo 123|
+22|Santiago del Estero|222|Frias|2212|Almacen Fria|Av. Frias 123|
+23|Tierra del Fuego|230|Ushuaia|2310|Kiosco Ushuaia|Av. Ushuaia 123|
+23|Tierra del Fuego|231|Rio Grande|2311|Libreria Grande|Av. Grande 123|
+23|Tierra del Fuego|232|Tolwin|2312|Almacen Tol|Av. Tolwin 123|
