@@ -1,3 +1,6 @@
 8647|123456|11/11/2022 12:00:00 AM|Iniciada|Envio normal|Correspondencia hasta 500g|600|Retiro en sucursal|chubut|Rawson|||Kiosco Raw|Entrega en sucursal|argentina|chaco|Campo Largo|||||
-3518|123456|11/11/2022 12:00:00 AM|Entregada|Envio normal|Correspondencia hasta 500g|600|Retiro en sucursal|chaco|Campo Largo|||Kiosco CL|Entrega en sucursal|argentina|san luis|Algarrobo Grande|||||Kiosco Alga
-5197|123456|11/11/2022 12:00:00 AM|En Proceso|Envio normal|Bultos hasta 30Kg|2200|Retiro en sucursal|entre rios|Colon|||Kiosco Colon||brasil|||Av. Brasil|Av. Brasil|1234||DISTRIBUIDORA DE BEBIDAS .SRL
+3518|123456|11/11/2022 12:00:00 AM|Entregada|Envio normal|Correspondencia hasta 500g|600|Retiro en sucursal|chaco|Campo Largo|||Kiosco CL|Entrega en sucursal|argentina|san luis|Algarrobo Grande|||||
+5197|123456|11/11/2022 12:00:00 AM|En Proceso|Envio normal|Bultos hasta 30Kg|2200|Retiro en sucursal|entre rios|Colon|||Kiosco Colon||brasil|||Av. Brasil|Av. Brasil|Av. Brasil|Av. Brasil|Av. Brasil
+8026|123456|11/11/2022 12:00:00 AM|Iniciada|Envio normal|Correspondencia hasta 500g|950|Retiro en sucursal|buenos aires|Pilar|||Kiosco Pilar|Entrega en sucursal|argentina|san juan|Jachal|||||
+7632|123456|11/11/2022 12:00:00 AM|Iniciada|Envio normal|Bultos hasta 30Kg|180000|Retiro en sucursal|chubut|Rawson|||Kiosco Raw||japón|||Av. Japon|Av. Japon|Av. Japon|1234|
+6476|123456|11/13/2022 12:00:00 AM|Iniciada|Envio normal|Bultos hasta 20Kg|98400|Retiro en sucursal|chubut|Rawson|||Kiosco Raw||alemania|||Av. Alemania |Av. Alemania |123||DISTRIBUIDORA DE BEBIDAS .SRL

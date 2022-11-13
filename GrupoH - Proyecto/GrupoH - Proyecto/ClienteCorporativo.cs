@@ -80,9 +80,13 @@ namespace GrupoH___Proyecto
                 Console.WriteLine($"Cliente: {clientes[i].NombreCliente}");
                 Console.WriteLine($"CUIT: {clientes[i].CUIT}");
                 Console.WriteLine("");
-                Console.WriteLine("Usuarios Autorizados:");
-                Console.WriteLine($"Nombre {clientes[i].NombrePersonalAutorizado}");
+                Console.WriteLine("Usuario Autorizado");
+                Console.WriteLine($"Nombre: {clientes[i].NombrePersonalAutorizado}");
                 Console.WriteLine("--------------------------------------------------");
+
+                Console.WriteLine("");
+                Console.WriteLine("Presione una tecla para continuar.");
+                Console.ReadKey();
             }
         }
 

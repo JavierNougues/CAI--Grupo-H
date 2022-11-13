@@ -408,7 +408,7 @@ namespace CAIGrupoH
             }
             else
             {
-                Console.WriteLine($"Dirección de Retiro: {nuevoEnvio.RetiroPaquete.RetiroDireccion} ' ' {nuevoEnvio.RetiroPaquete.RetiroDireccionNumero}\n");
+                Console.WriteLine($"Dirección de Retiro: {nuevoEnvio.RetiroPaquete.RetiroDireccion} {nuevoEnvio.RetiroPaquete.RetiroDireccionNumero}\n");
             }
 
 
@@ -424,17 +424,17 @@ namespace CAIGrupoH
                 }
                 else
                 {
-                    Console.WriteLine($"Dirección de Entrega: {nuevoEnvio.EntregaPaquete.EntregaDireccion} ' ' {nuevoEnvio.EntregaPaquete.EntregaDireccionNumero}\n");
+                    Console.WriteLine($"Dirección de Entrega: {nuevoEnvio.EntregaPaquete.EntregaDireccion} {nuevoEnvio.EntregaPaquete.EntregaDireccionNumero}\n");
                 }
             }
             else
             {
-                Console.WriteLine($"País de Entrega: {nuevoEnvio.EntregaPaquete.EntregaPais}\n");
-                Console.WriteLine($"Dirección de Entrega: {nuevoEnvio.EntregaPaquete.EntregaDireccion} ' ' {nuevoEnvio.EntregaPaquete.EntregaDireccionNumero}\n");
-                Console.WriteLine($"información Adicional: {nuevoEnvio.EntregaPaquete.EntregaInternacionalInfo}\n");
+                Console.WriteLine($"País de Entrega: {nuevoEnvio.EntregaPaquete.EntregaPais.ToUpper()}\n");
+                Console.WriteLine($"Dirección de Entrega: {nuevoEnvio.EntregaPaquete.EntregaDireccion} {nuevoEnvio.EntregaPaquete.EntregaDireccionNumero}\n");
+                Console.WriteLine($"Información Adicional: {nuevoEnvio.EntregaPaquete.EntregaInternacionalInfo}\n");
             }
             
-            Console.Write("-----------------------------------------------------------------------------------------------------------------------");
+            Console.Write("-----------------------------------------------------------------------------------------------------------------------\n");
 
 
             // Confirmamos la orden de envio
