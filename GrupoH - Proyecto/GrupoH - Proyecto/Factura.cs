@@ -15,7 +15,7 @@ namespace GrupoH___Proyecto
         public string? NumeroFactura { get; set; }
         public string? NumeroCliente { get; set; }
         public string? EstadoFactura { get; set; }
-        public int? MontoFactura { get; set; }
+        public int MontoFactura { get; set; }
 
         const string maestroFacturas = "maestrofacturas.txt";
 
@@ -55,7 +55,7 @@ namespace GrupoH___Proyecto
         public void DesplegarFacturasCliente(string codCliente)
         {
             Console.Clear();
-            var monto = new Factura();
+            int monto = 0;
             bool factura = false;
             Console.WriteLine("|Fecha| \t\t|Número Factura|  \t|Estado| \t|Monto|");
             for (int i = 0; i < facturas.Count; i++)
@@ -81,13 +81,13 @@ namespace GrupoH___Proyecto
                     {
                         var b = ($"${facturas[i].MontoFactura}");
                         Console.WriteLine(b);
-                        monto.MontoFactura += facturas[i].MontoFactura;
+                        monto += facturas[i].MontoFactura;
 
                     }
                 }
                 Console.WriteLine("");
                 Console.WriteLine("------------------------------------------------------");
-                Console.WriteLine("Total 'Monto Adeudado': $55000");
+                Console.WriteLine($"Total 'Monto Adeudado': ${monto}");
                 Console.WriteLine("------------------------------------------------------");
             }
             if (factura == false)

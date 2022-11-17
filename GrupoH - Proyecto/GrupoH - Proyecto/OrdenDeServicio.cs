@@ -11,7 +11,7 @@ namespace CAIGrupoH
     internal class OrdenDeServicio
     {
         //Propiedades
-        public DateTime FechaOS { get; set; }
+        public string FechaOS { get; set; }
         public string? NumeroCliente { get; set; }
         public string? NombreCliente { get; set; }
         public string? NroOrdenServicio { get; set; }
@@ -46,7 +46,7 @@ namespace CAIGrupoH
             var datos = linea.Split('|');
             NroOrdenServicio = datos[0];
             NumeroCliente = datos[1];
-            FechaOS = DateTime.Parse(datos[2]);
+            FechaOS = datos[2];
             EstadoOrden = datos[3];
             TipoEnvio = datos[4];
             PesoPaquete = datos[5];

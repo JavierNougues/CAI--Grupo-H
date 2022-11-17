@@ -2,6 +2,10 @@
 3518|123456|11/11/2022 12:00:00|Entregada|Envio normal|Correspondencia hasta 500g|600|Retiro en sucursal|chaco|Campo Largo|||Kiosco CL|Entrega en sucursal|argentina|san luis|Algarrobo Grande|||||
 5197|123456|11/11/2022 12:00:00|En Proceso|Envio normal|Bultos hasta 30Kg|2200|Retiro en sucursal|entre rios|Colon|||Kiosco Colon||brasil|||Av. Brasil|Av. Brasil|Av. Brasil|Av. Brasil|Av. Brasil
 8026|123456|11/11/2022 12:00:00|Iniciada|Envio normal|Correspondencia hasta 500g|950|Retiro en sucursal|buenos aires|Pilar|||Kiosco Pilar|Entrega en sucursal|argentina|san juan|Jachal|||||
-7632|123456|11/11/2022 12:00:00|Iniciada|Envio normal|Bultos hasta 30Kg|180000|Retiro en sucursal|chubut|Rawson|||Kiosco Raw||japón|||Av. Japon|Av. Japon|Av. Japon|Av. Japon|1234
-6476|123456|13/11/2022 12:00:00|Iniciada|Envio normal|Bultos hasta 20Kg|98400|Retiro en sucursal|chubut|Rawson|||Kiosco Raw||alemania|||Av. Alemania |Av. Alemania |Av. Alemania |123|
-5226|123456|13/11/2022 00:00:00|Iniciada|Envio urgente|Correspondencia hasta 500g|14875|Retiro en puerta|buenos aires|Pilar|perito moreno|2047||Entrega en puerta|argentina|chubut|Rawson|rivadavia|rivadavia|50||DISTRIBUIDORA DE BEBIDAS .SRL
+7632|123456|11/11/2022 12:00:00|Iniciada|Envio normal|Bultos hasta 30Kg|180000|Retiro en sucursal|chubut|Rawson|||Kiosco Raw||japón|||Av. Japon|Av. Japon|Av. Japon|Av. Japon|Av. Japon
+6476|123456|13/11/2022 12:00:00|Iniciada|Envio normal|Bultos hasta 20Kg|98400|Retiro en sucursal|chubut|Rawson|||Kiosco Raw||alemania|||Av. Alemania |Av. Alemania |Av. Alemania |Av. Alemania |Av. Alemania 
+5226|123456|13/11/2022 00:00:00|Iniciada|Envio urgente|Correspondencia hasta 500g|14875|Retiro en puerta|buenos aires|Pilar|perito moreno|2047||Entrega en puerta|argentina|chubut|Rawson|rivadavia|rivadavia|rivadavia|rivadavia|rivadavia
+6741|123456|11/17/2022 12:00:00 AM|Iniciada|Envio normal|Bultos hasta 10Kg|3500|Retiro en sucursal|buenos aires|Pilar|||Kiosco Pilar|Entrega en sucursal|argentina|buenos aires|Pilar|||||
+8982|123456|11/17/2022 12:00:00 AM|Iniciada|Envio normal|Bultos hasta 20Kg|11400|Retiro en sucursal|buenos aires|Pilar|||Kiosco Pilar|Entrega en sucursal|argentina|tierra del fuego|Ushuaia|||||
+4184|123456|11/17/2022 12:00:00 AM|Iniciada|Envio normal|Bultos hasta 10Kg|9500|Retiro en sucursal|tierra del fuego|Ushuaia|||Kiosco Ushuaia|Entrega en sucursal|argentina|buenos aires|Pilar|||||Kiosco Pilar
+7766|123456|11/17/2022 12:00:00 AM|Iniciada|Envio normal|Bultos hasta 10Kg|25700|Retiro en sucursal|tierra del fuego|Ushuaia|||Kiosco Ushuaia||brasil|||Av. Brasil|Av. Brasil|1234||DISTRIBUIDORA DE BEBIDAS .SRL

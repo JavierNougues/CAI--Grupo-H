@@ -13,7 +13,7 @@ namespace CAIGrupoH
         public string? TipoPaquete { get; set; }
         public string? PesoPaquete { get; set; }
         public string? TipoEnvio { get; set; }
-        public double? TarifaPaqueteNacional { get; set; }
+        public double TarifaPaqueteNacional { get; set; }
         public string? OrdenDeServicio { get; set; }
 
         // Propiedades Tarifas
@@ -231,7 +231,7 @@ namespace CAIGrupoH
                 nuevaOS.NroOrdenServicio = nuevoEnvio.OrdenDeServicio;
                 nuevaOS.NumeroCliente = nuevoEnvio.Cliente.NroCliente();
                 nuevaOS.NombreCliente = nuevoEnvio.Cliente.Cliente();
-                nuevaOS.FechaOS = DateTime.Today;
+                nuevaOS.FechaOS = DateTime.Today.ToString();
                 nuevaOS.EstadoOrden = "Iniciada";
                 nuevaOS.TipoEnvio = nuevoEnvio.TipoEnvio;
                 nuevaOS.PesoPaquete = nuevoEnvio.PesoPaquete;
@@ -267,6 +267,7 @@ namespace CAIGrupoH
         {
             LeerMaestroTarifas();
             double tarifaPaquete = 0;
+            double tarifaCABA = 0;
             for (int i = 0; i < tarifas.Count; i++)
             {
                 if (RetiroPaquete.TipoRecepcion == "Retiro en puerta")
@@ -469,145 +470,11 @@ namespace CAIGrupoH
                 }
 
                 // ENTREGA INTERNACIONAL
-                if (EntregaPaquete.EntregaPais != "argentina")
+                if (EntregaPaquete.EntregaPais != "argentina" && tarifas[i].EnvioTarifa == "internacional")
                 {
-                    // Tarifa hasta CABA
-                    if (TipoPaquete == "Correspondencia" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "correspondencia")
-                    {
-                        // Tarifa Nacional
-                        if (RetiroPaquete.RetiroRegion != "centro")
-                        {
-                            if (tarifas[i].ZonaTarifa == "nacional")
-                            {
-                                tarifaPaquete += tarifas[i].PrecioTarifa;
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            // Tarifa Regional
-                            if (RetiroPaquete.RetiroProvincia != "caba")
-                            {
-                                if (tarifas[i].ZonaTarifa == "regional")
-                                {
-                                    tarifaPaquete += tarifas[i].PrecioTarifa;
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                // Tarifa Provincial
-                                if (tarifas[i].ZonaTarifa == "provincial")
-                                {
-                                    tarifaPaquete += tarifas[i].PrecioTarifa;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    if (TipoPaquete == "Encomienda" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto10")
-                    {
-                        // Tarifa Nacional
-                        if (RetiroPaquete.RetiroRegion != "centro")
-                        {
-                            if (tarifas[i].ZonaTarifa == "nacional")
-                            {
-                                tarifaPaquete += tarifas[i].PrecioTarifa;
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            // Tarifa Regional
-                            if (RetiroPaquete.RetiroProvincia != "caba")
-                            {
-                                if (tarifas[i].ZonaTarifa == "regional")
-                                {
-                                    tarifaPaquete += tarifas[i].PrecioTarifa;
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                // Tarifa Provincial
-                                if (tarifas[i].ZonaTarifa == "provincial")
-                                {
-                                    tarifaPaquete += tarifas[i].PrecioTarifa;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    if (TipoPaquete == "Encomienda" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto20")
-                    {
-                        // Tarifa Nacional
-                        if (RetiroPaquete.RetiroRegion != "centro")
-                        {
-                            if (tarifas[i].ZonaTarifa == "nacional")
-                            {
-                                tarifaPaquete += tarifas[i].PrecioTarifa;
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            // Tarifa Regional
-                            if (RetiroPaquete.RetiroProvincia != "caba")
-                            {
-                                if (tarifas[i].ZonaTarifa == "regional")
-                                {
-                                    tarifaPaquete += tarifas[i].PrecioTarifa;
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                // Tarifa Provincial
-                                if (tarifas[i].ZonaTarifa == "provincial")
-                                {
-                                    tarifaPaquete += tarifas[i].PrecioTarifa;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    if (TipoPaquete == "Encomienda" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto30")
-                    {
-                        // Tarifa Nacional
-                        if (RetiroPaquete.RetiroRegion != "centro")
-                        {
-                            if (tarifas[i].ZonaTarifa == "nacional")
-                            {
-                                tarifaPaquete += tarifas[i].PrecioTarifa;
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            // Tarifa Regional
-                            if (RetiroPaquete.RetiroProvincia != "caba")
-                            {
-                                if (tarifas[i].ZonaTarifa == "regional")
-                                {
-                                    tarifaPaquete += tarifas[i].PrecioTarifa;
-                                    break;
-                                }
-                            }
-                            else
-                            {
-                                // Tarifa Provincial
-                                if (tarifas[i].ZonaTarifa == "provincial")
-                                {
-                                    tarifaPaquete += tarifas[i].PrecioTarifa;
-                                    break;
-                                }
-                            }
-                        }
-                    }
+                    CalcularTarifaCABA();
+                    tarifaCABA = TarifaPaqueteNacional;
 
-                    // Resto de la Tarifa Internacional
-                    if (tarifas[i].EnvioTarifa == "internacional")
-                    {
                         if (EntregaPaquete.EntregaPaisRegion == "pais limitrofe" && tarifas[i].ZonaTarifa == "limitrofe")
                         {
                             if (TipoPaquete == "Correspondencia" && tarifas[i].PaqueteTarifa == "correspondencia")
@@ -739,7 +606,7 @@ namespace CAIGrupoH
                             }
                         }
                     }
-                }
+                
             }
             if (TipoEnvio == "Envio urgente")
             {
@@ -755,7 +622,150 @@ namespace CAIGrupoH
                     tarifaPaquete += 15000;
                 }
             }
+            TarifaPaqueteNacional = tarifaPaquete + tarifaCABA;
+        }
+
+        public void CalcularTarifaCABA()
+        {
+            LeerMaestroTarifas();
+            double tarifaPaquete = 0;
+            for (int i = 0; i < tarifas.Count; i++)
+            {
+                if (TipoPaquete == "Correspondencia" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "correspondencia")
+                {
+                    // Tarifa Nacional
+                    if (RetiroPaquete.RetiroRegion != "centro")
+                    {
+                        if (tarifas[i].ZonaTarifa == "nacional")
+                        {
+                            tarifaPaquete += tarifas[i].PrecioTarifa;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        // Tarifa Regional
+                        if (RetiroPaquete.RetiroProvincia != "caba")
+                        {
+                            if (tarifas[i].ZonaTarifa == "regional")
+                            {
+                                tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            // Tarifa Provincial
+                            if (tarifas[i].ZonaTarifa == "provincial")
+                            {
+                                tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (TipoPaquete == "Encomienda" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto10")
+                {
+                    // Tarifa Nacional
+                    if (RetiroPaquete.RetiroRegion != "centro")
+                    {
+                        if (tarifas[i].ZonaTarifa == "nacional")
+                        {
+                            tarifaPaquete += tarifas[i].PrecioTarifa;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        // Tarifa Regional
+                        if (RetiroPaquete.RetiroProvincia != "caba")
+                        {
+                            if (tarifas[i].ZonaTarifa == "regional")
+                            {
+                                tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            // Tarifa Provincial
+                            if (tarifas[i].ZonaTarifa == "provincial")
+                            {
+                                tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (TipoPaquete == "Encomienda" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto20")
+                {
+                    // Tarifa Nacional
+                    if (RetiroPaquete.RetiroRegion != "centro")
+                    {
+                        if (tarifas[i].ZonaTarifa == "nacional")
+                        {
+                            tarifaPaquete += tarifas[i].PrecioTarifa;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        // Tarifa Regional
+                        if (RetiroPaquete.RetiroProvincia != "caba")
+                        {
+                            if (tarifas[i].ZonaTarifa == "regional")
+                            {
+                                tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            // Tarifa Provincial
+                            if (tarifas[i].ZonaTarifa == "provincial")
+                            {
+                                tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (TipoPaquete == "Encomienda" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto30")
+                {
+                    // Tarifa Nacional
+                    if (RetiroPaquete.RetiroRegion != "centro")
+                    {
+                        if (tarifas[i].ZonaTarifa == "nacional")
+                        {
+                            tarifaPaquete += tarifas[i].PrecioTarifa;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        // Tarifa Regional
+                        if (RetiroPaquete.RetiroProvincia != "caba")
+                        {
+                            if (tarifas[i].ZonaTarifa == "regional")
+                            {
+                                tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            // Tarifa Provincial
+                            if (tarifas[i].ZonaTarifa == "provincial")
+                            {
+                                tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
             TarifaPaqueteNacional = tarifaPaquete;
+                
         }
     }
 }
