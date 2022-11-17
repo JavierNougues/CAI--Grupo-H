@@ -298,6 +298,7 @@ namespace CAIGrupoH
                             if (tarifas[i].ZonaTarifa == "local")
                             {
                                 tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
                             }
                         }
                         // Tarifa regional
@@ -309,6 +310,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "provincial")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                             // Tarifa Regional
@@ -317,6 +319,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "regional")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -326,6 +329,7 @@ namespace CAIGrupoH
                             if (tarifas[i].ZonaTarifa == "nacional")
                             {
                                 tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
                             }
                         }
                     }
@@ -339,6 +343,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "local")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                             // Tarifa regional
@@ -350,6 +355,7 @@ namespace CAIGrupoH
                                     if (tarifas[i].ZonaTarifa == "provincial")
                                     {
                                         tarifaPaquete += tarifas[i].PrecioTarifa;
+                                        break;
                                     }
                                 }
                                 // Tarifa Regional
@@ -358,6 +364,7 @@ namespace CAIGrupoH
                                     if (tarifas[i].ZonaTarifa == "regional")
                                     {
                                         tarifaPaquete += tarifas[i].PrecioTarifa;
+                                        break;
                                     }
                                 }
                             }
@@ -367,6 +374,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "nacional")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -378,6 +386,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "local")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                             // Tarifa regional
@@ -389,6 +398,7 @@ namespace CAIGrupoH
                                     if (tarifas[i].ZonaTarifa == "provincial")
                                     {
                                         tarifaPaquete += tarifas[i].PrecioTarifa;
+                                        break;
                                     }
                                 }
                                 // Tarifa Regional
@@ -397,6 +407,7 @@ namespace CAIGrupoH
                                     if (tarifas[i].ZonaTarifa == "regional")
                                     {
                                         tarifaPaquete += tarifas[i].PrecioTarifa;
+                                        break;
                                     }
                                 }
                             }
@@ -406,6 +417,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "nacional")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -417,6 +429,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "local")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                             // Tarifa regional
@@ -428,6 +441,7 @@ namespace CAIGrupoH
                                     if (tarifas[i].ZonaTarifa == "provincial")
                                     {
                                         tarifaPaquete += tarifas[i].PrecioTarifa;
+                                        break;
                                     }
                                 }
                                 // Tarifa Regional
@@ -436,6 +450,7 @@ namespace CAIGrupoH
                                     if (tarifas[i].ZonaTarifa == "regional")
                                     {
                                         tarifaPaquete += tarifas[i].PrecioTarifa;
+                                        break;
                                     }
                                 }
                             }
@@ -445,6 +460,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "nacional")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -464,6 +480,7 @@ namespace CAIGrupoH
                             if (tarifas[i].ZonaTarifa == "nacional")
                             {
                                 tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
                             }
                         }
                         else
@@ -474,6 +491,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "regional")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                             else
@@ -482,6 +500,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "provincial")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -494,6 +513,7 @@ namespace CAIGrupoH
                             if (tarifas[i].ZonaTarifa == "nacional")
                             {
                                 tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
                             }
                         }
                         else
@@ -504,6 +524,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "regional")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                             else
@@ -512,6 +533,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "provincial")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -524,6 +546,7 @@ namespace CAIGrupoH
                             if (tarifas[i].ZonaTarifa == "nacional")
                             {
                                 tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
                             }
                         }
                         else
@@ -534,6 +557,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "regional")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                             else
@@ -542,6 +566,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "provincial")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -554,6 +579,7 @@ namespace CAIGrupoH
                             if (tarifas[i].ZonaTarifa == "nacional")
                             {
                                 tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
                             }
                         }
                         else
@@ -564,6 +590,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "regional")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                             else
@@ -572,6 +599,7 @@ namespace CAIGrupoH
                                 if (tarifas[i].ZonaTarifa == "provincial")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -585,20 +613,24 @@ namespace CAIGrupoH
                             if (TipoPaquete == "Correspondencia" && tarifas[i].PaqueteTarifa == "correspondencia")
                             {
                                 tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
                             }
                             if (TipoPaquete == "Encomienda")
                             {
                                 if (PesoPaquete == "Bultos hasta 10Kg" && tarifas[i].PaqueteTarifa == "bulto10")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                                 if (PesoPaquete == "Bultos hasta 20Kg" && tarifas[i].PaqueteTarifa == "bulto20")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                                 if (PesoPaquete == "Bultos hasta 30Kg" && tarifas[i].PaqueteTarifa == "bulto30")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -607,20 +639,24 @@ namespace CAIGrupoH
                             if (TipoPaquete == "Correspondencia" && tarifas[i].PaqueteTarifa == "correspondencia")
                             {
                                 tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
                             }
                             if (TipoPaquete == "Encomienda")
                             {
                                 if (PesoPaquete == "Bultos hasta 10Kg" && tarifas[i].PaqueteTarifa == "bulto10")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                                 if (PesoPaquete == "Bultos hasta 20Kg" && tarifas[i].PaqueteTarifa == "bulto20")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                                 if (PesoPaquete == "Bultos hasta 30Kg" && tarifas[i].PaqueteTarifa == "bulto30")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -629,20 +665,24 @@ namespace CAIGrupoH
                             if (TipoPaquete == "Correspondencia" && tarifas[i].PaqueteTarifa == "correspondencia")
                             {
                                 tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
                             }
                             if (TipoPaquete == "Encomienda")
                             {
                                 if (PesoPaquete == "Bultos hasta 10Kg" && tarifas[i].PaqueteTarifa == "bulto10")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                                 if (PesoPaquete == "Bultos hasta 20Kg" && tarifas[i].PaqueteTarifa == "bulto20")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                                 if (PesoPaquete == "Bultos hasta 30Kg" && tarifas[i].PaqueteTarifa == "bulto30")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -651,20 +691,24 @@ namespace CAIGrupoH
                             if (TipoPaquete == "Correspondencia" && tarifas[i].PaqueteTarifa == "correspondencia")
                             {
                                 tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
                             }
                             if (TipoPaquete == "Encomienda")
                             {
                                 if (PesoPaquete == "Bultos hasta 10Kg" && tarifas[i].PaqueteTarifa == "bulto10")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                                 if (PesoPaquete == "Bultos hasta 20Kg" && tarifas[i].PaqueteTarifa == "bulto20")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                                 if (PesoPaquete == "Bultos hasta 30Kg" && tarifas[i].PaqueteTarifa == "bulto30")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }
@@ -673,20 +717,24 @@ namespace CAIGrupoH
                             if (TipoPaquete == "Correspondencia" && tarifas[i].PaqueteTarifa == "correspondencia")
                             {
                                 tarifaPaquete += tarifas[i].PrecioTarifa;
+                                break;
                             }
                             if (TipoPaquete == "Encomienda")
                             {
                                 if (PesoPaquete == "Bultos hasta 10Kg" && tarifas[i].PaqueteTarifa == "bulto10")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                                 if (PesoPaquete == "Bultos hasta 20Kg" && tarifas[i].PaqueteTarifa == "bulto20")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                                 if (PesoPaquete == "Bultos hasta 30Kg" && tarifas[i].PaqueteTarifa == "bulto30")
                                 {
                                     tarifaPaquete += tarifas[i].PrecioTarifa;
+                                    break;
                                 }
                             }
                         }

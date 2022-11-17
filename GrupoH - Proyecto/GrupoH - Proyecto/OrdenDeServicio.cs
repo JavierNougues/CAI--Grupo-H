@@ -11,7 +11,7 @@ namespace CAIGrupoH
     internal class OrdenDeServicio
     {
         //Propiedades
-        public DateTime? FechaOS { get; set; }
+        public DateTime FechaOS { get; set; }
         public string? NumeroCliente { get; set; }
         public string? NombreCliente { get; set; }
         public string? NroOrdenServicio { get; set; }
