@@ -612,7 +612,7 @@ namespace CAIGrupoH
             {
                 // Cargo fijo por envio urgente.
                 double t = 0;
-                t = (tarifaPaquete * 1.5);
+                t = (tarifaPaquete * 0.5);
                 if (t <= 15000)
                 {
                     tarifaPaquete += t;
@@ -664,7 +664,7 @@ namespace CAIGrupoH
                         }
                     }
                 }
-                if (TipoPaquete == "Encomienda" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto10")
+                if (TipoPaquete == "Encomienda" && PesoPaquete == "Bultos hasta 10Kg" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto10")
                 {
                     // Tarifa Nacional
                     if (RetiroPaquete.RetiroRegion != "centro")
@@ -697,7 +697,7 @@ namespace CAIGrupoH
                         }
                     }
                 }
-                if (TipoPaquete == "Encomienda" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto20")
+                if (TipoPaquete == "Encomienda" && PesoPaquete == "Bultos hasta 20Kg" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto20")
                 {
                     // Tarifa Nacional
                     if (RetiroPaquete.RetiroRegion != "centro")
@@ -730,7 +730,7 @@ namespace CAIGrupoH
                         }
                     }
                 }
-                if (TipoPaquete == "Encomienda" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto30")
+                if (TipoPaquete == "Encomienda" && PesoPaquete == "Bultos hasta 30Kg" && tarifas[i].EnvioTarifa == "nacional" && tarifas[i].PaqueteTarifa == "bulto30")
                 {
                     // Tarifa Nacional
                     if (RetiroPaquete.RetiroRegion != "centro")

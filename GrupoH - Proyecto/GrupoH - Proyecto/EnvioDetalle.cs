@@ -81,7 +81,7 @@ namespace CAIGrupoH
                     // Provincia de retiro
                     Console.Clear();
 
-                    int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
+                    int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa \n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe \n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
 
                     tipoRecepcion.LeerMaestroProvincias();
                     switch (menuProvincia)
@@ -254,7 +254,7 @@ namespace CAIGrupoH
                     // Provincia de retiro
                     Console.Clear();
 
-                    int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
+                    int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se retira el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa \n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe \n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
 
                     tipoRecepcion.LeerMaestroProvincias();
                     switch (menuProvincia)
@@ -602,7 +602,7 @@ namespace CAIGrupoH
                             // Provincia de entrega
                             Console.Clear();
 
-                            int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se entrega el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
+                            int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se entrega el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa \n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe \n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
 
                             tipoEntrega.LeerMaestroProvincias();
                             switch (menuProvincia)
@@ -776,7 +776,7 @@ namespace CAIGrupoH
                             // Provincia de entrega
                             Console.Clear();
 
-                            int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se entrega el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
+                            int menuProvincia = Validaciones.ValidarMenuPrincipal("Seleccione la provincia donde se entrega el paquete:", "1. Buenos Aires \n2. Chubut \n3. Catamarca \n4. Chaco \n5. CABA \n6. Córdoba \n7. Corrientes \n8. Entre Ríos \n9. Formosa \n10. Jujuy \n11. La Pampa \n12. La Rioja \n13. Mendoza \n14. Misiones \n15. Neuquén \n16. Río Negro \n17. Salta \n18. San Juan \n19. San Luis \n20. Santa Cruz \n21. Santa Fe \n22. Santiago del Estero \n23. Tierra del Fuego", 1, 23);
 
                             tipoEntrega.LeerMaestroProvincias();
                             switch (menuProvincia)
