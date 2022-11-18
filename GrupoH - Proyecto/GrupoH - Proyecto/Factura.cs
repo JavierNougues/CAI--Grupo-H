@@ -62,7 +62,7 @@ namespace GrupoH___Proyecto
             {
                 if (facturas[i].NumeroCliente == codCliente)
                 {
-                    var a = ($"{facturas[i].FechaFactura} \t\t{facturas[i].NumeroFactura} \t\t{facturas[i].EstadoFactura} \t\t${facturas[i].MontoFactura} ");
+                    var a = ($"{facturas[i].FechaFactura} \t\t{facturas[i].NumeroFactura} \t\t{facturas[i].EstadoFactura} \t\t${facturas[i].MontoFactura}");
                     Console.WriteLine(a);
                     factura = true;
                 }
